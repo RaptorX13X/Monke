@@ -12,11 +12,12 @@ public class PlayerFreeLookState : PlayerBaseState
     {
         //check for attack input
         Vector3 movement = CalculateMovement();
+        
         if (stateMachine.InputReader.isSprinting)
         {
             Move(movement * stateMachine.FreeLookSprintingMovementSpeed, deltaTime);
         }
-        else
+        else 
         {
             Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
         }
@@ -27,6 +28,11 @@ public class PlayerFreeLookState : PlayerBaseState
             // return;
         }
         // stateMachine.Animator.SetFloat();   float to 1 
+
+        if (stateMachine.InputReader.isCrouching)
+        {
+            stateMachine.SwitchState(new PlayerCrouchingState(stateMachine));
+        }
     }
 
     public override void Exit()

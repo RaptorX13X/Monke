@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class InputReader : MonoBehaviour, Controls.IPlayerActions
 {
     public bool isSprinting;
+    public bool isCrouching;
     public float MovementValue {get; private set;}
     public float RotationValue { get; private set;}
 
@@ -40,6 +41,18 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
         else if (context.canceled)
         {
             isSprinting = false;
+        }
+    }
+
+    public void OnCrouch(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            isCrouching = true;
+        }
+        else if (context.canceled)
+        {
+            isCrouching = false;
         }
     }
 }
