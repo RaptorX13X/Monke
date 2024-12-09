@@ -9,6 +9,7 @@ public class PlayerCrouchingState : PlayerBaseState
         stateMachine.WalkTest.SetActive(false);
         stateMachine.CrouchTest.SetActive(true); // to change i guess, animacje?
         // move character controller center and size
+        stateMachine.InputReader.JumpEvent += OnJump;
     }
 
     public override void Tick(float deltaTime)
@@ -27,6 +28,7 @@ public class PlayerCrouchingState : PlayerBaseState
         stateMachine.WalkTest.SetActive(true);
         stateMachine.CrouchTest.SetActive(false); // to change i guess
         // reset character controller center and size
+        stateMachine.InputReader.JumpEvent -= OnJump;
     }
     
     private Vector3 CalculateMovement()
@@ -40,5 +42,10 @@ public class PlayerCrouchingState : PlayerBaseState
         forward.Normalize();
         //right.Normalize();
         return forward * stateMachine.InputReader.MovementValue; // + right * stateMachine.InputReader.MovementValue.x;
+    }
+
+    private void OnJump()
+    {
+        stateMachine.SwitchState(new PlayerJumpingState(stateMachine));
     }
 }

@@ -34,4 +34,9 @@ public class ForceReceiver : MonoBehaviour
     {
         impact += translation;
     }
+
+    public void Jump(float jumpForce)
+    {
+        verticalVelocity += jumpForce;
+    }
 }

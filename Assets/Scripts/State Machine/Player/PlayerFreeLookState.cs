@@ -6,6 +6,7 @@ public class PlayerFreeLookState : PlayerBaseState
     public override void Enter()
     {
         //handle animation crossfade
+        stateMachine.InputReader.JumpEvent += OnJump;
     }
 
     public override void Tick(float deltaTime)
@@ -37,7 +38,7 @@ public class PlayerFreeLookState : PlayerBaseState
 
     public override void Exit()
     {
-        
+        stateMachine.InputReader.JumpEvent -= OnJump;
     }
     
     private Vector3 CalculateMovement()
@@ -51,5 +52,10 @@ public class PlayerFreeLookState : PlayerBaseState
         forward.Normalize();
         //right.Normalize();
         return forward * stateMachine.InputReader.MovementValue; // + right * stateMachine.InputReader.MovementValue.x;
+    }
+    
+    private void OnJump()
+    {
+        stateMachine.SwitchState(new PlayerJumpingState(stateMachine));
     }
 }
