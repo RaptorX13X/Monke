@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class InputReader : MonoBehaviour, Controls.IPlayerActions
 {
+    public Action JumpEvent;
     public bool isSprinting;
     public bool isCrouching;
     public float MovementValue {get; private set;}
@@ -54,5 +55,12 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
         {
             isCrouching = false;
         }
+    }
+
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        if (!context.performed) { return; }
+        
+        JumpEvent?.Invoke();
     }
 }

@@ -13,6 +13,7 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public Transform BaseTransform { get; private set; }
     [field: SerializeField] public GameObject CrouchTest { get; private set; }
     [field: SerializeField] public GameObject WalkTest { get; private set; }
+    [field: SerializeField] public float JumpFoce { get; private set; }
 
     public Transform MainCameraTransform { get; private set; }
     private void Start()
