@@ -34,14 +34,14 @@ public class PlayerCrouchingState : PlayerBaseState
     private Vector3 CalculateMovement()
     {
         Vector3 forward = stateMachine.MainCameraTransform.forward;
-        //Vector3 right = stateMachine.MainCameraTransform.right;
+        Vector3 right = stateMachine.MainCameraTransform.right;
 
         forward.y = 0f;
-        //right.y = 0f;
+        right.y = 0f;
 
         forward.Normalize();
-        //right.Normalize();
-        return forward * stateMachine.InputReader.MovementValue; // + right * stateMachine.InputReader.MovementValue.x;
+        right.Normalize();
+        return forward * stateMachine.InputReader.MovementValue.y  + right * stateMachine.InputReader.MovementValue.x;
     }
 
     private void OnJump()
