@@ -6,8 +6,7 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public Action JumpEvent;
     public bool isSprinting;
     public bool isCrouching;
-    public float MovementValue {get; private set;}
-    public float RotationValue { get; private set;}
+    public Vector2 MovementValue {get; private set;}
 
     private Controls controls;
 
@@ -25,12 +24,7 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        MovementValue = context.ReadValue<float>();
-    }
-
-    public void OnRotate(InputAction.CallbackContext context)
-    {
-        RotationValue = context.ReadValue<float>();
+        MovementValue = context.ReadValue<Vector2>();
     }
 
     public void OnSprint(InputAction.CallbackContext context)

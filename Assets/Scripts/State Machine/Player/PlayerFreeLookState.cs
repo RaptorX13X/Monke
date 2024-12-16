@@ -23,11 +23,11 @@ public class PlayerFreeLookState : PlayerBaseState
             Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
         }
 
-        if (stateMachine.InputReader.MovementValue == 0)
-        {
+        //if (stateMachine.InputReader.MovementValue == 0)
+        //{
             // animation float 0
             // return;
-        }
+        //}
         // stateMachine.Animator.SetFloat();   float to 1 
 
         if (stateMachine.InputReader.isCrouching)
@@ -44,14 +44,14 @@ public class PlayerFreeLookState : PlayerBaseState
     private Vector3 CalculateMovement()
     {
         Vector3 forward = stateMachine.MainCameraTransform.forward;
-        //Vector3 right = stateMachine.MainCameraTransform.right;
+        Vector3 right = stateMachine.MainCameraTransform.right;
 
         forward.y = 0f;
-        //right.y = 0f;
+        right.y = 0f;
 
         forward.Normalize();
-        //right.Normalize();
-        return forward * stateMachine.InputReader.MovementValue; // + right * stateMachine.InputReader.MovementValue.x;
+        right.Normalize();
+        return forward * stateMachine.InputReader.MovementValue.y  + right * stateMachine.InputReader.MovementValue.x;
     }
     
     private void OnJump()
