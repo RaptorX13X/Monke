@@ -12,7 +12,7 @@ public class PlayerJumpingState : PlayerBaseState
         momentum = stateMachine.CharacterController.velocity;
         momentum.y = 0f;
         
-        stateMachine.PlayerAudio.PlayJump();
+        //stateMachine.PlayerAudio.PlayJump();
         //play the jump animation
     }
 

@@ -29,12 +29,4 @@ public class PlayerStateMachine : StateMachine
         MainCameraTransform = Camera.main.transform;
         SwitchState(new PlayerFreeLookState(this));
     }
-
-    // private void Update()
-    // {
-    //     if (lastFootstepTime > 0f)
-    //     {
-    //         lastFootstepTime -= Time.deltaTime;
-    //     }
-    // }
 }

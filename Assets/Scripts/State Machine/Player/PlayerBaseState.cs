@@ -16,11 +16,11 @@ public abstract class PlayerBaseState : State
         
         stateMachine.BaseTransform.rotation = Quaternion.Euler(stateMachine.BaseTransform.rotation.eulerAngles.x, stateMachine.MainCameraTransform.rotation.eulerAngles.y, stateMachine.BaseTransform.rotation.eulerAngles.z);
 
-        if (Time.time - stateMachine.lastFootstepTime > 0.5f && stateMachine.CharacterController.velocity != Vector3.zero)
-        {
-            stateMachine.lastFootstepTime = Time.time; // check if its not too messy
-            stateMachine.PlayerAudio.PlayFootsteps();
-        }
+        // if (Time.time - stateMachine.lastFootstepTime > 0.5f && stateMachine.CharacterController.velocity != Vector3.zero)
+        // {
+        //     stateMachine.lastFootstepTime = Time.time; // check if its not too messy
+        //     stateMachine.PlayerAudio.PlayFootsteps();
+        // }
     }
 
     protected void ReturnToLocomotion() 
