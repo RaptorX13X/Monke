@@ -15,6 +15,12 @@ public abstract class PlayerBaseState : State
         stateMachine.CharacterController.Move((motion + stateMachine.ForceReceiver.Movement) * deltaTime);
         
         stateMachine.BaseTransform.rotation = Quaternion.Euler(stateMachine.BaseTransform.rotation.eulerAngles.x, stateMachine.MainCameraTransform.rotation.eulerAngles.y, stateMachine.BaseTransform.rotation.eulerAngles.z);
+
+        if (Time.deltaTime - stateMachine.lastFootstepTime > 0.5f)
+        {
+            stateMachine.lastFootstepTime = Time.deltaTime; // check if its not too messy
+            stateMachine.PlayerAudio.PlayFootsteps();
+        }
     }
 
     protected void ReturnToLocomotion() 

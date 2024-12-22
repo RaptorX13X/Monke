@@ -46,7 +46,7 @@ public class PlayerFallingState : PlayerBaseState
 
     public override void Exit()
     {
-        
+        stateMachine.PlayerAudio.PlayLanding();
     }
     
     private Vector3 CalculateMovement()
