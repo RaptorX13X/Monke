@@ -69,6 +69,7 @@ MonoBehaviour:
   <InputReader>k__BackingField: {fileID: 3848167631154456629}
   <Animator>k__BackingField: {fileID: 5236497943987884418}
   <ForceReceiver>k__BackingField: {fileID: 4081500694432222166}
+  <PlayerAudio>k__BackingField: {fileID: 725962259733445944}
   <FreeLookMovementSpeed>k__BackingField: 6
   <FreeLookSprintingMovementSpeed>k__BackingField: 12
   <CrouchingMovementSpeed>k__BackingField: 3
@@ -76,6 +77,7 @@ MonoBehaviour:
   <BaseTransform>k__BackingField: {fileID: 5072153682559003238}
   <CrouchTest>k__BackingField: {fileID: 5789971931338332697}
   <WalkTest>k__BackingField: {fileID: 2966784731097074460}
+  lastFootstepTime: 0
 --- !u!95 &5236497943987884418
 Animator:
   serializedVersion: 7

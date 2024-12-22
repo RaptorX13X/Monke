@@ -21,12 +21,14 @@ public class PlayerAudio : MonoBehaviour
 
         if(characterController.isGrounded)
         {
+
             RaycastHit hit;
 
             if ((Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 0.5f)))
             {
                 if (hit.collider.CompareTag("gravel"))
                 {
+                    Debug.Log("gravel walk");
                     FootstepsSound = FMODUnity.RuntimeManager.CreateInstance(footstepsEvent);
                     FootstepsSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
                     FootstepsSound.setParameterByNameWithLabel("Surface", "gravel");
@@ -67,6 +69,7 @@ public class PlayerAudio : MonoBehaviour
 
             if (hit.collider.CompareTag("gravel"))
             {
+                Debug.Log("gravel jump");
                 JumpSound.setParameterByNameWithLabel("Surface", "gravel");
                 JumpSound.start();
             }
@@ -95,6 +98,7 @@ public class PlayerAudio : MonoBehaviour
 
             if (hit.collider.CompareTag("gravel"))
             {
+                Debug.Log("gravel land");
                 LandSound.setParameterByNameWithLabel("Surface", "gravel");
                 LandSound.start();
             }
