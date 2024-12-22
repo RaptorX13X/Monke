@@ -30,11 +30,11 @@ public class PlayerStateMachine : StateMachine
         SwitchState(new PlayerFreeLookState(this));
     }
 
-    // private void Update()
-    // {
-    //     if (lastFootstepTime > 0f)
-    //     {
-    //         lastFootstepTime -= Time.deltaTime;
-    //     }
-    // }
+    private void Update()
+    {
+        if (lastFootstepTime > 0f)
+        {
+            lastFootstepTime -= Time.deltaTime;
+        }
+    }
 }
