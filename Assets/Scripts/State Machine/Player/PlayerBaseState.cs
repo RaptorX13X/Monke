@@ -16,9 +16,9 @@ public abstract class PlayerBaseState : State
         
         stateMachine.BaseTransform.rotation = Quaternion.Euler(stateMachine.BaseTransform.rotation.eulerAngles.x, stateMachine.MainCameraTransform.rotation.eulerAngles.y, stateMachine.BaseTransform.rotation.eulerAngles.z);
 
-        if (stateMachine.lastFootstepTime <= 0f)
+        if (Time.time - stateMachine.lastFootstepTime > 0.5f)
         {
-            stateMachine.lastFootstepTime = 0.5f;
+            stateMachine.lastFootstepTime = Time.time; // check if its not too messy
             stateMachine.PlayerAudio.PlayFootsteps();
         }
     }
