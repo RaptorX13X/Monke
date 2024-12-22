@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5236497943987884418}
   - component: {fileID: 9147552183235917680}
   - component: {fileID: 4081500694432222166}
+  - component: {fileID: 725962259733445944}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -71,6 +72,7 @@ MonoBehaviour:
   <FreeLookMovementSpeed>k__BackingField: 6
   <FreeLookSprintingMovementSpeed>k__BackingField: 12
   <CrouchingMovementSpeed>k__BackingField: 3
+  <JumpFoce>k__BackingField: 0
   <BaseTransform>k__BackingField: {fileID: 5072153682559003238}
   <CrouchTest>k__BackingField: {fileID: 5789971931338332697}
   <WalkTest>k__BackingField: {fileID: 2966784731097074460}
@@ -135,6 +137,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 9147552183235917680}
   drag: 0.025
+--- !u!114 &725962259733445944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271679210315325818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc18e87b089529b48916caebc654a00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepsEvent:
+    Guid:
+      Data1: 1693105440
+      Data2: 1291007390
+      Data3: -1313020540
+      Data4: 566784420
+    Path: event:/footsteps
+  jumpEvent:
+    Guid:
+      Data1: -454235298
+      Data2: 1187055313
+      Data3: -218881911
+      Data4: -1897322629
+    Path: event:/jump
+  landEvent:
+    Guid:
+      Data1: 1382053671
+      Data2: 1100149909
+      Data3: -557949548
+      Data4: 1367638517
+    Path: event:/land
+  characterController: {fileID: 9147552183235917680}
 --- !u!1 &2966784731097074460
 GameObject:
   m_ObjectHideFlags: 0
