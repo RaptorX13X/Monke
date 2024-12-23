@@ -4,6 +4,7 @@ public class ForceReceiver : MonoBehaviour
 {
     [SerializeField] private CharacterController controller;
     [SerializeField] private float drag;
+    [SerializeField] private float gravityMultiplier;
     private float verticalVelocity;
     private Vector3 dampingVelocity;
     private Vector3 impact;
@@ -14,11 +15,11 @@ public class ForceReceiver : MonoBehaviour
     {
         if (verticalVelocity < 0f && controller.isGrounded)
         {
-            verticalVelocity = Physics.gravity.y * Time.deltaTime;
+            verticalVelocity = Physics.gravity.y  * Time.deltaTime;
         }
         else
         {
-            verticalVelocity += Physics.gravity.y * Time.deltaTime;
+            verticalVelocity += Physics.gravity.y * gravityMultiplier * Time.deltaTime;
         }
 
         impact = Vector3.SmoothDamp(impact, Vector3.zero, ref dampingVelocity, drag);
@@ -38,5 +39,11 @@ public class ForceReceiver : MonoBehaviour
     public void Jump(float jumpForce)
     {
         verticalVelocity += jumpForce;
+    }
+
+    public void Reset()
+    {
+        impact = Vector3.zero;
+        verticalVelocity = 0f;
     }
 }
