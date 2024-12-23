@@ -7,12 +7,13 @@ public class PlayerJumpingState : PlayerBaseState
     private Vector3 momentum;
     public override void Enter()
     {
-        stateMachine.ForceReceiver.Jump(stateMachine.JumpFoce);
+        stateMachine.ForceReceiver.Jump(stateMachine.JumpForce);
 
         momentum = stateMachine.CharacterController.velocity;
         momentum.y = 0f;
         
-        //stateMachine.PlayerAudio.PlayJump();
+        stateMachine.PlayerAudio.PlayJump();
+        stateMachine.LedgeDetector.OnLedgeDetect += HandleLedgeDetect;
         //play the jump animation
     }
 
@@ -41,7 +42,7 @@ public class PlayerJumpingState : PlayerBaseState
 
     public override void Exit()
     {
-        
+        stateMachine.LedgeDetector.OnLedgeDetect -= HandleLedgeDetect;
     }
     
     private Vector3 CalculateMovement()
@@ -55,5 +56,10 @@ public class PlayerJumpingState : PlayerBaseState
         forward.Normalize();
         right.Normalize();
         return forward * stateMachine.InputReader.MovementValue.y  + right * stateMachine.InputReader.MovementValue.x;
+    }
+
+    private void HandleLedgeDetect(Vector3 ledgeForward)
+    {
+        stateMachine.SwitchState(new PlayerHangingState(stateMachine, ledgeForward));
     }
 }

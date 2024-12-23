@@ -9,13 +9,15 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public Animator Animator { get; private set; }
     [field: SerializeField] public ForceReceiver ForceReceiver { get; private set; }
     [field: SerializeField] public PlayerAudio PlayerAudio { get; private set; }
+    [field: SerializeField] public LedgeDetector LedgeDetector { get; private set; }
 
     [field: Header("Movement Stats")]
     [field: SerializeField] public float FreeLookMovementSpeed { get; private set; }
     [field: SerializeField] public float FreeLookSprintingMovementSpeed { get; private set; }
     [field: SerializeField] public float CrouchingMovementSpeed { get; private set; }
-    [field: SerializeField] public float JumpFoce { get; private set; }
-  
+    [field: SerializeField] public float JumpForce { get; private set; }
+    [field: SerializeField] public Vector3 ClimbOffset { get; private set; }
+
     [field: Header("Testing")]
     [field: SerializeField] public Transform BaseTransform { get; private set; }
     [field: SerializeField] public GameObject CrouchTest { get; private set; }

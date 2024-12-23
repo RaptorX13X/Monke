@@ -10,19 +10,48 @@ public class PlayerFallingState : PlayerBaseState
     {
         momentum = stateMachine.CharacterController.velocity;
         momentum.y = 0f;
-        
+
+        stateMachine.LedgeDetector.OnLedgeDetect += HandleLedgeDetect;
         //play falling animation
+
+        // stateMachine.InputReader.JumpEvent += OnJump;
     }
 
     public override void Tick(float deltaTime)
     {
         Move(momentum,deltaTime);
+        
+        Debug.Log(stateMachine.CharacterController.collisionFlags);
 
         if (stateMachine.CharacterController.isGrounded)
         {
             ReturnToLocomotion();
             return;
         }
+
+        // if ((stateMachine.CharacterController.collisionFlags & CollisionFlags.Sides) != 0)
+        // {
+        //     stateMachine.InputReader.JumpEvent += OnJump;
+        // }
+        // else
+        // {
+        //     stateMachine.InputReader.JumpEvent -= OnJump;
+        // }
+        /*RaycastHit hit;
+
+        Vector3 p1 = stateMachine.BaseTransform.position + stateMachine.CharacterController.center;
+        float distance = 0;
+        if (Physics.SphereCast(p1, stateMachine.CharacterController.height / 2, stateMachine.BaseTransform.forward,
+                out hit, 10))
+        {
+            stateMachine.InputReader.JumpEvent += OnJump;
+            Debug.Log(hit);
+        }
+        else
+        {
+            stateMachine.InputReader.JumpEvent -= OnJump;
+        }*/
+        
         
         Vector3 movement = CalculateMovement();
         
@@ -46,7 +75,10 @@ public class PlayerFallingState : PlayerBaseState
 
     public override void Exit()
     {
-        //stateMachine.PlayerAudio.PlayLanding();
+        stateMachine.InputReader.JumpEvent -= OnJump;
+        stateMachine.PlayerAudio.PlayLanding();
+        
+        stateMachine.LedgeDetector.OnLedgeDetect -= HandleLedgeDetect;
     }
     
     private Vector3 CalculateMovement()
@@ -60,5 +92,15 @@ public class PlayerFallingState : PlayerBaseState
         forward.Normalize();
         right.Normalize();
         return forward * stateMachine.InputReader.MovementValue.y  + right * stateMachine.InputReader.MovementValue.x;
+    }
+    
+    private void OnJump()
+    {
+        stateMachine.SwitchState(new PlayerJumpingState(stateMachine));
+    }
+
+    private void HandleLedgeDetect(Vector3 ledgeForward)
+    {
+        stateMachine.SwitchState(new PlayerHangingState(stateMachine, ledgeForward));
     }
 }
