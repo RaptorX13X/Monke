@@ -15,7 +15,7 @@ public class PlayerAudio : MonoBehaviour
     
     [SerializeField] private CharacterController characterController;
 
-
+//fix it kurwa
     public void PlayFootsteps()
     {
 
@@ -61,9 +61,10 @@ public class PlayerAudio : MonoBehaviour
 
     public void PlayJump()
     {
-        JumpSound = FMODUnity.RuntimeManager.CreateInstance(jumpEvent);
+        //JumpSound = FMODUnity.RuntimeManager.CreateInstance(jumpEvent);
+        //FMODUnity.RuntimeManager.PlayOneShotAttached(jumpEvent, gameObject);
 
-        RaycastHit hit;
+        /*RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 0.5f))
         {
 
@@ -83,14 +84,16 @@ public class PlayerAudio : MonoBehaviour
                 JumpSound.setParameterByNameWithLabel("Surface", "gravel");
                 JumpSound.start();
             }
-        }
+        }*/
 
-        JumpSound.release();
+        //JumpSound.release();
     }
 
     public void PlayLanding()
     {
-        LandSound = FMODUnity.RuntimeManager.CreateInstance(landEvent);
+        //LandSound = FMODUnity.RuntimeManager.CreateInstance(landEvent);
+        //FMODUnity.RuntimeManager.PlayOneShotAttached(landEvent, gameObject);
+        /*LandSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
         RaycastHit hit;
 
         if (Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 0.5f))
@@ -114,6 +117,6 @@ public class PlayerAudio : MonoBehaviour
             }
         }
 
-        LandSound.release();
+        LandSound.release();*/
     }
 }
