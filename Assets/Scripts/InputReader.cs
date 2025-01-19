@@ -7,6 +7,9 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public bool isSprinting;
     public bool isCrouching;
     public Vector2 MovementValue {get; private set;}
+    
+    public bool IsAttackingL { get; private set; }
+    public bool IsAttackingH { get; private set; }
 
     private Controls controls;
 
@@ -25,6 +28,30 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public void OnMove(InputAction.CallbackContext context)
     {
         MovementValue = context.ReadValue<Vector2>();
+    }
+
+    public void OnAttackL(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            IsAttackingL = true;
+        }
+        else if (context.canceled)
+        {
+            IsAttackingL = false;
+        }
+    }
+
+    public void OnAttackH(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            IsAttackingH = true;
+        }
+        else if (context.canceled)
+        {
+            IsAttackingH = false;
+        }
     }
 
     public void OnSprint(InputAction.CallbackContext context)

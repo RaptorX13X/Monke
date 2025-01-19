@@ -22,6 +22,11 @@ public abstract class PlayerBaseState : State
             stateMachine.PlayerAudio.PlayFootsteps();
         }
     }
+    
+    protected void Move(float deltaTime)
+    {
+        Move(Vector3.zero, deltaTime);
+    }
 
     protected void ReturnToLocomotion() 
     {
