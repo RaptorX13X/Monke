@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{ac44ecc0-0640-402c-9deb-09576b698943}">
 		<property name="assetPath">
-			<value>jump/gravel/jump_gravel-005.wav</value>
+			<value>player/jump/gravel/jump_gravel-005.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
