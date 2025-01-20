@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="EncodableAsset" id="{7556e7a0-8c80-4f46-af30-9871d2685ac3}">
 		<property name="assetPath">
-			<value>land/gravel/</value>
+			<value>player/land/gravel/</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{8df8c748-50e3-4d56-aa57-737ff52775ac}</destination>
