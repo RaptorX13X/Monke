@@ -35,6 +35,11 @@ public class Health : MonoBehaviour
         }
     }
 
+    public void Respawn()
+    {
+        currentHealth = maxHealth;
+    }
+
     private IEnumerator HealthRegen()
     {
         while (currentHealth != maxHealth)

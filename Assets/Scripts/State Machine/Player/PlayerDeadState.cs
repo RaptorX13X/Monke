@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerDeadState : PlayerBaseState
@@ -8,22 +9,21 @@ public class PlayerDeadState : PlayerBaseState
 
     public override void Enter()
     {
-        // ragdoll?
-        // disable weapon
-        // start coroutine to respawn
+        stateMachine.Weapon.gameObject.SetActive(false);
+        //death animation
     }
 
     public override void Tick(float deltaTime)
     {
-        
+        //if (stateMachine.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1) return;
+        stateMachine.Health.Respawn();
+        stateMachine.Respawn.Respawn();
+        stateMachine.Weapon.gameObject.SetActive(true);
+        stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
     }
 
     public override void Exit()
     {
         
     }
-    
-    //coroutine to respawn
-    //wait for 3 seconds and then respawn
-    //and enable the weapon i guess
 }

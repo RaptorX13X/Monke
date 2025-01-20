@@ -1,15 +1,15 @@
 using UnityEngine;
 
-public class PlayerAttackingState : PlayerBaseState
+public class PlayerAttackingHState : PlayerBaseState
 {
     private Attack attack;
     private float previousFrameTime;
     private bool alreadyAppliedForce;
 
 
-    public PlayerAttackingState(PlayerStateMachine stateMachine, int attackIndex) : base(stateMachine)
+    public PlayerAttackingHState(PlayerStateMachine stateMachine, int attackIndex) : base(stateMachine)
     {
-        attack = stateMachine.Attacks[attackIndex];
+        attack = stateMachine.AttacksH[attackIndex];
     }
 
     public override void Enter()
@@ -72,6 +72,6 @@ public class PlayerAttackingState : PlayerBaseState
             return;
         }
         
-        stateMachine.SwitchState(new PlayerAttackingState(stateMachine, attack.ComboStateIndex));
+        stateMachine.SwitchState(new PlayerAttackingHState(stateMachine, attack.ComboStateIndex));
     }
 }
