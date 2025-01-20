@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ForceReceiver : MonoBehaviour
 {
     [SerializeField] private CharacterController controller;
+    [SerializeField] private NavMeshAgent agent;
     [SerializeField] private float drag;
     [SerializeField] private float gravityMultiplier;
     private float verticalVelocity;
@@ -28,6 +30,15 @@ public class ForceReceiver : MonoBehaviour
         if (impact.sqrMagnitude < 0.2f * 0.2f) 
         { 
             impact = Vector3.zero;
+        }
+        
+        if (agent != null)
+        {
+            if (impact.sqrMagnitude < 0.2f * 0.2f)
+            {
+                impact = Vector3.zero;
+                agent.enabled = true;
+            }
         }
     }
 

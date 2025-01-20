@@ -22,10 +22,22 @@ public abstract class PlayerBaseState : State
             stateMachine.PlayerAudio.PlayFootsteps();
         }
     }
+    
+    protected void Move(float deltaTime)
+    {
+        Move(Vector3.zero, deltaTime);
+    }
 
     protected void ReturnToLocomotion() 
     {
-        stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
+        if (stateMachine.Targeter.CurrentTarget != null)
+        {
+            stateMachine.SwitchState(new PlayerTargetingState(stateMachine));
+        }
+        else
+        {
+            stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
+        }
     }
     
     private Vector3 AdjustVelocityToSlope(Vector3 velocity)
@@ -43,5 +55,15 @@ public abstract class PlayerBaseState : State
             }
         }
         return velocity;
+    }
+    
+    protected void FaceTarget()
+    {
+        if (stateMachine.Targeter.CurrentTarget == null ) {return;}
+
+        Vector3 lookPos = stateMachine.Targeter.CurrentTarget.transform.position - stateMachine.transform.position;
+        lookPos.y = 0f;
+
+        stateMachine.transform.rotation = Quaternion.LookRotation(lookPos);
     }
 }

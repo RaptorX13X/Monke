@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 
@@ -10,6 +11,13 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public ForceReceiver ForceReceiver { get; private set; }
     [field: SerializeField] public PlayerAudio PlayerAudio { get; private set; }
     [field: SerializeField] public LedgeDetector LedgeDetector { get; private set; }
+    [field: SerializeField] public Health Health { get; private set; }
+    [field: SerializeField] public WeaponDamage Weapon { get; private set; }
+    [field: SerializeField] public Targeter Targeter { get; private set; }
+    [field: SerializeField] public Attack[] Attacks { get; private set; }
+    [field: SerializeField] public Attack[] AttacksH { get; private set; }
+    [field: SerializeField] public TestRespawnHandler Respawn { get; private set; }
+    
 
     [field: Header("Movement Stats")]
     [field: SerializeField] public float FreeLookMovementSpeed { get; private set; }
@@ -20,8 +28,7 @@ public class PlayerStateMachine : StateMachine
 
     [field: Header("Testing")]
     [field: SerializeField] public Transform BaseTransform { get; private set; }
-    [field: SerializeField] public GameObject CrouchTest { get; private set; }
-    [field: SerializeField] public GameObject WalkTest { get; private set; }
+    [field: SerializeField] public float RotationDamping { get; private set; }
 
     public float lastFootstepTime = 0f;
 
@@ -30,5 +37,27 @@ public class PlayerStateMachine : StateMachine
     {
         MainCameraTransform = Camera.main.transform;
         SwitchState(new PlayerFreeLookState(this));
+    }
+
+    private void OnEnable()
+    {
+        Health.OnTakeDamage += HandleTakeDamage;
+        Health.OnDie += HandleDie;
+    }
+
+    private void OnDisable()
+    {
+        Health.OnTakeDamage -= HandleTakeDamage;
+        Health.OnDie -= HandleDie;
+    }
+
+    private void HandleTakeDamage()
+    {
+        SwitchState(new PlayerImpactState(this));
+    }
+
+    private void HandleDie()
+    {
+        SwitchState(new PlayerDeadState(this));
     }
 }
