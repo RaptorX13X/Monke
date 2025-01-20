@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class EnemyDeadState : EnemyBaseState
 {
+    private readonly int DyingHash = Animator.StringToHash("Dying");
+    private const float TransitionDuration = 0.1f;
     public EnemyDeadState(EnemyStateMachine stateMachine) : base(stateMachine) { }
 
     public override void Enter()
     {
-        //death anim
+        stateMachine.Animator.CrossFadeInFixedTime(DyingHash, TransitionDuration);
         stateMachine.Weapon.gameObject.SetActive(false);
         GameObject.Destroy(stateMachine.Target);
     }

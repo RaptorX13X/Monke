@@ -28,8 +28,7 @@ public class PlayerStateMachine : StateMachine
 
     [field: Header("Testing")]
     [field: SerializeField] public Transform BaseTransform { get; private set; }
-    [field: SerializeField] public GameObject CrouchTest { get; private set; }
-    [field: SerializeField] public GameObject WalkTest { get; private set; }
+    [field: SerializeField] public float RotationDamping { get; private set; }
 
     public float lastFootstepTime = 0f;
 
