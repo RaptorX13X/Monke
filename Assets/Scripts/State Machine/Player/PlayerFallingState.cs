@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerFallingState : PlayerBaseState
 {
+    private readonly int FallHash = Animator.StringToHash("Fall");
+    private const float TransitionDuration = 0.1f;
     public PlayerFallingState(PlayerStateMachine stateMachine) : base(stateMachine) { }
 
     private Vector3 momentum;
@@ -12,6 +14,7 @@ public class PlayerFallingState : PlayerBaseState
         momentum.y = 0f;
 
         stateMachine.LedgeDetector.OnLedgeDetect += HandleLedgeDetect;
+        stateMachine.Animator.CrossFadeInFixedTime(FallHash, TransitionDuration);
         //play falling animation
 
         // stateMachine.InputReader.JumpEvent += OnJump;

@@ -89,8 +89,6 @@ MonoBehaviour:
   <ClimbOffset>k__BackingField: {x: 0, y: 2.325, z: 0.65}
   <BaseTransform>k__BackingField: {fileID: 5072153682559003238}
   <RotationDamping>k__BackingField: 10
-  <CrouchTest>k__BackingField: {fileID: 0}
-  <WalkTest>k__BackingField: {fileID: 0}
   lastFootstepTime: 0
 --- !u!95 &5236497943987884418
 Animator:
@@ -138,7 +136,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.05
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &4081500694432222166
 MonoBehaviour:
   m_ObjectHideFlags: 0

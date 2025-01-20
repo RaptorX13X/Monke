@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerJumpingState : PlayerBaseState
 {
+    private readonly int JumpHash = Animator.StringToHash("Jump");
+    private const float TransitionDuration = 0.1f;
     public PlayerJumpingState(PlayerStateMachine stateMachine) : base(stateMachine) { }
 
     private Vector3 momentum;
@@ -11,7 +13,7 @@ public class PlayerJumpingState : PlayerBaseState
 
         momentum = stateMachine.CharacterController.velocity;
         momentum.y = 0f;
-        
+        stateMachine.Animator.CrossFadeInFixedTime(JumpHash, TransitionDuration);
         stateMachine.PlayerAudio.PlayJump();
         stateMachine.LedgeDetector.OnLedgeDetect += HandleLedgeDetect;
         //play the jump animation
