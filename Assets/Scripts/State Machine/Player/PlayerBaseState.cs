@@ -11,7 +11,7 @@ public abstract class PlayerBaseState : State
     
     protected void Move(Vector3 motion, float deltaTime)
     {
-        motion = AdjustVelocityToSlope(motion);
+        //motion = AdjustVelocityToSlope(motion);
         stateMachine.CharacterController.Move((motion + stateMachine.ForceReceiver.Movement) * deltaTime);
         
         stateMachine.BaseTransform.rotation = Quaternion.Euler(stateMachine.BaseTransform.rotation.eulerAngles.x, stateMachine.MainCameraTransform.rotation.eulerAngles.y, stateMachine.BaseTransform.rotation.eulerAngles.z);
@@ -48,7 +48,7 @@ public abstract class PlayerBaseState : State
         {
             var slopeRotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
             var adjustedVelocity = slopeRotation * velocity;
-
+            
             if (adjustedVelocity.y < 0)
             {
                 return adjustedVelocity;

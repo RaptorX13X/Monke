@@ -1320,7 +1320,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 5072153682559003238}
+    TrackingTarget: {fileID: 3932810405062114529}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -2569,7 +2569,51 @@ MonoBehaviour:
   AnimatedTarget: {fileID: 5236497943987884418}
   LayerIndex: 0
   Instructions: []
-  HashOfParent: []
+  HashOfParent:
+  - Hash: 585382737
+    HashOfParent: 756556552
+  - Hash: 230188126
+    HashOfParent: 585382737
+  - Hash: 2009079396
+    HashOfParent: 585382737
+  - Hash: 788460410
+    HashOfParent: 756556552
+  - Hash: 1914514016
+    HashOfParent: 756556552
+  - Hash: -479991077
+    HashOfParent: 756556552
+  - Hash: 168036699
+    HashOfParent: -479991077
+  - Hash: -1503067552
+    HashOfParent: -479991077
+  - Hash: -1587927945
+    HashOfParent: -479991077
+  - Hash: 1972345908
+    HashOfParent: -479991077
+  - Hash: 1909800350
+    HashOfParent: -479991077
+  - Hash: -274583130
+    HashOfParent: 756556552
+  - Hash: 1990942748
+    HashOfParent: 756556552
+  - Hash: 28070026
+    HashOfParent: 756556552
+  - Hash: -946407516
+    HashOfParent: 756556552
+  - Hash: -1063883918
+    HashOfParent: 756556552
+  - Hash: -1546996312
+    HashOfParent: 756556552
+  - Hash: 699097072
+    HashOfParent: 756556552
+  - Hash: -725336713
+    HashOfParent: 756556552
+  - Hash: -1110214448
+    HashOfParent: 756556552
+  - Hash: 647003580
+    HashOfParent: -1110214448
+  - Hash: 715752333
+    HashOfParent: -1110214448
   m_LegacyLookAt: {fileID: 0}
   m_LegacyFollow: {fileID: 0}
 --- !u!1 &7041435138904181751
