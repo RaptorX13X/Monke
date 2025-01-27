@@ -205,8 +205,8 @@ MonoBehaviour:
   <FreeLookMovementSpeed>k__BackingField: 6
   <FreeLookSprintingMovementSpeed>k__BackingField: 12
   <CrouchingMovementSpeed>k__BackingField: 3
-  <JumpForce>k__BackingField: 6
-  <ClimbOffset>k__BackingField: {x: 0, y: 2.325, z: 0.65}
+  <JumpForce>k__BackingField: 7
+  <ClimbOffset>k__BackingField: {x: 0, y: 3.9525, z: 1.105}
   <BaseTransform>k__BackingField: {fileID: 5072153682559003238}
   <RotationDamping>k__BackingField: 10
   lastFootstepTime: 0
@@ -272,7 +272,7 @@ MonoBehaviour:
   controller: {fileID: 9147552183235917680}
   agent: {fileID: 0}
   drag: 0.025
-  gravityMultiplier: 1
+  gravityMultiplier: 2.3
 --- !u!114 &725962259733445944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1329,8 +1329,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.59, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5072153682559003238}
   - {fileID: 5559373830387072095}
@@ -1552,6 +1552,7 @@ GameObject:
   - component: {fileID: 8305905907797115739}
   - component: {fileID: 5070838693644803595}
   - component: {fileID: 4582867475564169987}
+  - component: {fileID: 7336723540220646129}
   m_Layer: 0
   m_Name: FreeLook Camera
   m_TagString: Untagged
@@ -1567,8 +1568,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3914528299665653806}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.009805585, y: 0.9881402, z: 0.07148303, w: 0.13554676}
-  m_LocalPosition: {x: -1.3564748, y: -0.7326561, z: 4.8513355}
+  m_LocalRotation: {x: -0.007298538, y: 0.9892927, z: 0.053206574, w: 0.13570486}
+  m_LocalPosition: {x: -1.1357138, y: -0.1148768, z: 4.0204983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1594,7 +1595,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 3932810405062114529}
+    TrackingTarget: {fileID: 2040045743539693729}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -1640,15 +1641,15 @@ MonoBehaviour:
   Radius: 10
   Orbits:
     Top:
-      Radius: 5
-      Height: 2.5
+      Radius: 2
+      Height: 7
     Center:
-      Radius: 6
+      Radius: 10
       Height: 0.5
     Bottom:
-      Radius: 5
+      Radius: 7
       Height: -0.75
-    SplineCurvature: 0.2
+    SplineCurvature: 1
   RecenteringTarget: 2
   HorizontalAxis:
     Value: 164.37856
@@ -1783,6 +1784,36 @@ MonoBehaviour:
         DecelTime: 0
   PlayerIndex: -1
   AutoEnableInputs: 1
+--- !u!114 &7336723540220646129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3914528299665653806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7de3aefa901374ba29464584a3109a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraRadius: 0.4
+  Decollision:
+    Enabled: 0
+    ObstacleLayers:
+      serializedVersion: 2
+      m_Bits: 1
+    UseFollowTarget:
+      Enabled: 0
+      YOffset: 0
+    Damping: 0.5
+    SmoothingTime: 0
+  TerrainResolution:
+    Enabled: 1
+    TerrainLayers:
+      serializedVersion: 2
+      m_Bits: 1
+    MaximumRaycast: 10
+    Damping: 0.5
 --- !u!1 &4090802670006702173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2283,7 +2314,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 0.5, z: 1}
-  m_Center: {x: 0, y: 1.5, z: 0}
+  m_Center: {x: 0, y: 2.5, z: 0}
 --- !u!54 &2199922918620221877
 Rigidbody:
   m_ObjectHideFlags: 0
