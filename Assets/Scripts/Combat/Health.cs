@@ -50,6 +50,7 @@ public class Health : MonoBehaviour
     public void Respawn()
     {
         currentHealth = maxHealth;
+        healthText.text = currentHealth.ToString();
     }
 
     private IEnumerator HealthRegen()
