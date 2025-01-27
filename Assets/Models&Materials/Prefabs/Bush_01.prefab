@@ -52,6 +52,26 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9d513c9477b878642ac438cb98ef5879, type: 2}
+    - target: {fileID: 49549934688856624, guid: 29714dbdb3630234995f6a2f378c35f7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 49549934688856624, guid: 29714dbdb3630234995f6a2f378c35f7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 49549934688856624, guid: 29714dbdb3630234995f6a2f378c35f7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 49549934688856624, guid: 29714dbdb3630234995f6a2f378c35f7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 49549934688856624, guid: 29714dbdb3630234995f6a2f378c35f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 637356599425421236, guid: 29714dbdb3630234995f6a2f378c35f7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -69,7 +89,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 9d513c9477b878642ac438cb98ef5879, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4609190261242277994, guid: 29714dbdb3630234995f6a2f378c35f7, type: 3}
+    - {fileID: -6319091506081472516, guid: 29714dbdb3630234995f6a2f378c35f7, type: 3}
+    - {fileID: 1153002869730038282, guid: 29714dbdb3630234995f6a2f378c35f7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29714dbdb3630234995f6a2f378c35f7, type: 3}
