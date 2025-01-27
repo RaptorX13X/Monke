@@ -2125,6 +2125,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8689449202193871711, guid: d58999d8f91e13b49b250588d92083ff, type: 3}
   m_PrefabInstance: {fileID: 432071991}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &211424628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2542094535025376225, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+  m_PrefabInstance: {fileID: 219310935}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &211840810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3337,6 +3342,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7459072956327914733, guid: 542731246f0244b40a823023a04659c1, type: 3}
   m_PrefabInstance: {fileID: 1993497994}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &287948621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 747832117648134893, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+  m_PrefabInstance: {fileID: 1875729530}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &290348419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8689449202193871711, guid: d58999d8f91e13b49b250588d92083ff, type: 3}
@@ -3561,6 +3571,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a97cc3ef9be39e0408c452be6c9a568d, type: 3}
+--- !u!1 &327352847 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 747832117648134893, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+  m_PrefabInstance: {fileID: 619077152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -4102,6 +4117,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5018841370536349577, guid: a97cc3ef9be39e0408c452be6c9a568d, type: 3}
   m_PrefabInstance: {fileID: 837830254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &363430001 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 747832117648134893, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+  m_PrefabInstance: {fileID: 593176222}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &363518394 stripped
 Transform:
@@ -9471,6 +9491,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1781426591}
     m_Modifications:
+    - target: {fileID: 16701234628585842, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 747832117648134893, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: m_Name
       value: PuzzlePressurePlate
@@ -9518,13 +9542,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 747832117648134893, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 593176224}
   m_SourcePrefab: {fileID: 100100000, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
 --- !u!4 &593176223 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5425696795634817659, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
   m_PrefabInstance: {fileID: 593176222}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &593176224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363430001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509bc67ca087ed84c91f51fe5d5a5ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToDisable: {fileID: 1704368260}
 --- !u!4 &595409936 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5018841370536349577, guid: a97cc3ef9be39e0408c452be6c9a568d, type: 3}
@@ -9705,6 +9745,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1781426591}
     m_Modifications:
+    - target: {fileID: 16701234628585842, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 747832117648134893, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: m_Name
       value: PuzzlePressurePlate (1)
@@ -9756,13 +9800,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 747832117648134893, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 619077154}
   m_SourcePrefab: {fileID: 100100000, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
 --- !u!4 &619077153 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5425696795634817659, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
   m_PrefabInstance: {fileID: 619077152}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &619077154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327352847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509bc67ca087ed84c91f51fe5d5a5ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToDisable: {fileID: 211424628}
 --- !u!1001 &623692811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9914,6 +9974,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 79948140}
     m_Modifications:
+    - target: {fileID: 16701234628585842, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 747832117648134893, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: m_Name
       value: PuzzlePressurePlate (4)
@@ -9961,7 +10025,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 747832117648134893, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1206239711}
   m_SourcePrefab: {fileID: 100100000, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
 --- !u!4 &638746428 stripped
 Transform:
@@ -39343,6 +39410,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a97cc3ef9be39e0408c452be6c9a568d, type: 3}
+--- !u!1 &1107353715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 747832117648134893, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+  m_PrefabInstance: {fileID: 1127374649}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1110948376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39631,6 +39703,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1781426591}
     m_Modifications:
+    - target: {fileID: 16701234628585842, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 747832117648134893, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: m_Name
       value: PuzzlePressurePlate (2)
@@ -39682,13 +39758,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 747832117648134893, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1127374651}
   m_SourcePrefab: {fileID: 100100000, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
 --- !u!4 &1127374650 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5425696795634817659, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
   m_PrefabInstance: {fileID: 1127374649}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1127374651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107353715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509bc67ca087ed84c91f51fe5d5a5ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToDisable: {fileID: 2132889243}
 --- !u!4 &1130181984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7459072956327914733, guid: 542731246f0244b40a823023a04659c1, type: 3}
@@ -52858,6 +52950,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a97cc3ef9be39e0408c452be6c9a568d, type: 3}
+--- !u!1 &1206239707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 747832117648134893, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+  m_PrefabInstance: {fileID: 638746427}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1206239711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206239707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509bc67ca087ed84c91f51fe5d5a5ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToDisable: {fileID: 2082735934}
 --- !u!4 &1219257621 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7459072956327914733, guid: a2cdcc1c58e72a246b0561178d6124cb, type: 3}
@@ -55650,6 +55760,11 @@ MonoBehaviour:
   m_SkinMeshRef: {fileID: 0}
   m_OriginalMeshObject: {fileID: -951608786083511892, guid: 6737bcb91c297384885cf4ca329d7706, type: 3}
   m_Mode: 0
+--- !u!1 &1328999554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2542094535025376225, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+  m_PrefabInstance: {fileID: 812624767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1340377805 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5018841370536349577, guid: a97cc3ef9be39e0408c452be6c9a568d, type: 3}
@@ -63905,6 +64020,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 542731246f0244b40a823023a04659c1, type: 3}
+--- !u!1 &1704368260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2542094535025376225, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+  m_PrefabInstance: {fileID: 1965907120}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1712347330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8689449202193871711, guid: d58999d8f91e13b49b250588d92083ff, type: 3}
@@ -68709,13 +68829,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 747832117648134893, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1875729532}
   m_SourcePrefab: {fileID: 100100000, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
 --- !u!4 &1875729531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5425696795634817659, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
   m_PrefabInstance: {fileID: 1875729530}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1875729532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287948621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509bc67ca087ed84c91f51fe5d5a5ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToDisable: {fileID: 1328999554}
 --- !u!4 &1876282390 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2274807843032683820, guid: 9d76b8880ba5b064ead061b8756ab4a3, type: 3}
@@ -79994,6 +80130,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5018841370536349577, guid: a97cc3ef9be39e0408c452be6c9a568d, type: 3}
   m_PrefabInstance: {fileID: 317694739}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2082735934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4225318272120624205, guid: 71086414a0611e9449306370acfda382, type: 3}
+  m_PrefabInstance: {fileID: 524006808}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2083767347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80859,6 +81000,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5018841370536349577, guid: a97cc3ef9be39e0408c452be6c9a568d, type: 3}
   m_PrefabInstance: {fileID: 2023235085}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2132889243 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2542094535025376225, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+  m_PrefabInstance: {fileID: 1352702689}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2136053806
 PrefabInstance:
