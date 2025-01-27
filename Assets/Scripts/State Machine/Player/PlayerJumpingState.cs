@@ -16,7 +16,6 @@ public class PlayerJumpingState : PlayerBaseState
         stateMachine.Animator.CrossFadeInFixedTime(JumpHash, TransitionDuration);
         stateMachine.PlayerAudio.PlayJump();
         stateMachine.LedgeDetector.OnLedgeDetect += HandleLedgeDetect;
-        //play the jump animation
     }
 
     public override void Tick(float deltaTime)
@@ -25,14 +24,15 @@ public class PlayerJumpingState : PlayerBaseState
         
         Vector3 movement = CalculateMovement();
         
-        if (stateMachine.InputReader.isSprinting)
-        {
-            Move(movement * stateMachine.FreeLookSprintingMovementSpeed, deltaTime);
-        }
-        else 
-        {
-            Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
-        }
+        Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
+        // if (stateMachine.InputReader.isSprinting)
+        // {
+        //     Move(movement * stateMachine.FreeLookSprintingMovementSpeed, deltaTime);
+        // }
+        // else 
+        // {
+        //     Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
+        // }
 
         if (stateMachine.CharacterController.velocity.y <= 0)
         {
