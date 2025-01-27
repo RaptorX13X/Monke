@@ -2284,8 +2284,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.38278, y: 2.815966, z: 34.208557}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4118714950717882248}
   - {fileID: 8081416127191080990}
@@ -2329,8 +2329,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  healthRegen: 5
+  healthRegen: 0
   isPlayer: 0
+  healthText: {fileID: 0}
 --- !u!114 &1745154021665504935
 MonoBehaviour:
   m_ObjectHideFlags: 0
