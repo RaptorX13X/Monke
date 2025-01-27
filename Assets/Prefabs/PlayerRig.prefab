@@ -183,7 +183,7 @@ MonoBehaviour:
     <ForceTime>k__BackingField: 0.35
     <Force>k__BackingField: 15
     <Damage>k__BackingField: 30
-    <Knockback>k__BackingField: 20
+    <Knockback>k__BackingField: 0
   - <AnimationName>k__BackingField: Attack 2
     <TransitionDuration>k__BackingField: 0.1
     <ComboStateIndex>k__BackingField: 1
@@ -191,7 +191,7 @@ MonoBehaviour:
     <ForceTime>k__BackingField: 0.35
     <Force>k__BackingField: 15
     <Damage>k__BackingField: 20
-    <Knockback>k__BackingField: 20
+    <Knockback>k__BackingField: 0
   - <AnimationName>k__BackingField: Attack 3
     <TransitionDuration>k__BackingField: 0.2
     <ComboStateIndex>k__BackingField: -1
@@ -199,7 +199,7 @@ MonoBehaviour:
     <ForceTime>k__BackingField: 0.35
     <Force>k__BackingField: 15
     <Damage>k__BackingField: 40
-    <Knockback>k__BackingField: 30
+    <Knockback>k__BackingField: 0
   <AttacksH>k__BackingField: []
   <Respawn>k__BackingField: {fileID: 7842866747011902996}
   <FreeLookMovementSpeed>k__BackingField: 6

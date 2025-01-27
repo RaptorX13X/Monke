@@ -1,12 +1,14 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using TMPro;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int healthRegen = 5;
     [SerializeField] private bool isPlayer;
+    [SerializeField] private TextMeshProUGUI healthText;
     private int currentHealth;
     private bool isInvulnerable;
     public event Action OnTakeDamage;
@@ -16,6 +18,10 @@ public class Health : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+        if (isPlayer)
+        {
+            healthText.text = currentHealth.ToString();
+        }
     }
 
     public void SetInvulnerable(bool isInvulnerable)
@@ -35,6 +41,10 @@ public class Health : MonoBehaviour
             OnDie?.Invoke();
         }
         Debug.Log(currentHealth);
+        if (isPlayer)
+        {
+            healthText.text = currentHealth.ToString();
+        }
     }
 
     public void Respawn()
