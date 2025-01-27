@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 
-public class Attack : MonoBehaviour
+[Serializable]
+public class Attack 
 {
     [field: SerializeField] public string AnimationName { get; private set; }
     [field: SerializeField] public float TransitionDuration { get; private set; }

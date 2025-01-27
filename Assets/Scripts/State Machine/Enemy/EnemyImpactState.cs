@@ -10,6 +10,7 @@ public class EnemyImpactState : EnemyBaseState
     public override void Enter()
     {
         stateMachine.Animator.CrossFadeInFixedTime(ImpactHash, CrossFadeDuration);
+        Debug.Log("Entering impact state");
     }
 
     public override void Tick(float deltaTime)
@@ -24,6 +25,6 @@ public class EnemyImpactState : EnemyBaseState
 
     public override void Exit()
     {
-        
+        Debug.Log("Exiting impact state");
     }
 }

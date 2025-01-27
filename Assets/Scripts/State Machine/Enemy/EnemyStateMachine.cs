@@ -46,6 +46,7 @@ public class EnemyStateMachine : StateMachine
     private void HandleTakeDamage()
     {
         SwitchState(new EnemyImpactState(this));
+        Debug.Log("Damage taken");
     }
     private void HandleDie()
     {

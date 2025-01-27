@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TestRespawnHandler : MonoBehaviour
 {
-    [SerializeField] private Transform respawnPoint;
+    public Transform respawnPoint;
     [SerializeField] private CharacterController controller;
 
     public void Update()
@@ -19,5 +19,10 @@ public class TestRespawnHandler : MonoBehaviour
         controller.enabled = false;
         transform.position = respawnPoint.position;
         controller.enabled = true;
+    }
+
+    public void SetRespawn(Transform newRespawn)
+    {
+        respawnPoint = newRespawn;
     }
 }

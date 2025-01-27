@@ -29,10 +29,12 @@ public class Health : MonoBehaviour
         if (isInvulnerable) return;
         currentHealth = Mathf.Max(currentHealth - damage, 0);
         OnTakeDamage?.Invoke();
+        Debug.Log("Dealing damage");
         if (currentHealth == 0)
         {
             OnDie?.Invoke();
         }
+        Debug.Log(currentHealth);
     }
 
     public void Respawn()

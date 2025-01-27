@@ -14,7 +14,7 @@ public abstract class PlayerBaseState : State
         //motion = AdjustVelocityToSlope(motion);
         stateMachine.CharacterController.Move((motion + stateMachine.ForceReceiver.Movement) * deltaTime);
         
-        stateMachine.BaseTransform.rotation = Quaternion.Euler(stateMachine.BaseTransform.rotation.eulerAngles.x, stateMachine.MainCameraTransform.rotation.eulerAngles.y, stateMachine.BaseTransform.rotation.eulerAngles.z);
+        //stateMachine.BaseTransform.rotation = Quaternion.Euler(stateMachine.BaseTransform.rotation.eulerAngles.x, stateMachine.MainCameraTransform.rotation.eulerAngles.y, stateMachine.BaseTransform.rotation.eulerAngles.z);
 
         if (Time.time - stateMachine.lastFootstepTime > 0.5f && stateMachine.CharacterController.velocity != Vector3.zero)
         {

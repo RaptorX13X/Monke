@@ -15,7 +15,7 @@ public class EnemyAttackingState : EnemyBaseState
     public override void Tick(float deltaTime)
     {
         FacePlayer();
-        if (GetNormalizedTime(stateMachine.Animator) >= 1)
+        if (GetNormalizedTime(stateMachine.Animator) >= 1.5)
         {
             stateMachine.SwitchState(new EnemyChasingState(stateMachine));
         }
