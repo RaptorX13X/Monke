@@ -10,6 +10,7 @@ public class EnemyImpactState : EnemyBaseState
     public override void Enter()
     {
         stateMachine.Animator.CrossFadeInFixedTime(ImpactHash, CrossFadeDuration);
+        stateMachine.EnemyAudio.PlayDamage();
         Debug.Log("Entering impact state");
     }
 

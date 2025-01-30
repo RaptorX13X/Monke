@@ -12,6 +12,7 @@ public class PlayerImpactState : PlayerBaseState
     public override void Enter()
     {
         stateMachine.Animator.CrossFadeInFixedTime(ImpactHash, CrossFadeDuration);
+        stateMachine.PlayerAudio.PlayDamage();
     }
 
     public override void Tick(float deltaTime)

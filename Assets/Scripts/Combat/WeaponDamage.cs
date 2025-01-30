@@ -5,6 +5,8 @@ public class WeaponDamage : MonoBehaviour
 {
     [SerializeField] private Collider myCollider;
     private List<Collider> alreadyCollidedWith = new List<Collider>();
+    [SerializeField] private PlayerAudio playerAudio;
+    [SerializeField] private EnemyAudio enemyAudio;
 
     private int damage;
     private float knockback;
@@ -25,6 +27,14 @@ public class WeaponDamage : MonoBehaviour
         if (other.TryGetComponent<Health>(out Health health))
         {
             health.DealDamage(damage);
+            if (playerAudio!= null)
+            {
+                playerAudio.PlayAttack();
+            }
+            if (enemyAudio != null)
+            {
+                enemyAudio.PlayAttack();
+            }
         }
 
         if (other.TryGetComponent(out ForceReceiver forceReceiver))

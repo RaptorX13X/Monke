@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCollider: {fileID: 9147552183235917680}
+  playerAudio: {fileID: 725962259733445944}
+  enemyAudio: {fileID: 0}
 --- !u!54 &266424297613551869
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -306,6 +308,20 @@ MonoBehaviour:
       Data3: -557949548
       Data4: 1367638517
     Path: event:/land
+  playerDamageEvent:
+    Guid:
+      Data1: -310370302
+      Data2: 1301646815
+      Data3: -1470853493
+      Data4: -779111288
+    Path: event:/player damage
+  playerAttackEvent:
+    Guid:
+      Data1: -646046451
+      Data2: 1218651334
+      Data3: -1781211491
+      Data4: 1537141215
+    Path: event:/player attack no weapon
   characterController: {fileID: 9147552183235917680}
 --- !u!114 &7842866747011902996
 MonoBehaviour:
@@ -336,6 +352,7 @@ MonoBehaviour:
   maxHealth: 100
   healthRegen: 5
   isPlayer: 1
+  healthText: {fileID: 0}
 --- !u!114 &7705820476462676696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1568,7 +1585,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3914528299665653806}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.007298538, y: 0.9892927, z: 0.053206574, w: 0.13570486}
+  m_LocalRotation: {x: -0.007298536, y: 0.98929274, z: 0.053206556, w: 0.13570487}
   m_LocalPosition: {x: -1.1357138, y: -0.1148768, z: 4.0204983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

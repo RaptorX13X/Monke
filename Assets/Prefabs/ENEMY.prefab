@@ -2267,6 +2267,7 @@ GameObject:
   - component: {fileID: 4174768456941361899}
   - component: {fileID: 8577416259791916359}
   - component: {fileID: 6965074029876661905}
+  - component: {fileID: 4705738447111965613}
   m_Layer: 0
   m_Name: ENEMY
   m_TagString: Untagged
@@ -2423,6 +2424,7 @@ MonoBehaviour:
   <Weapon>k__BackingField: {fileID: 5206252987054141854}
   <Health>k__BackingField: {fileID: 3243836970122815592}
   <Target>k__BackingField: {fileID: 4174768456941361899}
+  <EnemyAudio>k__BackingField: {fileID: 4705738447111965613}
   <PlayerChasingRange>k__BackingField: 10
   <AttackRange>k__BackingField: 1.5
   <AttackDamage>k__BackingField: 10
@@ -2441,6 +2443,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponObject: {fileID: 8752995454874488895}
+--- !u!114 &4705738447111965613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7725493790076028701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c719d5317c7d4dbb7457491410603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAttackEvent:
+    Guid:
+      Data1: 950929127
+      Data2: 1195327129
+      Data3: -1149225599
+      Data4: -56204762
+    Path: event:/naga attack
+  enemyDamageEvent:
+    Guid:
+      Data1: -176286628
+      Data2: 1210425669
+      Data3: 1901815701
+      Data4: 490591538
+    Path: event:/naga damage
 --- !u!1 &7999606657415807427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2729,6 +2757,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCollider: {fileID: 1172123237438290231}
+  playerAudio: {fileID: 0}
+  enemyAudio: {fileID: 4705738447111965613}
 --- !u!1 &8979078306136199554
 GameObject:
   m_ObjectHideFlags: 0

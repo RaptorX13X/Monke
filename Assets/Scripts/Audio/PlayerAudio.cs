@@ -6,16 +6,20 @@ public class PlayerAudio : MonoBehaviour
     FMOD.Studio.EventInstance FootstepsSound;
     FMOD.Studio.EventInstance JumpSound;
     FMOD.Studio.EventInstance LandSound;
+    FMOD.Studio.EventInstance PlayerDamageSound;
+    FMOD.Studio.EventInstance PlayerAttackSound;
 
 
-    public EventReference footstepsEvent;
-    public EventReference jumpEvent;
-    public EventReference landEvent;
+    [SerializeField] private EventReference footstepsEvent;
+    [SerializeField] private EventReference jumpEvent;
+    [SerializeField] private EventReference landEvent;
+    [SerializeField] private EventReference playerDamageEvent;
+    [SerializeField] private EventReference playerAttackEvent;
 
-    
+
     [SerializeField] private CharacterController characterController;
 
-//fix it kurwa
+
     public void PlayFootsteps()
     {
 
@@ -64,27 +68,27 @@ public class PlayerAudio : MonoBehaviour
         //JumpSound = FMODUnity.RuntimeManager.CreateInstance(jumpEvent);
         //FMODUnity.RuntimeManager.PlayOneShotAttached(jumpEvent, gameObject);
 
-        /*RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 0.5f))
-        {
+        //RaycastHit hit;
+        //if (Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 0.5f))
+        //{
 
-            if (hit.collider.CompareTag("gravel"))
-            {
-                Debug.Log("gravel jump");
-                JumpSound.setParameterByNameWithLabel("Surface", "gravel");
-                JumpSound.start();
-            }
-            else if (hit.collider.CompareTag("stone"))
-            {
-                JumpSound.setParameterByNameWithLabel("Surface", "stone");
-                JumpSound.start();
-            }
-            else
-            {
-                JumpSound.setParameterByNameWithLabel("Surface", "gravel");
-                JumpSound.start();
-            }
-        }*/
+        //    if (hit.collider.CompareTag("gravel"))
+        //    {
+        //        Debug.Log("gravel jump");
+        //        JumpSound.setParameterByNameWithLabel("Surface", "gravel");
+        //        JumpSound.start();
+        //    }
+        //    else if (hit.collider.CompareTag("stone"))
+        //    {
+        //        JumpSound.setParameterByNameWithLabel("Surface", "stone");
+        //        JumpSound.start();
+        //    }
+        //    else
+        //    {
+        //        JumpSound.setParameterByNameWithLabel("Surface", "gravel");
+        //        JumpSound.start();
+        //    }
+        //}
 
         //JumpSound.release();
     }
@@ -93,30 +97,46 @@ public class PlayerAudio : MonoBehaviour
     {
         //LandSound = FMODUnity.RuntimeManager.CreateInstance(landEvent);
         //FMODUnity.RuntimeManager.PlayOneShotAttached(landEvent, gameObject);
-        /*LandSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-        RaycastHit hit;
+        //LandSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+        //RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 0.5f))
-        {
+        //if (Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 0.5f))
+        //{
 
-            if (hit.collider.CompareTag("gravel"))
-            {
-                Debug.Log("gravel land");
-                LandSound.setParameterByNameWithLabel("Surface", "gravel");
-                LandSound.start();
-            }
-            else if (hit.collider.CompareTag("stone"))
-            {
-                LandSound.setParameterByNameWithLabel("Surface", "stone");
-                LandSound.start();
-            }
-            else
-            {
-                LandSound.setParameterByNameWithLabel("Surface", "gravel");
-                LandSound.start();
-            }
-        }
+        //    if (hit.collider.CompareTag("gravel"))
+        //    {
+        //        Debug.Log("gravel land");
+        //        LandSound.setParameterByNameWithLabel("Surface", "gravel");
+        //        LandSound.start();
+        //    }
+        //    else if (hit.collider.CompareTag("stone"))
+        //    {
+        //        LandSound.setParameterByNameWithLabel("Surface", "stone");
+        //        LandSound.start();
+        //    }
+        //    else
+        //    {
+        //        LandSound.setParameterByNameWithLabel("Surface", "gravel");
+        //        LandSound.start();
+        //    }
+        //}
 
-        LandSound.release();*/
+        //LandSound.release();
+    }
+
+    public void PlayDamage() 
+    {
+        PlayerDamageSound = FMODUnity.RuntimeManager.CreateInstance(playerDamageEvent);
+        PlayerDamageSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+        PlayerDamageSound.start();
+        PlayerDamageSound.release();
+    }
+
+    public void PlayAttack()
+    {
+        PlayerAttackSound = FMODUnity.RuntimeManager.CreateInstance(playerAttackEvent);
+        PlayerAttackSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+        PlayerAttackSound.start();
+        PlayerAttackSound.release();
     }
 }
