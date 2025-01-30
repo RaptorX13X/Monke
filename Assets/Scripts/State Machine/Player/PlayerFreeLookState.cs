@@ -12,6 +12,8 @@ public class PlayerFreeLookState : PlayerBaseState
         stateMachine.InputReader.JumpEvent += OnJump;
         stateMachine.InputReader.TargetEvent += OnTarget;
         stateMachine.Animator.CrossFadeInFixedTime(FreeLookBlendtreeHash, 0.1f);
+        stateMachine.PlayerLeftFoot.canPlay = true;
+        stateMachine.PlayerRightFoot.canPlay = true;
     }
 
     public override void Tick(float deltaTime)
@@ -51,6 +53,8 @@ public class PlayerFreeLookState : PlayerBaseState
     {
         stateMachine.InputReader.JumpEvent -= OnJump;
         stateMachine.InputReader.TargetEvent -= OnTarget;
+        stateMachine.PlayerLeftFoot.canPlay = false;
+        stateMachine.PlayerRightFoot.canPlay = false;
     }
     
     private Vector3 CalculateMovement()

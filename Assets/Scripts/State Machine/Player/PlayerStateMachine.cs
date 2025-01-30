@@ -17,6 +17,8 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public Attack[] Attacks { get; private set; }
     [field: SerializeField] public Attack[] AttacksH { get; private set; }
     [field: SerializeField] public TestRespawnHandler Respawn { get; private set; }
+    [field: SerializeField] public PlayerFoot PlayerLeftFoot { get; private set; }
+    [field: SerializeField] public PlayerFoot PlayerRightFoot { get; private set; }
     
 
     [field: Header("Movement Stats")]

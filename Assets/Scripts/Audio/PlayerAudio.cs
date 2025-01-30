@@ -1,5 +1,6 @@
 using UnityEngine;
 using FMODUnity;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 public class PlayerAudio : MonoBehaviour
 {
@@ -22,13 +23,12 @@ public class PlayerAudio : MonoBehaviour
 
     public void PlayFootsteps()
     {
-
-        if(characterController.isGrounded)
+        if(true) // characterController.isGrounded
         {
 
             RaycastHit hit;
-
-            if ((Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 0.5f)))
+            Debug.Log("Attempting steps");
+            if ((Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity))) //characterController.height + 0.5f
             {
                 if (hit.collider.CompareTag("gravel"))
                 {
@@ -41,6 +41,7 @@ public class PlayerAudio : MonoBehaviour
                 }
                 else if (hit.collider.CompareTag("stone"))
                 {
+                    Debug.Log("stone walk");
                     FootstepsSound = FMODUnity.RuntimeManager.CreateInstance(footstepsEvent);
                     FootstepsSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
                     FootstepsSound.setParameterByNameWithLabel("Surface", "stone");
@@ -49,6 +50,7 @@ public class PlayerAudio : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("whatever walk");
                     FootstepsSound = FMODUnity.RuntimeManager.CreateInstance(footstepsEvent);
                     FootstepsSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
                     FootstepsSound.setParameterByNameWithLabel("Surface", "gravel");
@@ -56,7 +58,10 @@ public class PlayerAudio : MonoBehaviour
                     FootstepsSound.release();
                 }
             }
-
+            else
+            {
+                Debug.Log("Raycast failed");
+            }
 
         }
 
