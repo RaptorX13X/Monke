@@ -14,6 +14,9 @@ public class Health : MonoBehaviour
     public event Action OnTakeDamage;
     public event Action OnDie;
     public bool IsDead => currentHealth == 0;
+    public bool canRegen;
+    [SerializeField] private float regenRate = 5;
+    private float regen;
 
     private void Start()
     {
@@ -22,6 +25,8 @@ public class Health : MonoBehaviour
         {
             healthText.text = currentHealth.ToString();
         }
+
+        regen = regenRate;
     }
 
     public void SetInvulnerable(bool isInvulnerable)
@@ -53,12 +58,32 @@ public class Health : MonoBehaviour
         healthText.text = currentHealth.ToString();
     }
 
-    private IEnumerator HealthRegen()
+    private void Update()
     {
-        while (currentHealth != maxHealth)
+        if (canRegen)
+        {
+            if (currentHealth < maxHealth)
+            {
+                regen -= Time.deltaTime;
+                if (regen <= 0)
+                {
+                    currentHealth += healthRegen;
+                    Mathf.Clamp(currentHealth, 0, maxHealth);
+                    healthText.text = currentHealth.ToString();
+                    regen = regenRate;
+                }
+            }
+        }
+    }
+
+    public IEnumerator HealthRegen()
+    {
+        while (currentHealth < maxHealth)
         {
             currentHealth += healthRegen;
-            yield return new WaitForSeconds(0.5f);
+            Mathf.Clamp(currentHealth, 0, maxHealth);
+            healthText.text = currentHealth.ToString();
+            yield return new WaitForSeconds(2f);
         }
     }
 }
