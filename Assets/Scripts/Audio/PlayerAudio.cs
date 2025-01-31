@@ -70,63 +70,64 @@ public class PlayerAudio : MonoBehaviour
 
     public void PlayJump()
     {
-        //JumpSound = FMODUnity.RuntimeManager.CreateInstance(jumpEvent);
-        //FMODUnity.RuntimeManager.PlayOneShotAttached(jumpEvent, gameObject);
+        JumpSound = FMODUnity.RuntimeManager.CreateInstance(jumpEvent);
+        FMODUnity.RuntimeManager.PlayOneShotAttached(jumpEvent, gameObject);
+        JumpSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+        
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 2f))
+        {
 
-        //RaycastHit hit;
-        //if (Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 0.5f))
-        //{
+            if (hit.collider.CompareTag("gravel"))
+            {
+                Debug.Log("gravel jump");
+                JumpSound.setParameterByNameWithLabel("Surface", "gravel");
+                JumpSound.start();
+            }
+            else if (hit.collider.CompareTag("stone"))
+            {
+                JumpSound.setParameterByNameWithLabel("Surface", "stone");
+                JumpSound.start();
+            }
+            else
+            {
+                JumpSound.setParameterByNameWithLabel("Surface", "gravel");
+                JumpSound.start();
+            }
+        }
 
-        //    if (hit.collider.CompareTag("gravel"))
-        //    {
-        //        Debug.Log("gravel jump");
-        //        JumpSound.setParameterByNameWithLabel("Surface", "gravel");
-        //        JumpSound.start();
-        //    }
-        //    else if (hit.collider.CompareTag("stone"))
-        //    {
-        //        JumpSound.setParameterByNameWithLabel("Surface", "stone");
-        //        JumpSound.start();
-        //    }
-        //    else
-        //    {
-        //        JumpSound.setParameterByNameWithLabel("Surface", "gravel");
-        //        JumpSound.start();
-        //    }
-        //}
-
-        //JumpSound.release();
+        JumpSound.release();
     }
 
     public void PlayLanding()
     {
-        //LandSound = FMODUnity.RuntimeManager.CreateInstance(landEvent);
-        //FMODUnity.RuntimeManager.PlayOneShotAttached(landEvent, gameObject);
-        //LandSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-        //RaycastHit hit;
+        LandSound = FMODUnity.RuntimeManager.CreateInstance(landEvent);
+        FMODUnity.RuntimeManager.PlayOneShotAttached(landEvent, gameObject);
+        LandSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+        RaycastHit hit;
 
-        //if (Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 0.5f))
-        //{
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 0.5f))
+        {
 
-        //    if (hit.collider.CompareTag("gravel"))
-        //    {
-        //        Debug.Log("gravel land");
-        //        LandSound.setParameterByNameWithLabel("Surface", "gravel");
-        //        LandSound.start();
-        //    }
-        //    else if (hit.collider.CompareTag("stone"))
-        //    {
-        //        LandSound.setParameterByNameWithLabel("Surface", "stone");
-        //        LandSound.start();
-        //    }
-        //    else
-        //    {
-        //        LandSound.setParameterByNameWithLabel("Surface", "gravel");
-        //        LandSound.start();
-        //    }
-        //}
+            if (hit.collider.CompareTag("gravel"))
+            {
+                Debug.Log("gravel land");
+                LandSound.setParameterByNameWithLabel("Surface", "gravel");
+                LandSound.start();
+            }
+            else if (hit.collider.CompareTag("stone"))
+            {
+                LandSound.setParameterByNameWithLabel("Surface", "stone");
+                LandSound.start();
+            }
+            else
+            {
+                LandSound.setParameterByNameWithLabel("Surface", "gravel");
+                LandSound.start();
+            }
+        }
 
-        //LandSound.release();
+        LandSound.release();
     }
 
     public void PlayDamage() 

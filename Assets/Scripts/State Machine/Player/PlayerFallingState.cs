@@ -57,28 +57,14 @@ public class PlayerFallingState : PlayerBaseState
         
         
         Vector3 movement = CalculateMovement();
-        
-        if (stateMachine.InputReader.isSprinting)
-        {
-            Move(movement * stateMachine.FreeLookSprintingMovementSpeed, deltaTime);
-        }
-        else 
-        {
-            Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
-        }
+        Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
 
-        if (stateMachine.CharacterController.velocity.y <= 0)
-        {
-            stateMachine.SwitchState(new PlayerFallingState(stateMachine));
-            return;
-        }
-        
         //facetarget idk
     }
 
     public override void Exit()
     {
-        stateMachine.InputReader.JumpEvent -= OnJump;
+        //stateMachine.InputReader.JumpEvent -= OnJump;
         stateMachine.PlayerAudio.PlayLanding();
         
         stateMachine.LedgeDetector.OnLedgeDetect -= HandleLedgeDetect;
