@@ -34,6 +34,11 @@ public class PlayerFreeLookState : PlayerBaseState
         {
             Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
         }
+        
+        if (stateMachine.InputReader.isCrouching)
+        {
+            stateMachine.SwitchState(new PlayerCrouchingState(stateMachine));
+        }
 
         if (stateMachine.InputReader.MovementValue == Vector2.zero)
         {
@@ -41,11 +46,6 @@ public class PlayerFreeLookState : PlayerBaseState
             return;
         }
         stateMachine.Animator.SetFloat(FreeLookSpeedHash, 1, AnimatorDampTime, deltaTime);
-
-        if (stateMachine.InputReader.isCrouching)
-        {
-            stateMachine.SwitchState(new PlayerCrouchingState(stateMachine));
-        }
         FaceMovementDirection(movement, deltaTime);
     }
 
