@@ -209,7 +209,7 @@ MonoBehaviour:
   <FreeLookMovementSpeed>k__BackingField: 6
   <FreeLookSprintingMovementSpeed>k__BackingField: 12
   <CrouchingMovementSpeed>k__BackingField: 3
-  <JumpForce>k__BackingField: 2
+  <JumpForce>k__BackingField: 3
   <ClimbOffset>k__BackingField: {x: 0, y: 3.9525, z: 1.105}
   <BaseTransform>k__BackingField: {fileID: 5072153682559003238}
   <RotationDamping>k__BackingField: 10
@@ -1666,8 +1666,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3914528299665653806}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.007298536, y: 0.98929274, z: 0.053206556, w: 0.13570487}
-  m_LocalPosition: {x: -1.1357138, y: -0.1148768, z: 4.0204983}
+  m_LocalRotation: {x: -0.007298531, y: 0.98929274, z: 0.053206563, w: 0.13570477}
+  m_LocalPosition: {x: -1.1357138, y: -0.1148768, z: 4.020502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
