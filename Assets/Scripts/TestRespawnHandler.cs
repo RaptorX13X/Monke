@@ -6,13 +6,13 @@ public class TestRespawnHandler : MonoBehaviour
     public Transform respawnPoint;
     [SerializeField] private CharacterController controller;
 
-    public void Update()
-    {
-        if (transform.position.y <= -10f)
-        {
-            Respawn();
-        }
-    }
+    // public void Update()
+    // {
+    //     if (transform.position.y <= -10f)
+    //     {
+    //         Respawn();
+    //     }
+    // }
 
     public void Respawn()
     {

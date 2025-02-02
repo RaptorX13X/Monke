@@ -75,15 +75,4 @@ public class Health : MonoBehaviour
             }
         }
     }
-
-    public IEnumerator HealthRegen()
-    {
-        while (currentHealth < maxHealth)
-        {
-            currentHealth += healthRegen;
-            Mathf.Clamp(currentHealth, 0, maxHealth);
-            healthText.text = currentHealth.ToString();
-            yield return new WaitForSeconds(2f);
-        }
-    }
 }
