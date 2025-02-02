@@ -204,6 +204,8 @@ MonoBehaviour:
     <Knockback>k__BackingField: 0
   <AttacksH>k__BackingField: []
   <Respawn>k__BackingField: {fileID: 7842866747011902996}
+  <PlayerLeftFoot>k__BackingField: {fileID: 0}
+  <PlayerRightFoot>k__BackingField: {fileID: 0}
   <FreeLookMovementSpeed>k__BackingField: 6
   <FreeLookSprintingMovementSpeed>k__BackingField: 12
   <CrouchingMovementSpeed>k__BackingField: 3
@@ -211,7 +213,6 @@ MonoBehaviour:
   <ClimbOffset>k__BackingField: {x: 0, y: 3.9525, z: 1.105}
   <BaseTransform>k__BackingField: {fileID: 5072153682559003238}
   <RotationDamping>k__BackingField: 10
-  lastFootstepTime: 0
 --- !u!95 &5236497943987884418
 Animator:
   serializedVersion: 7
@@ -293,35 +294,35 @@ MonoBehaviour:
       Data2: 1291007390
       Data3: -1313020540
       Data4: 566784420
-    Path: event:/footsteps
+    Path: event:/player/footsteps
   jumpEvent:
     Guid:
       Data1: -454235298
       Data2: 1187055313
       Data3: -218881911
       Data4: -1897322629
-    Path: event:/jump
+    Path: event:/player/jump
   landEvent:
     Guid:
       Data1: 1382053671
       Data2: 1100149909
       Data3: -557949548
       Data4: 1367638517
-    Path: event:/land
+    Path: event:/player/land
   playerDamageEvent:
     Guid:
       Data1: -310370302
       Data2: 1301646815
       Data3: -1470853493
       Data4: -779111288
-    Path: event:/player damage
+    Path: event:/player/player damage
   playerAttackEvent:
     Guid:
       Data1: -646046451
       Data2: 1218651334
       Data3: -1781211491
       Data4: 1537141215
-    Path: event:/player attack no weapon
+    Path: event:/player/player attack no weapon
   characterController: {fileID: 9147552183235917680}
 --- !u!114 &7842866747011902996
 MonoBehaviour:
@@ -353,6 +354,8 @@ MonoBehaviour:
   healthRegen: 5
   isPlayer: 1
   healthText: {fileID: 0}
+  canRegen: 0
+  regenRate: 5
 --- !u!114 &7705820476462676696
 MonoBehaviour:
   m_ObjectHideFlags: 0

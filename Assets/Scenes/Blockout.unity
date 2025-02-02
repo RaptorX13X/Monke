@@ -3510,7 +3510,7 @@ MonoBehaviour:
       Data2: 1100149909
       Data3: -557949548
       Data4: 1367638517
-    Path: event:/land
+    Path: event:/player/land
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -3910,7 +3910,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -0.007298536, y: 0.9892927, z: 0.05320655, w: 0.13570489}
-  m_LocalPosition: {x: -13.640714, y: 5.2447095, z: 71.514854}
+  m_LocalPosition: {x: -1.9307138, y: 1.3947093, z: 6.8348475}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -61057,7 +61057,7 @@ MonoBehaviour:
       Data2: 1100149909
       Data3: -557949548
       Data4: 1367638517
-    Path: event:/land
+    Path: event:/player/land
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
