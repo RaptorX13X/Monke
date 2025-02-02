@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{913d7432-6465-466f-9fa3-288412966a5e}">
+		<property name="assetPath">
+			<value>player/death/normal death -004.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.5600000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8df8c748-50e3-4d56-aa57-737ff52775ac}</destination>
+		</relationship>
+	</object>
+</objects>

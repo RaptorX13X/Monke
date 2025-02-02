@@ -83103,6 +83103,46 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.053205416
       objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: fallToDeathEvent.Path
+      value: event:/player/death by falling
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: regularDeathEvent.Path
+      value: event:/player/death zero health
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: fallToDeathEvent.Guid.Data1
+      value: 1170077544
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: fallToDeathEvent.Guid.Data2
+      value: 1184985981
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: fallToDeathEvent.Guid.Data3
+      value: -1323981154
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: fallToDeathEvent.Guid.Data4
+      value: -16257528
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: regularDeathEvent.Guid.Data1
+      value: -705087032
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: regularDeathEvent.Guid.Data2
+      value: 1128045365
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: regularDeathEvent.Guid.Data3
+      value: -1087699801
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: regularDeathEvent.Guid.Data4
+      value: -515131835
+      objectReference: {fileID: 0}
     - target: {fileID: 3521376635081412297, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_Name
       value: PlayerRig
