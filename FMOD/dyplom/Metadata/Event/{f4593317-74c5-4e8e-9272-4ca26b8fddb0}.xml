@@ -2,10 +2,10 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{f4593317-74c5-4e8e-9272-4ca26b8fddb0}">
 		<property name="name">
-			<value>jungle ambient</value>
+			<value>jungle ambient 3D</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{1fb10f2a-49be-4413-97b5-375bd22c9730}</destination>
@@ -140,6 +140,7 @@
 		<relationship name="effects">
 			<destination>{73266153-bb3d-461d-9c3b-83b6ba1ff80d}</destination>
 			<destination>{7e4d8b3d-6f35-4f0d-9e03-a6c9a9753b50}</destination>
+			<destination>{530baab3-64ee-4606-b83f-83e79dbcbda1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{f5f16dbe-59e4-413e-976f-0579d3c03c86}" />
@@ -173,5 +174,6 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{7e4d8b3d-6f35-4f0d-9e03-a6c9a9753b50}" />
+	<object class="SpatialiserEffect" id="{530baab3-64ee-4606-b83f-83e79dbcbda1}" />
 	<object class="MixerBusFader" id="{84bf4c31-2950-4051-8886-ed0ba53fc3a1}" />
 </objects>
