@@ -22,7 +22,7 @@ public class ForceReceiver : MonoBehaviour
         }
         else
         {
-            verticalVelocity += Physics.gravity.y * Time.deltaTime; // * gravityMultiplier
+            verticalVelocity += -15 * Time.deltaTime; // * gravityMultiplier
         }
 
         impact = Vector3.SmoothDamp(impact, Vector3.zero, ref dampingVelocity, drag);
@@ -50,7 +50,7 @@ public class ForceReceiver : MonoBehaviour
 
     public void Jump(float jumpForce)
     {
-        verticalVelocity += Mathf.Sqrt(jumpForce * -2f * Physics.gravity.y); // bez -2f, physics i sqrt
+        verticalVelocity += Mathf.Sqrt(jumpForce * -2f * -15); // bez -2f, physics i sqrt
     }
 
     public void Reset()

@@ -204,12 +204,12 @@ MonoBehaviour:
     <Knockback>k__BackingField: 0
   <AttacksH>k__BackingField: []
   <Respawn>k__BackingField: {fileID: 7842866747011902996}
-  <PlayerLeftFoot>k__BackingField: {fileID: 0}
-  <PlayerRightFoot>k__BackingField: {fileID: 0}
+  <PlayerLeftFoot>k__BackingField: {fileID: 1865208680477163774}
+  <PlayerRightFoot>k__BackingField: {fileID: 6185449591362135641}
   <FreeLookMovementSpeed>k__BackingField: 6
   <FreeLookSprintingMovementSpeed>k__BackingField: 12
   <CrouchingMovementSpeed>k__BackingField: 3
-  <JumpForce>k__BackingField: 7
+  <JumpForce>k__BackingField: 2
   <ClimbOffset>k__BackingField: {x: 0, y: 3.9525, z: 1.105}
   <BaseTransform>k__BackingField: {fileID: 5072153682559003238}
   <RotationDamping>k__BackingField: 10
@@ -773,6 +773,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9115797812824765918}
+  - component: {fileID: 6185449591362135641}
+  - component: {fileID: 2935782163468832075}
   m_Layer: 0
   m_Name: mixamorig1:RightFoot
   m_TagString: Untagged
@@ -796,6 +798,43 @@ Transform:
   - {fileID: 4615953016208589094}
   m_Father: {fileID: 6452266027077539535}
   m_LocalEulerAnglesHint: {x: 70.64482, y: -33.14862, z: -34.4582}
+--- !u!114 &6185449591362135641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529843419148270987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b61187936b08ec4dac9d32a97c5509c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAudio: {fileID: 725962259733445944}
+  canPlay: 1
+--- !u!136 &2935782163468832075
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529843419148270987}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Height: 0.15
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.03, z: 0.06}
 --- !u!1 &1747242990664689477
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,6 +908,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4370935415851369773}
+  - component: {fileID: 4322934868645256145}
+  - component: {fileID: 1865208680477163774}
   m_Layer: 0
   m_Name: mixamorig1:LeftFoot
   m_TagString: Untagged
@@ -892,6 +933,43 @@ Transform:
   - {fileID: 8925584871967734274}
   m_Father: {fileID: 1391417258928907667}
   m_LocalEulerAnglesHint: {x: 56.896664, y: 14.680413, z: 3.8323047}
+--- !u!136 &4322934868645256145
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903166987777351763}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Height: 0.15
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.03, z: 0.06}
+--- !u!114 &1865208680477163774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903166987777351763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b61187936b08ec4dac9d32a97c5509c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAudio: {fileID: 725962259733445944}
+  canPlay: 1
 --- !u!1 &1919537590824974322
 GameObject:
   m_ObjectHideFlags: 0
