@@ -4,6 +4,8 @@ public class PlayerFallingState : PlayerBaseState
 {
     private readonly int FallHash = Animator.StringToHash("Fall");
     private const float TransitionDuration = 0.1f;
+
+    private readonly int LandHash = Animator.StringToHash("Land");
     public PlayerFallingState(PlayerStateMachine stateMachine) : base(stateMachine) { }
 
     private Vector3 momentum;
@@ -23,9 +25,7 @@ public class PlayerFallingState : PlayerBaseState
     public override void Tick(float deltaTime)
     {
         Move(momentum,deltaTime);
-        
-        Debug.Log(stateMachine.CharacterController.collisionFlags);
-
+        Debug.Log(stateMachine.CharacterController.isGrounded);
         if (stateMachine.CharacterController.isGrounded)
         {
             ReturnToLocomotion();
@@ -64,6 +64,7 @@ public class PlayerFallingState : PlayerBaseState
 
     public override void Exit()
     {
+        stateMachine.Animator.CrossFadeInFixedTime(LandHash, TransitionDuration);
         //stateMachine.InputReader.JumpEvent -= OnJump;
         stateMachine.PlayerAudio.PlayLanding();
         
