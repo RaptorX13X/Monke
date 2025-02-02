@@ -26,6 +26,8 @@ public class PlayerFreeLookState : PlayerBaseState
         
         Vector3 movement = CalculateMovement();
         
+        
+        
         if (stateMachine.InputReader.isSprinting)
         {
             Move(movement * stateMachine.FreeLookSprintingMovementSpeed, deltaTime);

@@ -55,12 +55,12 @@ public class PlayerStateMachine : StateMachine
     {
         if (OutOfCombat())
         {
-            Debug.Log("Out Of Combat");
+            //Debug.Log("Out Of Combat");
             timer += Time.fixedDeltaTime;
-            Debug.Log(timer);
+            //Debug.Log(timer);
             if (timer >= 5f)
             {
-                Debug.Log("Starting health regeneration");
+                //Debug.Log("Starting health regeneration");
                 timer = 0;
                 Health.canRegen = true;
             }
