@@ -10,6 +10,7 @@ public class EnemyAttackingState : EnemyBaseState
     {
         stateMachine.Weapon.SetAttack(stateMachine.AttackDamage, stateMachine.AttackKnockback);
         stateMachine.Animator.CrossFadeInFixedTime(AttackHash, TransitionDuration);
+        stateMachine.EnemyAudio.PlayAttack();
     }
 
     public override void Tick(float deltaTime)

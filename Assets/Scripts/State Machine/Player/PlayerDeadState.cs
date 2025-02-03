@@ -13,6 +13,7 @@ public class PlayerDeadState : PlayerBaseState
     {
         stateMachine.Weapon.gameObject.SetActive(false);
         stateMachine.Animator.CrossFadeInFixedTime(DyingHash, TransitionDuration);
+        stateMachine.PlayerAudio.PlayDeath();
     }
 
     public override void Tick(float deltaTime)
