@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f1ede2ea-1d15-4234-9120-5628f6db7327}">
+		<property name="assetPath">
+			<value>Dantes Rumba Third Circle 2.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>219.66367346938776</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8df8c748-50e3-4d56-aa57-737ff52775ac}</destination>
+		</relationship>
+	</object>
+</objects>
