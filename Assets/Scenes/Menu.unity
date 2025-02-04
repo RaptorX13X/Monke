@@ -2168,6 +2168,8 @@ MonoBehaviour:
   gameSceneNumber: 1
   menuObject: {fileID: 685824067}
   controlsObject: {fileID: 1109793553}
+  screenWidth: 1440
+  screenHeight: 1080
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
