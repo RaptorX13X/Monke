@@ -19,13 +19,13 @@ public class ForceReceiver : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = (Vector3.Angle (Vector3.up, hitNormal) <= controller.slopeLimit);
-
-        if (!isGrounded)
-        {
-            impact.x += (1f - hitNormal.y) * hitNormal.x * (1f - slideFriction);
-            impact.z += (1f - hitNormal.y) * hitNormal.z * (1f - slideFriction);
-        }
+        // isGrounded = (Vector3.Angle (Vector3.up, hitNormal) <= controller.slopeLimit);
+        //
+        // if (!isGrounded)
+        // {
+        //     impact.x += (1f - hitNormal.y) * hitNormal.x * (1f - slideFriction);
+        //     impact.z += (1f - hitNormal.y) * hitNormal.z * (1f - slideFriction);
+        // }
         
         //Debug.Log(verticalVelocity);
         if (verticalVelocity < 0f && controller.isGrounded)
