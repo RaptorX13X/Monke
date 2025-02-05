@@ -6,8 +6,11 @@ public class PauseController : MonoBehaviour
 {
     [SerializeField] private GameObject inGameUI;
     [SerializeField] private GameObject pauseUI;
+    [SerializeField] private GameObject levelFinishedUI;
     private bool paused;
+    private bool canPause => levelFinishedUI.activeInHierarchy;
     [SerializeField] private int menuSceneNumber;
+    [SerializeField] private int gameSceneNumber;
 
     private void Awake()
     {
@@ -15,6 +18,7 @@ public class PauseController : MonoBehaviour
         Time.timeScale = 1f;
         inGameUI.SetActive(true);
         pauseUI.SetActive(false);
+        levelFinishedUI.SetActive(false);
     }
 
     private void Update()
@@ -25,27 +29,37 @@ public class PauseController : MonoBehaviour
         }
     }
 
+    public void FinishedLevel()
+    {
+        inGameUI.SetActive(false);
+        pauseUI.SetActive(false);
+        levelFinishedUI.SetActive(true);
+    }
+
     private void OnPause()
     {
-        if (!paused)
+        if (canPause)
         {
-            //input.EnablingPlayer();
-            Time.timeScale = 0f;
-            inGameUI.SetActive(false);
-            pauseUI.SetActive(true);
-            paused = true;
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
-        }
-        else
-        {
-            //input.EnablingPlayer();
-            Time.timeScale = 1f;
-            inGameUI.SetActive(true);
-            pauseUI.SetActive(false);
-            paused = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            if (!paused)
+            {
+                //input.EnablingPlayer();
+                Time.timeScale = 0f;
+                inGameUI.SetActive(false);
+                pauseUI.SetActive(true);
+                paused = true;
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+            }
+            else
+            {
+                //input.EnablingPlayer();
+                Time.timeScale = 1f;
+                inGameUI.SetActive(true);
+                pauseUI.SetActive(false);
+                paused = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
         }
     }
 
@@ -57,5 +71,10 @@ public class PauseController : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadSceneAsync(menuSceneNumber);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(gameSceneNumber);
     }
 }

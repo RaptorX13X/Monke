@@ -89,8 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df72047a438d11c4b9d1eeb2ec37a26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSprinting: 0
-  isCrouching: 0
   isBlocking: 0
 --- !u!114 &3090553912852404232
 MonoBehaviour:
@@ -138,13 +136,10 @@ MonoBehaviour:
     <Force>k__BackingField: 15
     <Damage>k__BackingField: 40
     <Knockback>k__BackingField: 0
-  <AttacksH>k__BackingField: []
   <Respawn>k__BackingField: {fileID: 7842866747011902996}
   <PlayerLeftFoot>k__BackingField: {fileID: 1012823597950257914}
   <PlayerRightFoot>k__BackingField: {fileID: 5455867089574262395}
   <FreeLookMovementSpeed>k__BackingField: 6
-  <FreeLookSprintingMovementSpeed>k__BackingField: 12
-  <CrouchingMovementSpeed>k__BackingField: 3
   <JumpForce>k__BackingField: 3
   <ClimbOffset>k__BackingField: {x: 0, y: 3.9525, z: 1.105}
   <BaseTransform>k__BackingField: {fileID: 5072153682559003238}
@@ -189,7 +184,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 3.5
+  m_Height: 3.2
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -392,14 +387,14 @@ CapsuleCollider:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.34
-  m_Height: 0.255
+  m_Radius: 0.35
+  m_Height: 0.35
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0.1}
 --- !u!1 &776677614780131306
@@ -525,14 +520,14 @@ CapsuleCollider:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.34
-  m_Height: 0.255
+  m_Radius: 0.35
+  m_Height: 0.35
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0.1}
 --- !u!1 &1781493078150227662
@@ -902,8 +897,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3914528299665653806}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.029027052, y: -0.8482166, z: -0.04673874, w: 0.5267841}
-  m_LocalPosition: {x: 7.068507, y: 1.3949996, z: 3.4991078}
+  m_LocalRotation: {x: -0.001457816, y: -0.9982033, z: -0.053322583, w: 0.027290434}
+  m_LocalPosition: {x: 0.4065252, y: 1.5137417, z: 7.003859}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -986,7 +981,7 @@ MonoBehaviour:
     SplineCurvature: 1
   RecenteringTarget: 2
   HorizontalAxis:
-    Value: -116.321
+    Value: -37.08157
     Center: 0
     Range: {x: -180, y: 180}
     Wrap: 1
@@ -996,7 +991,7 @@ MonoBehaviour:
       Time: 2
     Restrictions: 0
   VerticalAxis:
-    Value: -6.3748093
+    Value: -10
     Center: 17.5
     Range: {x: -10, y: 45}
     Wrap: 0
