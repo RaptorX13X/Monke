@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerTestPush : MonoBehaviour
 {
-    float pushPower = 2.0f;
+    public float pushPower = 2.0f;
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Rigidbody body = hit.collider.attachedRigidbody;
