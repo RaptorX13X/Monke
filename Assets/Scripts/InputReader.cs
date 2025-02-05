@@ -6,6 +6,7 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public Action JumpEvent;
     public Action TargetEvent;
     public Action CancelEvent;
+    public Action PauseEvent;
     public bool isBlocking;
     public Vector2 MovementValue {get; private set;}
     
@@ -74,6 +75,11 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     }
 
     public void OnHanuman(InputAction.CallbackContext context)
+    {
+        //
+    }
+
+    public void OnPause(InputAction.CallbackContext context)
     {
         //
     }
