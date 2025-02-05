@@ -8,7 +8,7 @@ public class PauseController : MonoBehaviour
     [SerializeField] private GameObject pauseUI;
     [SerializeField] private GameObject levelFinishedUI;
     private bool paused;
-    private bool canPause => levelFinishedUI.activeInHierarchy;
+    private bool canPause => !levelFinishedUI.activeInHierarchy;
     [SerializeField] private int menuSceneNumber;
     [SerializeField] private int gameSceneNumber;
 
