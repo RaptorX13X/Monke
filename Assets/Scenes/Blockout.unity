@@ -38435,6 +38435,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5018841370536349577, guid: a97cc3ef9be39e0408c452be6c9a568d, type: 3}
   m_PrefabInstance: {fileID: 1514316380}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1514693659 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2431810579678744973, guid: df8701e605ad55345a437b0766eb0108, type: 3}
+  m_PrefabInstance: {fileID: 5904931794883613278}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1515500555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51723,6 +51734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelFInished
       objectReference: {fileID: 0}
+    - target: {fileID: 4542904625107815606, guid: bb6f952081b2a9b498b099d523cbbbc0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7273296440510691335, guid: bb6f952081b2a9b498b099d523cbbbc0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -61125,6 +61140,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7672158325937013773, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1514693659}
+    - target: {fileID: 7672158325937013773, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1390839414}
@@ -61204,6 +61223,10 @@ PrefabInstance:
     - target: {fileID: 1397719975170234468, guid: df8701e605ad55345a437b0766eb0108, type: 3}
       propertyPath: m_Name
       value: InGameCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2431810579678744973, guid: df8701e605ad55345a437b0766eb0108, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3642037009716287792, guid: df8701e605ad55345a437b0766eb0108, type: 3}
       propertyPath: m_Pivot.x
