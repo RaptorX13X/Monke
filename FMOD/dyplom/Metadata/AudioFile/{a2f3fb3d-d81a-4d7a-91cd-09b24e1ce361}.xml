@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{a2f3fb3d-d81a-4d7a-91cd-09b24e1ce361}">
+		<property name="assetPath">
+			<value>player/land/stone/land stone 2-001.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.7240816326530612</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8df8c748-50e3-4d56-aa57-737ff52775ac}</destination>
+		</relationship>
+	</object>
+</objects>
