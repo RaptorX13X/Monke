@@ -34,6 +34,9 @@ public class PauseController : MonoBehaviour
         inGameUI.SetActive(false);
         pauseUI.SetActive(false);
         levelFinishedUI.SetActive(true);
+        Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
 
     private void OnPause()
