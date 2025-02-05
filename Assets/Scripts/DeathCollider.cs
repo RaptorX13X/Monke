@@ -8,6 +8,10 @@ public class DeathCollider : MonoBehaviour
         if (other.TryGetComponent(out Health health))
         {
             health.DealDamage(99999);
+            if (other.TryGetComponent(out PlayerStateMachine stateMachine))
+            {
+                stateMachine.deathByFalling = true;
+            }
         }
     }
 }

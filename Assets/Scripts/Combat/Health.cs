@@ -49,7 +49,7 @@ public class Health : MonoBehaviour
         Debug.Log("Dealing damage");
         if (currentHealth == 0)
         {
-            if (playerAudio != null) playerAudio.PlayDeath();
+            //if (playerAudio != null) playerAudio.PlayDeath();
             OnDie?.Invoke();
         }
         Debug.Log(currentHealth);

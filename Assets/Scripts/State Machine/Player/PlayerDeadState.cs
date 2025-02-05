@@ -5,6 +5,8 @@ public class PlayerDeadState : PlayerBaseState
 {
     private readonly int DyingHash = Animator.StringToHash("Death");
     private const float TransitionDuration = 0.1f;
+
+    private float forceCooldown = 2f;
     public PlayerDeadState(PlayerStateMachine stateMachine) : base(stateMachine)
     {
     }
@@ -13,11 +15,14 @@ public class PlayerDeadState : PlayerBaseState
     {
         stateMachine.Weapon.gameObject.SetActive(false);
         stateMachine.Animator.CrossFadeInFixedTime(DyingHash, TransitionDuration);
-        //stateMachine.PlayerAudio.PlayDeath();
+        if (stateMachine.deathByFalling) stateMachine.PlayerAudio.PlayDeathByFalling();
+        else if (!stateMachine.deathByFalling) stateMachine.PlayerAudio.PlayDeath();
     }
 
     public override void Tick(float deltaTime)
     {
+        forceCooldown -= deltaTime;
+        if (forceCooldown >= 0.1f) return;
         if (stateMachine.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1) return;
         stateMachine.Health.Respawn();
         stateMachine.Respawn.Respawn();
@@ -27,6 +32,6 @@ public class PlayerDeadState : PlayerBaseState
 
     public override void Exit()
     {
-        
+        stateMachine.deathByFalling = false;
     }
 }

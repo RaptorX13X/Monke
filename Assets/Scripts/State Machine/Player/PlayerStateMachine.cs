@@ -24,11 +24,13 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public float FreeLookMovementSpeed { get; private set; }
     [field: SerializeField] public float JumpForce { get; private set; }
     [field: SerializeField] public Vector3 ClimbOffset { get; private set; }
-    
+
 
     [field: Header("Testing")]
     [field: SerializeField] public Transform BaseTransform { get; private set; }
     [field: SerializeField] public float RotationDamping { get; private set; }
+
+    public bool deathByFalling;
 
     public bool OutOfCombat()
     {
