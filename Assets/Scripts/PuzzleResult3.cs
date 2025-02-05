@@ -1,15 +1,15 @@
-using System;
 using UnityEngine;
 
-public class PuzzleResult : MonoBehaviour
+public class PuzzleResult3 : MonoBehaviour
 {
     [SerializeField] private PressurePlateCheat plate;
+    [SerializeField] private PressurePlateCheat plate2;
     private bool happened = false;
     [SerializeField] private Vector3 move;
 
     private void Update()
     {
-        if (plate.isSet && !happened)
+        if ((plate.isSet && plate2.isSet) && !happened)
         {
             MoveDoor();
             happened = true;
