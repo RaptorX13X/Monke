@@ -6,13 +6,10 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public Action JumpEvent;
     public Action TargetEvent;
     public Action CancelEvent;
-    public bool isSprinting;
-    public bool isCrouching;
     public bool isBlocking;
     public Vector2 MovementValue {get; private set;}
     
     public bool IsAttackingL { get; private set; }
-    public bool IsAttackingH { get; private set; }
 
     private Controls controls;
 
@@ -42,18 +39,6 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
         else if (context.canceled)
         {
             IsAttackingL = false;
-        }
-    }
-
-    public void OnAttackH(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            IsAttackingH = true;
-        }
-        else if (context.canceled)
-        {
-            IsAttackingH = false;
         }
     }
 
@@ -91,30 +76,6 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public void OnHanuman(InputAction.CallbackContext context)
     {
         //
-    }
-
-    public void OnSprint(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            isSprinting = true;
-        }
-        else if (context.canceled)
-        {
-            isSprinting = false;
-        }
-    }
-
-    public void OnCrouch(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            isCrouching = true;
-        }
-        else if (context.canceled)
-        {
-            isCrouching = false;
-        }
     }
 
     public void OnJump(InputAction.CallbackContext context)

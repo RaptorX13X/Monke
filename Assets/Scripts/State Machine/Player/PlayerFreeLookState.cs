@@ -26,23 +26,9 @@ public class PlayerFreeLookState : PlayerBaseState
         
         Vector3 movement = CalculateMovement();
         
-        
-        
-        if (stateMachine.InputReader.isSprinting)
-        {
-            Move(movement * stateMachine.FreeLookSprintingMovementSpeed, deltaTime);
-        }
-        else 
-        {
-            Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
-        }
-        
-        if (stateMachine.InputReader.isCrouching)
-        {
-            stateMachine.SwitchState(new PlayerCrouchingState(stateMachine));
-        }
+        Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
 
-        if (stateMachine.InputReader.MovementValue == Vector2.zero)
+            if (stateMachine.InputReader.MovementValue == Vector2.zero)
         {
             stateMachine.Animator.SetFloat(FreeLookSpeedHash, 0, AnimatorDampTime, deltaTime);
             return;

@@ -9,4 +9,21 @@ public class Target : MonoBehaviour
     {
         OnDestroyed?.Invoke(this);
     }
+    
+    [SerializeField] private GameObject UIthing;
+
+    private void Awake()
+    {
+        TurnMeOff();
+    }
+
+    public void TurnMeOn()
+    {
+        UIthing.SetActive(true);
+    }
+
+    public void TurnMeOff()
+    {
+        UIthing.SetActive(false);
+    }
 }

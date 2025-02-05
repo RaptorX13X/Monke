@@ -53,4 +53,9 @@ public class EnemyStateMachine : StateMachine
     {
         SwitchState(new EnemyDeadState(this));
     }
+
+    public void DestroyObject()
+    {
+        Destroy(gameObject);
+    }
 }

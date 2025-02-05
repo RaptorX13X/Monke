@@ -15,7 +15,6 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public WeaponDamage Weapon { get; private set; }
     [field: SerializeField] public Targeter Targeter { get; private set; }
     [field: SerializeField] public Attack[] Attacks { get; private set; }
-    [field: SerializeField] public Attack[] AttacksH { get; private set; }
     [field: SerializeField] public TestRespawnHandler Respawn { get; private set; }
     [field: SerializeField] public PlayerFoot PlayerLeftFoot { get; private set; }
     [field: SerializeField] public PlayerFoot PlayerRightFoot { get; private set; }
@@ -23,8 +22,6 @@ public class PlayerStateMachine : StateMachine
 
     [field: Header("Movement Stats")]
     [field: SerializeField] public float FreeLookMovementSpeed { get; private set; }
-    [field: SerializeField] public float FreeLookSprintingMovementSpeed { get; private set; }
-    [field: SerializeField] public float CrouchingMovementSpeed { get; private set; }
     [field: SerializeField] public float JumpForce { get; private set; }
     [field: SerializeField] public Vector3 ClimbOffset { get; private set; }
     
