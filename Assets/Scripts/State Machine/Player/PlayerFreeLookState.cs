@@ -24,11 +24,17 @@ public class PlayerFreeLookState : PlayerBaseState
             return;
         }
         
+        if (stateMachine.InputReader.isBlocking)
+        {
+            stateMachine.SwitchState(new PlayerBlockingState(stateMachine));
+            return;
+        }
+        
         Vector3 movement = CalculateMovement();
         
         Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
 
-            if (stateMachine.InputReader.MovementValue == Vector2.zero)
+        if (stateMachine.InputReader.MovementValue == Vector2.zero)
         {
             stateMachine.Animator.SetFloat(FreeLookSpeedHash, 0, AnimatorDampTime, deltaTime);
             return;

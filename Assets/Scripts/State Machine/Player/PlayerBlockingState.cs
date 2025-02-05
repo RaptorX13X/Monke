@@ -17,14 +17,15 @@ public class PlayerBlockingState : PlayerBaseState
     public override void Tick(float deltaTime)
     {
         Move(deltaTime);
-        if (!stateMachine.InputReader.isBlocking)
-        {
-            stateMachine.SwitchState(new PlayerTargetingState(stateMachine));
-            return;
-        }
+        if (stateMachine.InputReader.isBlocking) return;
         if (stateMachine.Targeter.CurrentTarget == null)
         {
             stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
+            return;
+        }
+        if (!stateMachine.InputReader.isBlocking)
+        {
+            stateMachine.SwitchState(new PlayerTargetingState(stateMachine));
             return;
         }
     }
