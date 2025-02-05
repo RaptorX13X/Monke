@@ -18,6 +18,7 @@ public class PressurePlateCheat : MonoBehaviour
             other.transform.DOShakePosition(1f, 0.05f, 50, 90f, false, false);
             other.transform.DOMove(movement, 1).SetDelay(0).SetLoops(0);
             isSet = true;
+            other.attachedRigidbody.isKinematic = true;
         }
     }
 }
