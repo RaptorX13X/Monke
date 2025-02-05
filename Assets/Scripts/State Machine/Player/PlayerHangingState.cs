@@ -5,6 +5,8 @@ public class PlayerHangingState : PlayerBaseState
     private Vector3 ledgeForward;
     private readonly int HangingHash = Animator.StringToHash("Hanging");
     private const float CrossFadeDuration = 0.1f;
+
+    private float forceCooldown = 0.5f;
     public PlayerHangingState(PlayerStateMachine stateMachine, Vector3 ledgeForward) : base(stateMachine)
     {
         this.ledgeForward = ledgeForward;
@@ -19,6 +21,8 @@ public class PlayerHangingState : PlayerBaseState
 
     public override void Tick(float deltaTime)
     {
+        forceCooldown -= deltaTime;
+        if (forceCooldown >= 0.1f) return;
         if (stateMachine.InputReader.MovementValue.y > 0f)
         {
             stateMachine.SwitchState(new PlayerPullUpState(stateMachine));
