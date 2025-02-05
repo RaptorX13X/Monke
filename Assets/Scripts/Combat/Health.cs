@@ -21,6 +21,8 @@ public class Health : MonoBehaviour
     [SerializeField] private float regenRate = 5;
     private float regen;
 
+    [SerializeField] private PlayerAudio playerAudio;
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -47,6 +49,7 @@ public class Health : MonoBehaviour
         Debug.Log("Dealing damage");
         if (currentHealth == 0)
         {
+            if (playerAudio != null) playerAudio.PlayDeath();
             OnDie?.Invoke();
         }
         Debug.Log(currentHealth);
