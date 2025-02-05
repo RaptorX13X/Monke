@@ -6,24 +6,6 @@
             "id": "df70fa95-8a34-4494-b137-73ab6b9c7d37",
             "actions": [
                 {
-                    "name": "Sprint",
-                    "type": "Button",
-                    "id": "819e3bfd-cc42-4c0b-a6f0-43ed928b421e",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Crouch",
-                    "type": "Button",
-                    "id": "c99f2b3c-988e-43de-879b-1eed7115d960",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "4a3aa119-24d4-4d87-b88f-dd0a778aab03",
@@ -45,15 +27,6 @@
                     "name": "AttackL",
                     "type": "Button",
                     "id": "2baa8c4d-5b8c-4cb4-a329-75c762e4692a",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "AttackH",
-                    "type": "Button",
-                    "id": "7a971b04-55f7-4982-8bdc-c528cf21360c",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -106,28 +79,6 @@
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "75718df9-2464-41f1-8854-d01a7f316809",
-                    "path": "<Keyboard>/shift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Sprint",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "591b39e6-22a6-4b28-a75b-b3275592cc11",
-                    "path": "<Keyboard>/ctrl",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Crouch",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "",
                     "id": "9d8cec1b-2a4d-4792-8193-773d52d961e1",
@@ -207,17 +158,6 @@
                 },
                 {
                     "name": "",
-                    "id": "97e5b9a8-46d4-49c4-bb34-4eeb803bf1f3",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "AttackH",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "b06efc7c-df54-451d-8d1d-12632a6a8340",
                     "path": "<Keyboard>/tab",
                     "interactions": "",
@@ -241,7 +181,7 @@
                 {
                     "name": "",
                     "id": "e07e3336-f7f0-4b74-951d-89b80e31e91b",
-                    "path": "<Keyboard>/f",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

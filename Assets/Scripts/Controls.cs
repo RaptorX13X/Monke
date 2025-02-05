@@ -28,24 +28,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             ""id"": ""df70fa95-8a34-4494-b137-73ab6b9c7d37"",
             ""actions"": [
                 {
-                    ""name"": ""Sprint"",
-                    ""type"": ""Button"",
-                    ""id"": ""819e3bfd-cc42-4c0b-a6f0-43ed928b421e"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Crouch"",
-                    ""type"": ""Button"",
-                    ""id"": ""c99f2b3c-988e-43de-879b-1eed7115d960"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""4a3aa119-24d4-4d87-b88f-dd0a778aab03"",
@@ -67,15 +49,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""name"": ""AttackL"",
                     ""type"": ""Button"",
                     ""id"": ""2baa8c4d-5b8c-4cb4-a329-75c762e4692a"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""AttackH"",
-                    ""type"": ""Button"",
-                    ""id"": ""7a971b04-55f7-4982-8bdc-c528cf21360c"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -128,28 +101,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""75718df9-2464-41f1-8854-d01a7f316809"",
-                    ""path"": ""<Keyboard>/shift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Sprint"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""591b39e6-22a6-4b28-a75b-b3275592cc11"",
-                    ""path"": ""<Keyboard>/ctrl"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Crouch"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": """",
                     ""id"": ""9d8cec1b-2a4d-4792-8193-773d52d961e1"",
@@ -229,17 +180,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""97e5b9a8-46d4-49c4-bb34-4eeb803bf1f3"",
-                    ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""AttackH"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""b06efc7c-df54-451d-8d1d-12632a6a8340"",
                     ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
@@ -263,7 +203,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e07e3336-f7f0-4b74-951d-89b80e31e91b"",
-                    ""path"": ""<Keyboard>/f"",
+                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -877,12 +817,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
-        m_Player_Crouch = m_Player.FindAction("Crouch", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_AttackL = m_Player.FindAction("AttackL", throwIfNotFound: true);
-        m_Player_AttackH = m_Player.FindAction("AttackH", throwIfNotFound: true);
         m_Player_Target = m_Player.FindAction("Target", throwIfNotFound: true);
         m_Player_Cancel = m_Player.FindAction("Cancel", throwIfNotFound: true);
         m_Player_Block = m_Player.FindAction("Block", throwIfNotFound: true);
@@ -967,12 +904,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-    private readonly InputAction m_Player_Sprint;
-    private readonly InputAction m_Player_Crouch;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_AttackL;
-    private readonly InputAction m_Player_AttackH;
     private readonly InputAction m_Player_Target;
     private readonly InputAction m_Player_Cancel;
     private readonly InputAction m_Player_Block;
@@ -982,12 +916,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     {
         private @Controls m_Wrapper;
         public PlayerActions(@Controls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
-        public InputAction @Crouch => m_Wrapper.m_Player_Crouch;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @AttackL => m_Wrapper.m_Player_AttackL;
-        public InputAction @AttackH => m_Wrapper.m_Player_AttackH;
         public InputAction @Target => m_Wrapper.m_Player_Target;
         public InputAction @Cancel => m_Wrapper.m_Player_Cancel;
         public InputAction @Block => m_Wrapper.m_Player_Block;
@@ -1002,12 +933,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
-            @Sprint.started += instance.OnSprint;
-            @Sprint.performed += instance.OnSprint;
-            @Sprint.canceled += instance.OnSprint;
-            @Crouch.started += instance.OnCrouch;
-            @Crouch.performed += instance.OnCrouch;
-            @Crouch.canceled += instance.OnCrouch;
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
@@ -1017,9 +942,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @AttackL.started += instance.OnAttackL;
             @AttackL.performed += instance.OnAttackL;
             @AttackL.canceled += instance.OnAttackL;
-            @AttackH.started += instance.OnAttackH;
-            @AttackH.performed += instance.OnAttackH;
-            @AttackH.canceled += instance.OnAttackH;
             @Target.started += instance.OnTarget;
             @Target.performed += instance.OnTarget;
             @Target.canceled += instance.OnTarget;
@@ -1039,12 +961,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IPlayerActions instance)
         {
-            @Sprint.started -= instance.OnSprint;
-            @Sprint.performed -= instance.OnSprint;
-            @Sprint.canceled -= instance.OnSprint;
-            @Crouch.started -= instance.OnCrouch;
-            @Crouch.performed -= instance.OnCrouch;
-            @Crouch.canceled -= instance.OnCrouch;
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
@@ -1054,9 +970,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @AttackL.started -= instance.OnAttackL;
             @AttackL.performed -= instance.OnAttackL;
             @AttackL.canceled -= instance.OnAttackL;
-            @AttackH.started -= instance.OnAttackH;
-            @AttackH.performed -= instance.OnAttackH;
-            @AttackH.canceled -= instance.OnAttackH;
             @Target.started -= instance.OnTarget;
             @Target.performed -= instance.OnTarget;
             @Target.canceled -= instance.OnTarget;
@@ -1254,12 +1167,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     }
     public interface IPlayerActions
     {
-        void OnSprint(InputAction.CallbackContext context);
-        void OnCrouch(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnAttackL(InputAction.CallbackContext context);
-        void OnAttackH(InputAction.CallbackContext context);
         void OnTarget(InputAction.CallbackContext context);
         void OnCancel(InputAction.CallbackContext context);
         void OnBlock(InputAction.CallbackContext context);

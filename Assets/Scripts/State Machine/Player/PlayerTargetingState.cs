@@ -11,6 +11,7 @@ public class PlayerTargetingState : PlayerBaseState
     {
         stateMachine.InputReader.CancelEvent += OnCancel;
         stateMachine.Animator.CrossFadeInFixedTime(TargetingBlendtreeHash, 0.1f);
+        stateMachine.Targeter.CurrentTarget.TurnMeOn();
     }
 
     public override void Tick(float deltaTime)
@@ -45,6 +46,7 @@ public class PlayerTargetingState : PlayerBaseState
 
     private void OnCancel()
     {
+        stateMachine.Targeter.CurrentTarget.TurnMeOff();
         stateMachine.Targeter.Cancel();
         stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
     }
@@ -80,7 +82,5 @@ public class PlayerTargetingState : PlayerBaseState
             float value = stateMachine.InputReader.MovementValue.y > 0 ? 1f : -1f;
             stateMachine.Animator.SetFloat(TargetingRightHash, value, 0.1f, deltaTime);
         }
-        
-        
     }
 }
