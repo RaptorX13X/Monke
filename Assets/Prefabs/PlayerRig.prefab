@@ -144,6 +144,7 @@ MonoBehaviour:
   <ClimbOffset>k__BackingField: {x: 0, y: 3.9525, z: 1.105}
   <BaseTransform>k__BackingField: {fileID: 5072153682559003238}
   <RotationDamping>k__BackingField: 10
+  deathByFalling: 0
 --- !u!95 &5236497943987884418
 Animator:
   serializedVersion: 7
@@ -268,6 +269,13 @@ MonoBehaviour:
       Data3: -1323981154
       Data4: -16257528
     Path: event:/player/death by falling
+  pushingObjectEvent:
+    Guid:
+      Data1: -647882837
+      Data2: 1220498828
+      Data3: -75623009
+      Data4: -571628866
+    Path: event:/pushing object
   characterController: {fileID: 9147552183235917680}
 --- !u!114 &7842866747011902996
 MonoBehaviour:
@@ -900,7 +908,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3914528299665653806}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.061020356, y: -0.39817145, z: -0.026556702, w: 0.91489387}
+  m_LocalRotation: {x: -0.050573893, y: -0.3175269, z: -0.01696183, w: 0.9467478}
   m_LocalPosition: {x: 4.244715, y: 1.5137417, z: -5.57013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

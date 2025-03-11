@@ -11,6 +11,7 @@ public class PlayerAudio : MonoBehaviour
     FMOD.Studio.EventInstance PlayerAttackSound;
     FMOD.Studio.EventInstance RegularDeathSound;
     FMOD.Studio.EventInstance FallToDeathSound;
+    FMOD.Studio.EventInstance PushingObjectSound;
 
 
     [SerializeField] private EventReference footstepsEvent;
@@ -20,6 +21,7 @@ public class PlayerAudio : MonoBehaviour
     [SerializeField] private EventReference playerAttackEvent;
     [SerializeField] private EventReference regularDeathEvent;
     [SerializeField] private EventReference fallToDeathEvent;
+    [SerializeField] private EventReference pushingObjectEvent;
 
 
     [SerializeField] private CharacterController characterController;
@@ -164,5 +166,13 @@ public class PlayerAudio : MonoBehaviour
         FallToDeathSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
         FallToDeathSound.start();
         FallToDeathSound.release();
+    }
+
+    public void PlayPushingObject()
+    {
+        PushingObjectSound = FMODUnity.RuntimeManager.CreateInstance(pushingObjectEvent);
+        PushingObjectSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+        PushingObjectSound.start();
+        PushingObjectSound.release();
     }
 }
