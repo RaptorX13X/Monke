@@ -25,14 +25,6 @@ public class PlayerJumpingState : PlayerBaseState
         Vector3 movement = CalculateMovement();
         
         Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
-        // if (stateMachine.InputReader.isSprinting)
-        // {
-        //     Move(movement * stateMachine.FreeLookSprintingMovementSpeed, deltaTime);
-        // }
-        // else 
-        // {
-        //     Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
-        // }
 
         if (stateMachine.CharacterController.velocity.y <= 0)
         {

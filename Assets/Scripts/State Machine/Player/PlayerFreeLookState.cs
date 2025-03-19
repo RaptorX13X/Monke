@@ -10,7 +10,6 @@ public class PlayerFreeLookState : PlayerBaseState
     public override void Enter()
     {
         stateMachine.InputReader.JumpEvent += OnJump;
-        stateMachine.InputReader.TargetEvent += OnTarget;
         stateMachine.Animator.CrossFadeInFixedTime(FreeLookBlendtreeHash, 0.1f);
         stateMachine.PlayerLeftFoot.canPlay = true;
         stateMachine.PlayerRightFoot.canPlay = true;
@@ -18,18 +17,6 @@ public class PlayerFreeLookState : PlayerBaseState
 
     public override void Tick(float deltaTime)
     {
-        if (stateMachine.InputReader.IsAttackingL)
-        {
-            stateMachine.SwitchState(new PlayerAttackingState(stateMachine, 0));
-            return;
-        }
-        
-        if (stateMachine.InputReader.isBlocking)
-        {
-            stateMachine.SwitchState(new PlayerBlockingState(stateMachine));
-            return;
-        }
-        
         Vector3 movement = CalculateMovement();
         
         Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
@@ -46,7 +33,6 @@ public class PlayerFreeLookState : PlayerBaseState
     public override void Exit()
     {
         stateMachine.InputReader.JumpEvent -= OnJump;
-        stateMachine.InputReader.TargetEvent -= OnTarget;
         stateMachine.PlayerLeftFoot.canPlay = false;
         stateMachine.PlayerRightFoot.canPlay = false;
     }
@@ -68,13 +54,7 @@ public class PlayerFreeLookState : PlayerBaseState
     {
         stateMachine.SwitchState(new PlayerJumpingState(stateMachine));
     }
-    
-    private void OnTarget()
-    {
-        if(!stateMachine.Targeter.SelectTarget()) {return;}
-        stateMachine.SwitchState(new PlayerTargetingState(stateMachine));
-    }
-    
+
     private void FaceMovementDirection(Vector3 movement, float deltaTime)
     {
         stateMachine.transform.rotation = Quaternion.Lerp(stateMachine.transform.rotation, Quaternion.LookRotation(movement), deltaTime * stateMachine.RotationDamping);

@@ -14,7 +14,6 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public Health Health { get; private set; }
     [field: SerializeField] public WeaponDamage Weapon { get; private set; }
     [field: SerializeField] public Targeter Targeter { get; private set; }
-    [field: SerializeField] public Attack[] Attacks { get; private set; }
     [field: SerializeField] public TestRespawnHandler Respawn { get; private set; }
     [field: SerializeField] public PlayerFoot PlayerLeftFoot { get; private set; }
     [field: SerializeField] public PlayerFoot PlayerRightFoot { get; private set; }
@@ -54,12 +53,9 @@ public class PlayerStateMachine : StateMachine
     {
         if (OutOfCombat())
         {
-            //Debug.Log("Out Of Combat");
             timer += Time.fixedDeltaTime;
-            //Debug.Log(timer);
             if (timer >= 5f)
             {
-                //Debug.Log("Starting health regeneration");
                 timer = 0;
                 Health.canRegen = true;
             }
@@ -84,7 +80,7 @@ public class PlayerStateMachine : StateMachine
 
     private void HandleTakeDamage()
     {
-        SwitchState(new PlayerImpactState(this));
+        
     }
 
     private void HandleDie()
