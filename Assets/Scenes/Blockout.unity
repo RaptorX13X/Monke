@@ -12828,6 +12828,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8689449202193871711, guid: d58999d8f91e13b49b250588d92083ff, type: 3}
   m_PrefabInstance: {fileID: 461347497}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &465025642 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 271679210315325818, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+  m_PrefabInstance: {fileID: 5438912051963420910}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &466111004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32548,6 +32553,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 314437582060279391, guid: db544d2c28a470147a37c30059b9a1bb, type: 3}
   m_PrefabInstance: {fileID: 207766247}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1073841819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4225318272120624205, guid: 71086414a0611e9449306370acfda382, type: 3}
+  m_PrefabInstance: {fileID: 2130960023}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1076884034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44531,6 +44541,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5072153682559003238, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
   m_PrefabInstance: {fileID: 5438912051963420910}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1453927833 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+  m_PrefabInstance: {fileID: 5438912051963420910}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465025642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc18e87b089529b48916caebc654a00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1453927839 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3090553912852404232, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+  m_PrefabInstance: {fileID: 5438912051963420910}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465025642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c64c857b1862c440b10d73e8c71ba26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1456220188
 GameObject:
   m_ObjectHideFlags: 0
@@ -71288,7 +71320,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4225318272120624205, guid: 71086414a0611e9449306370acfda382, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2130960027}
   m_SourcePrefab: {fileID: 100100000, guid: 71086414a0611e9449306370acfda382, type: 3}
 --- !u!4 &2130960024 stripped
 Transform:
@@ -71300,6 +71335,18 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 3112186932185454510, guid: 71086414a0611e9449306370acfda382, type: 3}
   m_PrefabInstance: {fileID: 2130960023}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2130960027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073841819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31782961dd61a3d4b9c6ef646dd1440a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2131544381 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5018841370536349577, guid: a97cc3ef9be39e0408c452be6c9a568d, type: 3}
@@ -72990,6 +73037,22 @@ PrefabInstance:
       propertyPath: pushPower
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1833230998227929750, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: stateMachine
+      value: 
+      objectReference: {fileID: 1453927839}
+    - target: {fileID: 3090553912852404232, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: <PlayerObject>k__BackingField
+      value: 
+      objectReference: {fileID: 465025642}
+    - target: {fileID: 3090553912852404232, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: <HanumanJumpForce>k__BackingField
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090553912852404232, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: <HanumanMovementSpeed>k__BackingField
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3521376635081412297, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_Name
       value: PlayerRig
@@ -73042,6 +73105,10 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1390839414}
+    - target: {fileID: 7672158325937013773, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1453927833}
     - target: {fileID: 7842866747011902996, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: respawnPoint
       value: 
