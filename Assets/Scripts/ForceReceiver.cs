@@ -6,16 +6,11 @@ public class ForceReceiver : MonoBehaviour
     [SerializeField] private CharacterController controller;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private float drag;
-    [SerializeField] private float gravityMultiplier;
     private float verticalVelocity;
     private Vector3 dampingVelocity;
     private Vector3 impact;
     
     public Vector3 Movement => impact + Vector3.up * verticalVelocity;
-
-    private Vector3 hitNormal;
-    private bool isGrounded;
-    private float slideFriction = 0.3f;
 
     private void Update()
     {
@@ -60,9 +55,5 @@ public class ForceReceiver : MonoBehaviour
     {
         impact = Vector3.zero;
         verticalVelocity = 0f;
-    }
-
-    void OnControllerColliderHit (ControllerColliderHit hit) {
-        hitNormal = hit.normal;
     }
 }

@@ -33,4 +33,18 @@ public abstract class PlayerBaseState : State
 
         stateMachine.transform.rotation = Quaternion.LookRotation(lookPos);
     }
+
+    protected void HanumanChange()
+    {
+        stateMachine.HanumanBool = !stateMachine.HanumanBool;
+        // change state to changing into hanuman or out of hanuman
+        if (stateMachine.HanumanBool)
+        {
+            stateMachine.PlayerObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        }
+        else
+        {
+            stateMachine.PlayerObject.transform.localScale = Vector3.one;
+        }
+    }
 }

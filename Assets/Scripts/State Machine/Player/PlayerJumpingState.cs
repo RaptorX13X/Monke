@@ -9,7 +9,15 @@ public class PlayerJumpingState : PlayerBaseState
     private Vector3 momentum;
     public override void Enter()
     {
-        stateMachine.ForceReceiver.Jump(stateMachine.JumpForce);
+        if (stateMachine.HanumanBool)
+        {
+            stateMachine.ForceReceiver.Jump(stateMachine.HanumanJumpForce);
+        }
+        else
+        {
+            stateMachine.ForceReceiver.Jump(stateMachine.JumpForce);
+        }
+        
 
         momentum = stateMachine.CharacterController.velocity;
         momentum.y = 0f;
@@ -24,7 +32,14 @@ public class PlayerJumpingState : PlayerBaseState
         
         Vector3 movement = CalculateMovement();
         
-        Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
+        if (stateMachine.HanumanBool)
+        {
+            Move(movement * stateMachine.HanumanMovementSpeed, deltaTime);
+        }
+        else
+        {
+            Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
+        }
 
         if (stateMachine.CharacterController.velocity.y <= 0)
         {

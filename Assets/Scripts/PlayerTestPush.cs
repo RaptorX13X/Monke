@@ -3,8 +3,13 @@ using UnityEngine;
 public class PlayerTestPush : MonoBehaviour
 {
     public float pushPower = 2.0f;
+    [SerializeField] private PlayerStateMachine stateMachine;
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
+        if (hit.gameObject.TryGetComponent(out BigPush bigPush))
+        {
+            if (!stateMachine.HanumanBool) return;
+        }
         Rigidbody body = hit.collider.attachedRigidbody;
 
         // no rigidbody

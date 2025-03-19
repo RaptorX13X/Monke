@@ -10,6 +10,7 @@ public class PlayerFreeLookState : PlayerBaseState
     public override void Enter()
     {
         stateMachine.InputReader.JumpEvent += OnJump;
+        stateMachine.InputReader.HanumanEvent += OnHanuman;
         stateMachine.Animator.CrossFadeInFixedTime(FreeLookBlendtreeHash, 0.1f);
         stateMachine.PlayerLeftFoot.canPlay = true;
         stateMachine.PlayerRightFoot.canPlay = true;
@@ -18,9 +19,15 @@ public class PlayerFreeLookState : PlayerBaseState
     public override void Tick(float deltaTime)
     {
         Vector3 movement = CalculateMovement();
+        if (stateMachine.HanumanBool)
+        {
+            Move(movement * stateMachine.HanumanMovementSpeed, deltaTime);
+        }
+        else
+        {
+            Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
+        }
         
-        Move(movement * stateMachine.FreeLookMovementSpeed, deltaTime);
-
         if (stateMachine.InputReader.MovementValue == Vector2.zero)
         {
             stateMachine.Animator.SetFloat(FreeLookSpeedHash, 0, AnimatorDampTime, deltaTime);
@@ -33,6 +40,7 @@ public class PlayerFreeLookState : PlayerBaseState
     public override void Exit()
     {
         stateMachine.InputReader.JumpEvent -= OnJump;
+        stateMachine.InputReader.HanumanEvent -= OnHanuman;
         stateMachine.PlayerLeftFoot.canPlay = false;
         stateMachine.PlayerRightFoot.canPlay = false;
     }
@@ -53,6 +61,11 @@ public class PlayerFreeLookState : PlayerBaseState
     private void OnJump()
     {
         stateMachine.SwitchState(new PlayerJumpingState(stateMachine));
+    }
+
+    private void OnHanuman()
+    {
+        HanumanChange();
     }
 
     private void FaceMovementDirection(Vector3 movement, float deltaTime)

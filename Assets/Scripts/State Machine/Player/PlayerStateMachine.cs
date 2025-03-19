@@ -17,11 +17,14 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public TestRespawnHandler Respawn { get; private set; }
     [field: SerializeField] public PlayerFoot PlayerLeftFoot { get; private set; }
     [field: SerializeField] public PlayerFoot PlayerRightFoot { get; private set; }
+    [field: SerializeField] public GameObject PlayerObject { get; set; }
     
 
     [field: Header("Movement Stats")]
     [field: SerializeField] public float FreeLookMovementSpeed { get; private set; }
+    [field: SerializeField] public float HanumanMovementSpeed { get; private set; }
     [field: SerializeField] public float JumpForce { get; private set; }
+    [field: SerializeField] public float HanumanJumpForce { get; private set; }
     [field: SerializeField] public Vector3 ClimbOffset { get; private set; }
 
 
@@ -30,6 +33,8 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public float RotationDamping { get; private set; }
 
     public bool deathByFalling;
+
+    public bool HanumanBool = false;
 
     public bool OutOfCombat()
     {
