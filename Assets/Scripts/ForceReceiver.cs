@@ -19,22 +19,13 @@ public class ForceReceiver : MonoBehaviour
 
     private void Update()
     {
-        // isGrounded = (Vector3.Angle (Vector3.up, hitNormal) <= controller.slopeLimit);
-        //
-        // if (!isGrounded)
-        // {
-        //     impact.x += (1f - hitNormal.y) * hitNormal.x * (1f - slideFriction);
-        //     impact.z += (1f - hitNormal.y) * hitNormal.z * (1f - slideFriction);
-        // }
-        
-        //Debug.Log(verticalVelocity);
         if (verticalVelocity < 0f && controller.isGrounded)
         {
-            verticalVelocity = -2f; // Physics.gravity.y * Time.deltaTime
+            verticalVelocity = -2f; 
         }
         else
         {
-            verticalVelocity += -15 * Time.deltaTime; // * gravityMultiplier
+            verticalVelocity += -15 * Time.deltaTime;
         }
 
         impact = Vector3.SmoothDamp(impact, Vector3.zero, ref dampingVelocity, drag);
@@ -62,7 +53,7 @@ public class ForceReceiver : MonoBehaviour
 
     public void Jump(float jumpForce)
     {
-        verticalVelocity += Mathf.Sqrt(jumpForce * -2f * -15); // bez -2f, physics i sqrt
+        verticalVelocity += Mathf.Sqrt(jumpForce * -2f * -15); 
     }
 
     public void Reset()

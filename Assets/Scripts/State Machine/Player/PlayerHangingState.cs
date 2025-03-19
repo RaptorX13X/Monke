@@ -16,7 +16,6 @@ public class PlayerHangingState : PlayerBaseState
     {
         stateMachine.transform.rotation = Quaternion.LookRotation(ledgeForward, Vector3.up);
         stateMachine.Animator.CrossFadeInFixedTime(HangingHash, CrossFadeDuration);
-        //stateMachine.InputReader.JumpEvent += OnJump
     }
 
     public override void Tick(float deltaTime)
@@ -37,11 +36,6 @@ public class PlayerHangingState : PlayerBaseState
 
     public override void Exit()
     {
-        //stateMachine.InputReader.JumpEvent -= OnJump;
-    }
-    
-    private void OnJump()
-    {
-        stateMachine.SwitchState(new PlayerJumpingState(stateMachine));
+        
     }
 }
