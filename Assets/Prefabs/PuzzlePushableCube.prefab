@@ -150,6 +150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleBox1
       objectReference: {fileID: 0}
+    - target: {fileID: 4539418856314472946, guid: ec765278664437f4aa0085f231cc81c1, type: 3}
+      propertyPath: m_TagString
+      value: PuzzleBlock
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -178,11 +182,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.5, y: 2.5, z: 2.5}
+  m_Size: {x: 6.27, y: 4.77, z: 3.82}
   m_Center: {x: -7.556876e-16, y: 1.2499998, z: 0}
 --- !u!4 &6721994463850727267 stripped
 Transform:

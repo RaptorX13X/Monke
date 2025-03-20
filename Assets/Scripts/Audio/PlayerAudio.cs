@@ -175,4 +175,9 @@ public class PlayerAudio : MonoBehaviour
         PushingObjectSound.start();
         PushingObjectSound.release();
     }
+
+    public void StopPushingObject()
+    {
+        PushingObjectSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
 }
