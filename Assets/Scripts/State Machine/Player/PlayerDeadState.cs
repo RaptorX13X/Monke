@@ -13,7 +13,7 @@ public class PlayerDeadState : PlayerBaseState
 
     public override void Enter()
     {
-        stateMachine.Weapon.gameObject.SetActive(false);
+        //stateMachine.Weapon.gameObject.SetActive(false);
         stateMachine.Animator.CrossFadeInFixedTime(DyingHash, TransitionDuration);
         if (stateMachine.deathByFalling) stateMachine.PlayerAudio.PlayDeathByFalling();
         else if (!stateMachine.deathByFalling) stateMachine.PlayerAudio.PlayDeath();
@@ -26,7 +26,7 @@ public class PlayerDeadState : PlayerBaseState
         if (stateMachine.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1) return;
         stateMachine.Health.Respawn();
         stateMachine.Respawn.Respawn();
-        stateMachine.Weapon.gameObject.SetActive(true);
+        //stateMachine.Weapon.gameObject.SetActive(true);
         stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
     }
 

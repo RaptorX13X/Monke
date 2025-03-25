@@ -138,6 +138,7 @@ public class PlayerAudio : MonoBehaviour
 
     public void PlayDamage() 
     {
+        
         PlayerDamageSound = FMODUnity.RuntimeManager.CreateInstance(playerDamageEvent);
         PlayerDamageSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
         PlayerDamageSound.start();
