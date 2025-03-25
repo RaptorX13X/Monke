@@ -7,6 +7,7 @@ public class PuzzleResult : MonoBehaviour
     private bool happened = false;
     [SerializeField] private Vector3 move;
     private Vector3 target;
+    [SerializeField] private PuzzleAudio puzzleAudio;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class PuzzleResult : MonoBehaviour
     {
         if (plate.isSet && !happened)
         {
+            puzzleAudio.PlaySecretDoorOpen();
             MoveDoor();
             happened = true;
         }
@@ -24,8 +26,10 @@ public class PuzzleResult : MonoBehaviour
 
     private void MoveDoor()
     {
+        
         transform.DOShakePosition(1f, 0.05f, 50, 90f, false, false);
         transform.DOLocalMove(target, 5).SetDelay(1).SetLoops(0);
         //transform.position += move;
+
     }
 }

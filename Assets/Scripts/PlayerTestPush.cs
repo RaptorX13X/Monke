@@ -4,6 +4,9 @@ public class PlayerTestPush : MonoBehaviour
 {
     public float pushPower = 2.0f;
     [SerializeField] private PlayerStateMachine stateMachine;
+    [SerializeField] private PlayerAudio playerAudio;
+    private bool alreadyPlaying;
+    
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.gameObject.TryGetComponent(out BigPush bigPush))
@@ -33,5 +36,11 @@ public class PlayerTestPush : MonoBehaviour
 
         // Apply the push
         body.linearVelocity = pushDir * pushPower;
+
+        //if (!alreadyPlaying)
+        //{
+        //    playerAudio.PlayPushingObject();
+        //    alreadyPlaying = true;
+        //}
     }
 }
