@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using DG.Tweening;
+using FMODUnity;
+
 public class PuzzleResult : MonoBehaviour
 {
     [SerializeField] private PressurePlateCheat plate;
@@ -8,6 +10,7 @@ public class PuzzleResult : MonoBehaviour
     [SerializeField] private Vector3 move;
     private Vector3 target;
     [SerializeField] private PuzzleAudio puzzleAudio;
+    [SerializeField] private StudioEventEmitter emitter;
 
     private void Start()
     {
@@ -18,7 +21,7 @@ public class PuzzleResult : MonoBehaviour
     {
         if (plate.isSet && !happened)
         {
-            puzzleAudio.PlaySecretDoorOpen();
+            emitter.Play();
             MoveDoor();
             happened = true;
         }

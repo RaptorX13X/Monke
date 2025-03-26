@@ -6,6 +6,7 @@ public class LeverPuzzle : MonoBehaviour
     [SerializeField] private Lever[] levers;
     private Vector3 target;
     [SerializeField] private Vector3 move;
+    [SerializeField] private PuzzleAudio puzzleAudio;
     
     private void Start()
     {
@@ -18,7 +19,7 @@ public class LeverPuzzle : MonoBehaviour
         {
             if (!lever.isSet) return;
         } 
-        
+        puzzleAudio.PlayPuzzleSolved();
         MoveDoor();
     }
     
