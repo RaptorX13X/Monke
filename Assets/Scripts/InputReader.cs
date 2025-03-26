@@ -6,6 +6,7 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public Action JumpEvent;
     public Action PauseEvent;
     public Action HanumanEvent;
+    public Action InteractEvent;
     public Vector2 MovementValue {get; private set;}
 
     private Controls controls;
@@ -29,7 +30,8 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        //
+        if (!context.performed) { return; }
+        InteractEvent?.Invoke();
     }
 
     public void OnHanuman(InputAction.CallbackContext context)

@@ -3733,6 +3733,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d58999d8f91e13b49b250588d92083ff, type: 3}
+--- !u!114 &146991039 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2698470687376150363, guid: 876b4279c54c5ef4c89039be36973ed5, type: 3}
+  m_PrefabInstance: {fileID: 435200964}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ed5bdb88f98354fbab88f199e92e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &147681814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6519,6 +6530,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &258533377 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2698470687376150363, guid: 876b4279c54c5ef4c89039be36973ed5, type: 3}
+  m_PrefabInstance: {fileID: 1522535108}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ed5bdb88f98354fbab88f199e92e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &259709508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10916,6 +10938,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2698470687376150363, guid: 876b4279c54c5ef4c89039be36973ed5, type: 3}
+      propertyPath: puzzle
+      value: 
+      objectReference: {fileID: 961744503}
     - target: {fileID: 4806511896402460939, guid: 876b4279c54c5ef4c89039be36973ed5, type: 3}
       propertyPath: m_Name
       value: Lever_01
@@ -21884,6 +21910,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &788995937 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2698470687376150363, guid: 876b4279c54c5ef4c89039be36973ed5, type: 3}
+  m_PrefabInstance: {fileID: 2004650238}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ed5bdb88f98354fbab88f199e92e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &791663687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5018841370536349577, guid: a97cc3ef9be39e0408c452be6c9a568d, type: 3}
@@ -27628,6 +27665,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d58999d8f91e13b49b250588d92083ff, type: 3}
+--- !u!1 &961744499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2503581308961057028, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
+  m_PrefabInstance: {fileID: 1481972484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &961744503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961744499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4201ebdfbd7b56745ba5f8d709d89810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levers:
+  - {fileID: 788995937}
+  - {fileID: 146991039}
+  - {fileID: 258533377}
+  move: {x: 0, y: -20, z: 0}
 --- !u!1 &962994212
 GameObject:
   m_ObjectHideFlags: 0
@@ -34187,6 +34246,10 @@ PrefabInstance:
     - target: {fileID: 2503581308961057028, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
       propertyPath: m_Name
       value: Door_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503581308961057028, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023412073059988414, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
       propertyPath: m_LocalScale.x
@@ -43887,7 +43950,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2503581308961057028, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 961744503}
   m_SourcePrefab: {fileID: 100100000, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
 --- !u!1001 &1484747172
 PrefabInstance:
@@ -45336,6 +45402,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2698470687376150363, guid: 876b4279c54c5ef4c89039be36973ed5, type: 3}
+      propertyPath: puzzle
+      value: 
+      objectReference: {fileID: 961744503}
     - target: {fileID: 4806511896402460939, guid: 876b4279c54c5ef4c89039be36973ed5, type: 3}
       propertyPath: m_Name
       value: Lever_01
@@ -63404,6 +63474,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2698470687376150363, guid: 876b4279c54c5ef4c89039be36973ed5, type: 3}
+      propertyPath: puzzle
+      value: 
+      objectReference: {fileID: 961744503}
     - target: {fileID: 4806511896402460939, guid: 876b4279c54c5ef4c89039be36973ed5, type: 3}
       propertyPath: m_Name
       value: Lever_01
