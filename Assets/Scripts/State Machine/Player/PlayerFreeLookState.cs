@@ -66,7 +66,7 @@ public class PlayerFreeLookState : PlayerBaseState
 
     private void OnHanuman()
     {
-        HanumanChange();
+        stateMachine.SwitchState(new PlayerTransformationState(stateMachine));
     }
 
     private void FaceMovementDirection(Vector3 movement, float deltaTime)
