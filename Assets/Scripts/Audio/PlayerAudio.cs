@@ -14,6 +14,11 @@ public class PlayerAudio : MonoBehaviour
     FMOD.Studio.EventInstance PushingObjectSound;
     FMOD.Studio.EventInstance LeverSound;
 
+    FMOD.Studio.EventInstance HanumanJumpSound;
+    FMOD.Studio.EventInstance HanumanDamageSound;
+    FMOD.Studio.EventInstance HanumanRegularDeathSound;
+    FMOD.Studio.EventInstance HanumanFallToDeathSound;
+
 
     [SerializeField] private EventReference footstepsEvent;
     [SerializeField] private EventReference jumpEvent;
@@ -25,9 +30,13 @@ public class PlayerAudio : MonoBehaviour
     [SerializeField] private EventReference pushingObjectEvent;
     [SerializeField] private EventReference leverEvent;
 
+    [SerializeField] private EventReference hanumanJumpEvent;
+    [SerializeField] private EventReference hanumanDamageEvent;
+    [SerializeField] private EventReference hanumanRegularDeathEvent;
+    [SerializeField] private EventReference hanumanFallToDeathEvent;
 
     [SerializeField] private CharacterController characterController;
-
+    [SerializeField] private PlayerStateMachine stateMachine;
 
     public void PlayFootsteps()
     {
@@ -78,33 +87,72 @@ public class PlayerAudio : MonoBehaviour
 
     public void PlayJump()
     {
-        JumpSound = FMODUnity.RuntimeManager.CreateInstance(jumpEvent);
-        FMODUnity.RuntimeManager.PlayOneShotAttached(jumpEvent, gameObject);
-        JumpSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-        
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 2f))
-        {
 
-            if (hit.collider.CompareTag("gravel"))
+        if (!stateMachine.HanumanBool)
+        {
+            JumpSound = FMODUnity.RuntimeManager.CreateInstance(jumpEvent);
+            FMODUnity.RuntimeManager.PlayOneShotAttached(jumpEvent, gameObject);
+            JumpSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+
+
+
+
+
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 2f))
             {
-                Debug.Log("gravel jump");
-                JumpSound.setParameterByNameWithLabel("Surface", "gravel");
-                JumpSound.start();
+
+                if (hit.collider.CompareTag("gravel"))
+                {
+                    Debug.Log("gravel jump");
+                    JumpSound.setParameterByNameWithLabel("Surface", "gravel");
+                    JumpSound.start();
+                }
+                else if (hit.collider.CompareTag("stone"))
+                {
+                    JumpSound.setParameterByNameWithLabel("Surface", "stone");
+                    JumpSound.start();
+                }
+                else
+                {
+                    JumpSound.setParameterByNameWithLabel("Surface", "gravel");
+                    JumpSound.start();
+                }
             }
-            else if (hit.collider.CompareTag("stone"))
-            {
-                JumpSound.setParameterByNameWithLabel("Surface", "stone");
-                JumpSound.start();
-            }
+
             else
             {
-                JumpSound.setParameterByNameWithLabel("Surface", "gravel");
-                JumpSound.start();
+                HanumanJumpSound = FMODUnity.RuntimeManager.CreateInstance(hanumanJumpEvent);
+                FMODUnity.RuntimeManager.PlayOneShotAttached(hanumanJumpEvent, gameObject);
+                HanumanJumpSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+
+
+
+                if (Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 2f))
+                {
+
+                    if (hit.collider.CompareTag("gravel"))
+                    {
+                        Debug.Log("gravel jump");
+                        JumpSound.setParameterByNameWithLabel("Surface", "gravel");
+                        JumpSound.start();
+                    }
+                    else if (hit.collider.CompareTag("stone"))
+                    {
+                        JumpSound.setParameterByNameWithLabel("Surface", "stone");
+                        JumpSound.start();
+                    }
+                    else
+                    {
+                        JumpSound.setParameterByNameWithLabel("Surface", "gravel");
+                        JumpSound.start();
+                    }
+                }
             }
         }
 
         JumpSound.release();
+        
     }
 
     public void PlayLanding()
@@ -140,11 +188,21 @@ public class PlayerAudio : MonoBehaviour
 
     public void PlayDamage() 
     {
+        if (!stateMachine.HanumanBool)
+        {
+            PlayerDamageSound = FMODUnity.RuntimeManager.CreateInstance(playerDamageEvent);
+            PlayerDamageSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+            PlayerDamageSound.start();
+            PlayerDamageSound.release();
+        }
+        else
+        {
+            HanumanDamageSound = FMODUnity.RuntimeManager.CreateInstance(hanumanDamageEvent);
+            HanumanDamageSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+            HanumanDamageSound.start();
+            HanumanDamageSound.release();
+        }
         
-        PlayerDamageSound = FMODUnity.RuntimeManager.CreateInstance(playerDamageEvent);
-        PlayerDamageSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-        PlayerDamageSound.start();
-        PlayerDamageSound.release();
     }
 
     public void PlayAttack()
@@ -157,18 +215,40 @@ public class PlayerAudio : MonoBehaviour
 
     public void PlayDeath()
     {
-        RegularDeathSound = FMODUnity.RuntimeManager.CreateInstance(regularDeathEvent);
-        RegularDeathSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-        RegularDeathSound.start();
-        RegularDeathSound.release();
+        if (!stateMachine.HanumanBool)
+        {
+            RegularDeathSound = FMODUnity.RuntimeManager.CreateInstance(regularDeathEvent);
+            RegularDeathSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+            RegularDeathSound.start();
+            RegularDeathSound.release();
+        }
+        else
+        {
+            HanumanRegularDeathSound = FMODUnity.RuntimeManager.CreateInstance(hanumanRegularDeathEvent);
+            HanumanRegularDeathSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+            HanumanRegularDeathSound.start();
+            HanumanRegularDeathSound.release();
+        }
+        
     }
 
     public void PlayDeathByFalling()
     {
-        FallToDeathSound = FMODUnity.RuntimeManager.CreateInstance(fallToDeathEvent);
-        FallToDeathSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-        FallToDeathSound.start();
-        FallToDeathSound.release();
+        if (!stateMachine.HanumanBool)
+        {
+            FallToDeathSound = FMODUnity.RuntimeManager.CreateInstance(fallToDeathEvent);
+            FallToDeathSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+            FallToDeathSound.start();
+            FallToDeathSound.release();
+        }
+        else
+        {
+            HanumanFallToDeathSound = FMODUnity.RuntimeManager.CreateInstance(hanumanFallToDeathEvent);
+            HanumanFallToDeathSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+            HanumanFallToDeathSound.start();
+            HanumanFallToDeathSound.release();
+        }
+        
     }
 
     public void PlayPushingObject()

@@ -22594,6 +22594,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleSlidingDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/puzzles/secret door open
+      objectReference: {fileID: 0}
     - target: {fileID: 7045026863892140539, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.95648396
@@ -27775,7 +27779,7 @@ MonoBehaviour:
       Data2: 1203990683
       Data3: -19552341
       Data4: 1145717807
-    Path: event:/secret door open
+    Path: event:/puzzles/secret door open
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -27785,8 +27789,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 25
-  OverrideMaxDistance: 25
+  OverrideMinDistance: 20
+  OverrideMaxDistance: 20
 --- !u!1 &962994212
 GameObject:
   m_ObjectHideFlags: 0
@@ -50105,7 +50109,7 @@ MonoBehaviour:
       Data2: 1203990683
       Data3: -19552341
       Data4: 1145717807
-    Path: event:/secret door open
+    Path: event:/puzzles/secret door open
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -50115,8 +50119,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 100
-  OverrideMaxDistance: 100
+  OverrideMinDistance: 20
+  OverrideMaxDistance: 20
 --- !u!114 &1650240237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62775,16 +62779,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/puzzles/secret door open
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: OverrideAttenuation
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: OverrideMaxDistance
-      value: 300
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: OverrideMinDistance
-      value: 300
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: plate
@@ -64071,7 +64079,7 @@ MonoBehaviour:
       Data2: 1203990683
       Data3: -19552341
       Data4: 1145717807
-    Path: event:/secret door open
+    Path: event:/puzzles/secret door open
   stoneWheelEvent:
     Guid:
       Data1: 0
@@ -64085,7 +64093,7 @@ MonoBehaviour:
       Data2: 1074705844
       Data3: 2114634910
       Data4: 1759395377
-    Path: event:/puzzle solved
+    Path: event:/puzzles/puzzle solved
 --- !u!4 &2038767118
 Transform:
   m_ObjectHideFlags: 0
@@ -71282,6 +71290,182 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.752392
+      objectReference: {fileID: 0}
+    - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.6009383
+      objectReference: {fileID: 0}
+    - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.023408
+      objectReference: {fileID: 0}
+    - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.14833388
+      objectReference: {fileID: 0}
+    - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.010027619
+      objectReference: {fileID: 0}
+    - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9866347
+      objectReference: {fileID: 0}
+    - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.06669815
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: stateMachine
+      value: 
+      objectReference: {fileID: 1453927839}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: leverEvent.Path
+      value: event:/puzzles/lever pull
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanJumpEvent.Path
+      value: event:/hanuman/hanuman jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: leverEvent.Guid.Data1
+      value: 1357013945
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: leverEvent.Guid.Data2
+      value: 1135763553
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: leverEvent.Guid.Data3
+      value: -1210001495
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: leverEvent.Guid.Data4
+      value: 839380326
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanDamageEvent.Path
+      value: event:/hanuman/hanuman damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: pushingObjectEvent.Path
+      value: event:/puzzles/pushing object
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanJumpEvent.Guid.Data1
+      value: 215804299
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanJumpEvent.Guid.Data2
+      value: 1320658768
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanJumpEvent.Guid.Data3
+      value: 88314811
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanJumpEvent.Guid.Data4
+      value: 1383963704
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanFallToDeathEvent.Path
+      value: event:/hanuman/hanuman death by falling
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanDamageEvent.Guid.Data1
+      value: -1237201864
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanDamageEvent.Guid.Data2
+      value: 1083259077
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanDamageEvent.Guid.Data3
+      value: 867101843
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanDamageEvent.Guid.Data4
+      value: 1066258023
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanRegularDeathEvent.Path
+      value: event:/hanuman/hanuman death zero health
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanFallToDeathEvent.Guid.Data1
+      value: -899320931
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanFallToDeathEvent.Guid.Data2
+      value: 1092226629
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanFallToDeathEvent.Guid.Data3
+      value: 322667945
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanFallToDeathEvent.Guid.Data4
+      value: -1222673574
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanRegularDeathEvent.Guid.Data1
+      value: -212254337
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanRegularDeathEvent.Guid.Data2
+      value: 1315040009
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanRegularDeathEvent.Guid.Data3
+      value: -1929294940
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: hanumanRegularDeathEvent.Guid.Data4
+      value: 607511559
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467855116582742774, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: HorizontalAxis.Value
+      value: 162.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720726506857150683, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833230998227929750, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: pushPower
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833230998227929750, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1453927833}
+    - target: {fileID: 1833230998227929750, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: stateMachine
+      value: 
+      objectReference: {fileID: 1453927839}
+    - target: {fileID: 3090553912852404232, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: <PlayerHolder>k__BackingField
+      value: 
+      objectReference: {fileID: 465025642}
+    - target: {fileID: 3090553912852404232, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: <PlayerObject>k__BackingField
+      value: 
+      objectReference: {fileID: 465025642}
+    - target: {fileID: 3090553912852404232, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: <HanumanJumpForce>k__BackingField
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090553912852404232, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: <HanumanMovementSpeed>k__BackingField
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090553912852404232, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: <TransformationHolder>k__BackingField
+      value: 
+      objectReference: {fileID: 1644353662}
     - target: {fileID: 3521376635081412297, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_Name
       value: PlayerRig
