@@ -173,6 +173,9 @@
 		<property name="triggerProbabilityEnabled">
 			<value>true</value>
 		</property>
+		<property name="triggerProbability">
+			<value>34.5</value>
+		</property>
 		<relationship name="sounds">
 			<destination>{d785ed15-9f24-4731-9d52-5e8c40099669}</destination>
 			<destination>{073a4750-0380-4f57-acf7-1fe8d5abc6dd}</destination>
