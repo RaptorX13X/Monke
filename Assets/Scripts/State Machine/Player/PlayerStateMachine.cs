@@ -31,6 +31,14 @@ public class PlayerStateMachine : StateMachine
     [field: Header("Testing")]
     [field: SerializeField] public Transform BaseTransform { get; private set; }
     [field: SerializeField] public float RotationDamping { get; private set; }
+    [field: SerializeField] public GameObject VisnaMesh { get; private set; }
+    [field: SerializeField] public GameObject VisnaBones { get; private set; }
+    [field: SerializeField] public GameObject HanumanMesh { get; private set; }
+    [field: SerializeField] public GameObject HanumanBones { get; private set; }
+    [field: SerializeField] public GameObject TransformationHolder { get; private set; }
+    [field: SerializeField] public GameObject PlayerHolder { get; private set; }
+    
+    [field: SerializeField] public ParticleSystem transformParticles { get; private set; }
 
     public bool deathByFalling;
 

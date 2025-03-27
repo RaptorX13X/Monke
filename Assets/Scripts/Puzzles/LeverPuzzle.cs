@@ -1,12 +1,15 @@
 using UnityEngine;
 using DG.Tweening;
-
+using FMODUnity;
 public class LeverPuzzle : MonoBehaviour
 {
     [SerializeField] private Lever[] levers;
     private Vector3 target;
     [SerializeField] private Vector3 move;
     [SerializeField] private PuzzleAudio puzzleAudio;
+    [SerializeField] private StudioEventEmitter emitter;
+    [SerializeField] private bool dingSound;
+    [SerializeField] private float doorDuration = 20f;
     
     private void Start()
     {
@@ -19,8 +22,12 @@ public class LeverPuzzle : MonoBehaviour
         {
             if (!lever.isSet) return;
         } 
-        puzzleAudio.PlayPuzzleSolved();
+        if (dingSound)
+        {
+            puzzleAudio.PlayPuzzleSolved();
+        }
         MoveDoor();
+        emitter.Play();
     }
     
     
@@ -28,7 +35,7 @@ public class LeverPuzzle : MonoBehaviour
     {
         
         transform.DOShakePosition(1f, 0.05f, 50, 90f, false, false);
-        transform.DOLocalMove(target, 5).SetDelay(1).SetLoops(0);
+        transform.DOLocalMove(target, doorDuration).SetDelay(1).SetLoops(0);
 
     }
 }
