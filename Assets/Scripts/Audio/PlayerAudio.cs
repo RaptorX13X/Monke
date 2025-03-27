@@ -119,34 +119,33 @@ public class PlayerAudio : MonoBehaviour
                     JumpSound.start();
                 }
             }
+        }
+        else
+        {
+            HanumanJumpSound = FMODUnity.RuntimeManager.CreateInstance(hanumanJumpEvent);
+            FMODUnity.RuntimeManager.PlayOneShotAttached(hanumanJumpEvent, gameObject);
+            HanumanJumpSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
 
-            else
+
+
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 2f))
             {
-                HanumanJumpSound = FMODUnity.RuntimeManager.CreateInstance(hanumanJumpEvent);
-                FMODUnity.RuntimeManager.PlayOneShotAttached(hanumanJumpEvent, gameObject);
-                HanumanJumpSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
 
-
-
-                if (Physics.Raycast(transform.position, Vector3.down, out hit, characterController.height + 2f))
+                if (hit.collider.CompareTag("gravel"))
                 {
-
-                    if (hit.collider.CompareTag("gravel"))
-                    {
-                        Debug.Log("gravel jump");
-                        JumpSound.setParameterByNameWithLabel("Surface", "gravel");
-                        JumpSound.start();
-                    }
-                    else if (hit.collider.CompareTag("stone"))
-                    {
-                        JumpSound.setParameterByNameWithLabel("Surface", "stone");
-                        JumpSound.start();
-                    }
-                    else
-                    {
-                        JumpSound.setParameterByNameWithLabel("Surface", "gravel");
-                        JumpSound.start();
-                    }
+                    Debug.Log("gravel jump");
+                    JumpSound.setParameterByNameWithLabel("Surface", "gravel");
+                    JumpSound.start();
+                }
+                else if (hit.collider.CompareTag("stone"))
+                {
+                    JumpSound.setParameterByNameWithLabel("Surface", "stone");
+                    JumpSound.start();
+                }
+                else
+                {
+                    JumpSound.setParameterByNameWithLabel("Surface", "gravel");
+                    JumpSound.start();
                 }
             }
         }

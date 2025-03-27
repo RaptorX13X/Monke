@@ -482,15 +482,44 @@ MonoBehaviour:
       Data2: 1220498828
       Data3: -75623009
       Data4: -571628866
-    Path: event:/pushing object
+    Path: event:/puzzles/pushing object
   leverEvent:
     Guid:
       Data1: 1357013945
       Data2: 1135763553
       Data3: -1210001495
       Data4: 839380326
-    Path: event:/lever pull
+    Path: event:/puzzles/lever pull
+  hanumanJumpEvent:
+    Guid:
+      Data1: 215804299
+      Data2: 1320658768
+      Data3: 88314811
+      Data4: 1383963704
+    Path: event:/hanuman/hanuman jump
+  hanumanDamageEvent:
+    Guid:
+      Data1: -1237201864
+      Data2: 1083259077
+      Data3: 867101843
+      Data4: 1066258023
+    Path: event:/hanuman/hanuman damage
+  hanumanRegularDeathEvent:
+    Guid:
+      Data1: -212254337
+      Data2: 1315040009
+      Data3: -1929294940
+      Data4: 607511559
+    Path: event:/hanuman/hanuman death zero health
+  hanumanFallToDeathEvent:
+    Guid:
+      Data1: -899320931
+      Data2: 1092226629
+      Data3: 322667945
+      Data4: -1222673574
+    Path: event:/hanuman/hanuman death by falling
   characterController: {fileID: 9147552183235917680}
+  stateMachine: {fileID: 3090553912852404232}
 --- !u!114 &7842866747011902996
 MonoBehaviour:
   m_ObjectHideFlags: 0

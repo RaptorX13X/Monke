@@ -124,6 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plate: {fileID: 0}
   move: {x: 0, y: -10, z: 0}
+  puzzleAudio: {fileID: 0}
+  emitter: {fileID: 0}
 --- !u!114 &5540083102763428278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +145,7 @@ MonoBehaviour:
       Data2: 1203990683
       Data3: -19552341
       Data4: 1145717807
-    Path: event:/secret door open
+    Path: event:/puzzles/secret door open
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
