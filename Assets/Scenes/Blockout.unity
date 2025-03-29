@@ -190,8 +190,66 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2503581308961057028, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7663721}
+    - targetCorrespondingSourceObject: {fileID: 2503581308961057028, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7663720}
   m_SourcePrefab: {fileID: 100100000, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
+--- !u!1 &7663719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2503581308961057028, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
+  m_PrefabInstance: {fileID: 7663718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7663720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7663719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1516025398
+      Data2: 1203990683
+      Data3: -19552341
+      Data4: 1145717807
+    Path: event:/puzzles/secret door open
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &7663721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7663719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ffdbf62c08376498440e78df361f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plate: {fileID: 1834711304}
+  move: {x: 0, y: -10, z: 0}
+  puzzleAudio: {fileID: 2038767117}
+  emitter: {fileID: 7663720}
 --- !u!1001 &9492796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1223,6 +1281,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 876b4279c54c5ef4c89039be36973ed5, type: 3}
+--- !u!114 &46625403 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2698470687376150363, guid: 876b4279c54c5ef4c89039be36973ed5, type: 3}
+  m_PrefabInstance: {fileID: 46625402}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ed5bdb88f98354fbab88f199e92e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &47892741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2900,6 +2969,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzlePressurePlate
       objectReference: {fileID: 0}
+    - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 851105594}
     - target: {fileID: 5425696795634817659, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: m_LocalPosition.x
       value: 145.85173
@@ -2945,6 +3018,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+--- !u!114 &100309505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+  m_PrefabInstance: {fileID: 100309504}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509bc67ca087ed84c91f51fe5d5a5ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &100846116 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8689449202193871711, guid: d58999d8f91e13b49b250588d92083ff, type: 3}
@@ -5534,6 +5618,8 @@ GameObject:
   - component: {fileID: 204812238}
   - component: {fileID: 204812237}
   - component: {fileID: 204812236}
+  - component: {fileID: 204812240}
+  - component: {fileID: 204812239}
   m_Layer: 8
   m_Name: Box050 (1)
   m_TagString: Untagged
@@ -5550,7 +5636,7 @@ Transform:
   m_GameObject: {fileID: 204812234}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -53.75, y: 27.75, z: 6.49}
+  m_LocalPosition: {x: -73.75, y: 27.75, z: 6.49}
   m_LocalScale: {x: 0.6065276, y: 0.8321966, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5631,6 +5717,56 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204812234}
   m_Mesh: {fileID: -4805025943348150233, guid: a29e3edb21f04fc4ab8b1417b8da44dd, type: 3}
+--- !u!114 &204812239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204812234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1516025398
+      Data2: 1203990683
+      Data3: -19552341
+      Data4: 1145717807
+    Path: event:/puzzles/secret door open
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &204812240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204812234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4201ebdfbd7b56745ba5f8d709d89810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levers:
+  - {fileID: 46625403}
+  move: {x: 20, y: 0, z: 0}
+  puzzleAudio: {fileID: 2038767117}
+  emitter: {fileID: 204812239}
+  dingSound: 0
+  doorDuration: 20
 --- !u!1001 &207655506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14298,6 +14434,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8689449202193871711, guid: d58999d8f91e13b49b250588d92083ff, type: 3}
   m_PrefabInstance: {fileID: 461347497}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &462897578
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 9a2ce4d6cf58c2f438c76666c5feaf65, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 108.771935
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a2ce4d6cf58c2f438c76666c5feaf65, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 36.864967
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a2ce4d6cf58c2f438c76666c5feaf65, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -150.55957
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a2ce4d6cf58c2f438c76666c5feaf65, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a2ce4d6cf58c2f438c76666c5feaf65, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a2ce4d6cf58c2f438c76666c5feaf65, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a2ce4d6cf58c2f438c76666c5feaf65, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a2ce4d6cf58c2f438c76666c5feaf65, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a2ce4d6cf58c2f438c76666c5feaf65, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a2ce4d6cf58c2f438c76666c5feaf65, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a2ce4d6cf58c2f438c76666c5feaf65, type: 3}
+      propertyPath: m_Name
+      value: m_reel_2_all
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9a2ce4d6cf58c2f438c76666c5feaf65, type: 3}
 --- !u!1001 &466111004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24481,6 +24674,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8689449202193871711, guid: d58999d8f91e13b49b250588d92083ff, type: 3}
   m_PrefabInstance: {fileID: 781772602}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &785443208
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 26c472c71c20fd245bbec5efd2753495, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 116.34
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 26c472c71c20fd245bbec5efd2753495, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.914944
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 26c472c71c20fd245bbec5efd2753495, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -27.58
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 26c472c71c20fd245bbec5efd2753495, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 26c472c71c20fd245bbec5efd2753495, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 26c472c71c20fd245bbec5efd2753495, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 26c472c71c20fd245bbec5efd2753495, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 26c472c71c20fd245bbec5efd2753495, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 26c472c71c20fd245bbec5efd2753495, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 26c472c71c20fd245bbec5efd2753495, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 26c472c71c20fd245bbec5efd2753495, type: 3}
+      propertyPath: m_Name
+      value: m_reel_1_all
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 26c472c71c20fd245bbec5efd2753495, type: 3}
 --- !u!1001 &786488649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26674,6 +26924,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71086414a0611e9449306370acfda382, type: 3}
+--- !u!65 &851105594 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3112186932185454510, guid: 71086414a0611e9449306370acfda382, type: 3}
+  m_PrefabInstance: {fileID: 851105593}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &852436435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38338,7 +38593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2503581308961057028, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3023412073059988414, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
       propertyPath: m_LocalScale.x
@@ -38395,8 +38650,66 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2503581308961057028, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1171311659}
+    - targetCorrespondingSourceObject: {fileID: 2503581308961057028, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1171311658}
   m_SourcePrefab: {fileID: 100100000, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
+--- !u!1 &1171311657 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2503581308961057028, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
+  m_PrefabInstance: {fileID: 1171311656}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1171311658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171311657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1516025398
+      Data2: 1203990683
+      Data3: -19552341
+      Data4: 1145717807
+    Path: event:/puzzles/secret door open
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1171311659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171311657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ffdbf62c08376498440e78df361f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plate: {fileID: 100309505}
+  move: {x: 0, y: -15, z: 0}
+  puzzleAudio: {fileID: 2038767117}
+  emitter: {fileID: 1171311658}
 --- !u!4 &1174526336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8689449202193871711, guid: d58999d8f91e13b49b250588d92083ff, type: 3}
@@ -43264,6 +43577,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71086414a0611e9449306370acfda382, type: 3}
+--- !u!65 &1321262387 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3112186932185454510, guid: 71086414a0611e9449306370acfda382, type: 3}
+  m_PrefabInstance: {fileID: 1321262386}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1321314194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66116,6 +66434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzlePressurePlate (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1321262387}
     - target: {fileID: 5425696795634817659, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: m_LocalPosition.x
       value: 102.09897
@@ -66161,6 +66483,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+--- !u!114 &1834711304 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+  m_PrefabInstance: {fileID: 1834711303}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509bc67ca087ed84c91f51fe5d5a5ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1835067013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8689449202193871711, guid: d58999d8f91e13b49b250588d92083ff, type: 3}
@@ -79104,3 +79437,5 @@ SceneRoots:
   - {fileID: 46625402}
   - {fileID: 745567202}
   - {fileID: 385987683}
+  - {fileID: 785443208}
+  - {fileID: 462897578}
