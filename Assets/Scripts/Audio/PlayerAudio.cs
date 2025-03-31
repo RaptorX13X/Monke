@@ -13,12 +13,13 @@ public class PlayerAudio : MonoBehaviour
     FMOD.Studio.EventInstance FallToDeathSound;
     FMOD.Studio.EventInstance PushingObjectSound;
     FMOD.Studio.EventInstance LeverSound;
+    
 
     FMOD.Studio.EventInstance HanumanJumpSound;
     FMOD.Studio.EventInstance HanumanDamageSound;
     FMOD.Studio.EventInstance HanumanRegularDeathSound;
     FMOD.Studio.EventInstance HanumanFallToDeathSound;
-
+    FMOD.Studio.EventInstance CrushSound;
 
     [SerializeField] private EventReference footstepsEvent;
     [SerializeField] private EventReference jumpEvent;
@@ -34,6 +35,7 @@ public class PlayerAudio : MonoBehaviour
     [SerializeField] private EventReference hanumanDamageEvent;
     [SerializeField] private EventReference hanumanRegularDeathEvent;
     [SerializeField] private EventReference hanumanFallToDeathEvent;
+    [SerializeField] private EventReference crushingObjectEvent;
 
     [SerializeField] private CharacterController characterController;
     [SerializeField] private PlayerStateMachine stateMachine;
@@ -269,5 +271,13 @@ public class PlayerAudio : MonoBehaviour
     public void StopPushingObject()
     {
         PushingObjectSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
+    public void PlaySmashBigBoy()
+    {
+        CrushSound = FMODUnity.RuntimeManager.CreateInstance(crushingObjectEvent);
+        CrushSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+        CrushSound.start();
+        CrushSound.release();
     }
 }
