@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3012180043833574187}
   - component: {fileID: 2437809303600156820}
   - component: {fileID: 3112186932185454510}
+  - component: {fileID: 2376031672769349586}
   m_Layer: 0
   m_Name: PuzzlePushableCube
   m_TagString: PuzzleBlock
@@ -82,6 +83,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.05, y: 1.05, z: 1.05}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2376031672769349586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4225318272120624205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5c4140923916c448169f79e1695c5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 4475093404203403610}
 --- !u!1001 &7565417985650906155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -186,8 +200,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6.27, y: 4.77, z: 3.82}
-  m_Center: {x: -7.556876e-16, y: 1.2499998, z: 0}
+  m_Size: {x: 3.5, y: 2.553537, z: 3.5}
+  m_Center: {x: 0, y: 1.2632318, z: 0}
 --- !u!4 &6721994463850727267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3869878279739921224, guid: ec765278664437f4aa0085f231cc81c1, type: 3}

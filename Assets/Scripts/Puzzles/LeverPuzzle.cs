@@ -10,6 +10,7 @@ public class LeverPuzzle : MonoBehaviour
     [SerializeField] private StudioEventEmitter emitter;
     [SerializeField] private bool dingSound;
     [SerializeField] private float doorDuration = 20f;
+    private bool playedOnce;
     
     private void Start()
     {
@@ -22,12 +23,13 @@ public class LeverPuzzle : MonoBehaviour
         {
             if (!lever.isSet) return;
         } 
-        if (dingSound)
+        if (dingSound && !playedOnce)
         {
             puzzleAudio.PlayPuzzleSolved();
+            emitter.Play();
+            playedOnce = true;
         }
         MoveDoor();
-        emitter.Play();
     }
     
     

@@ -2,7 +2,7 @@ using UnityEngine;
 using DG.Tweening;
 public class SpinningSaw : MonoBehaviour
 {
-    [SerializeField] private int damage = 20;
+    [SerializeField] private int damage = 100;
     [SerializeField]private Transform pathPoint1;
     [SerializeField]private Transform pathPoint2;
     void Start()
