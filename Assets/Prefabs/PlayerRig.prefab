@@ -341,7 +341,7 @@ MonoBehaviour:
   <HanumanMovementSpeed>k__BackingField: 12
   <JumpForce>k__BackingField: 3
   <HanumanJumpForce>k__BackingField: 6
-  <ClimbOffset>k__BackingField: {x: 0, y: 3.9525, z: 1.105}
+  <ClimbOffset>k__BackingField: {x: 0, y: 1.5, z: 1.105}
   <BaseTransform>k__BackingField: {fileID: 5072153682559003238}
   <RotationDamping>k__BackingField: 10
   <VisnaMesh>k__BackingField: {fileID: 21013631652401119}
@@ -518,6 +518,13 @@ MonoBehaviour:
       Data3: 322667945
       Data4: -1222673574
     Path: event:/hanuman/hanuman death by falling
+  crushingObjectEvent:
+    Guid:
+      Data1: -1038684305
+      Data2: 1317752509
+      Data3: -773533279
+      Data4: -1260572053
+    Path: event:/hanuman/stone crush
   characterController: {fileID: 9147552183235917680}
   stateMachine: {fileID: 3090553912852404232}
 --- !u!114 &7842866747011902996
@@ -2097,8 +2104,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3914528299665653806}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.010027619, y: 0.9866347, z: -0.06669815, w: 0.14833388}
-  m_LocalPosition: {x: -2.752392, y: 3.6009383, z: 9.023408}
+  m_LocalRotation: {x: 0.010027621, y: 0.9866346, z: -0.06669815, w: 0.14833392}
+  m_LocalPosition: {x: -2.752393, y: 3.6009383, z: 9.023408}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2751,7 +2758,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.99999976, y: 0.2808021, z: 0.54978263}
+  m_Size: {x: 0.99999976, y: 0.1, z: 0.54978263}
   m_Center: {x: 0, y: 2.48705, z: 0.22510727}
 --- !u!54 &2199922918620221877
 Rigidbody:
