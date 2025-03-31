@@ -41,7 +41,7 @@ public class BigDestructible : MonoBehaviour
         renderer.enabled = false;
         if (playerAudio != null)
         {
-            //playerAudio.PlayLever();
+            playerAudio.PlaySmashBigBoy();
         }
     }
 }
