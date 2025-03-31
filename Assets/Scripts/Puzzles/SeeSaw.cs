@@ -10,7 +10,8 @@ public class SeeSaw : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(Swinging());
+        //StartCoroutine(Swinging());
+        transform.DOLocalRotate(new Vector3(0, 0, RotationZLeft), 1f, RotateMode.Fast).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutCirc);
     }
 
     private IEnumerator Swinging()

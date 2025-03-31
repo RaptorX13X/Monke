@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSet: 0
   animator: {fileID: 971628775538165669}
+  puzzle: {fileID: 0}
 --- !u!135 &7300954370047913425
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -165,7 +166,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 4
+  m_Radius: 2.5
   m_Center: {x: 0, y: 0, z: 1.1431248}
 --- !u!1 &4806511896402460939 stripped
 GameObject:

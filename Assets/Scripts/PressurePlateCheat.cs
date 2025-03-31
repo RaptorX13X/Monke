@@ -19,6 +19,10 @@ public class PressurePlateCheat : MonoBehaviour
             other.transform.DOMove(movement, 1).SetDelay(0).SetLoops(0);
             isSet = true;
             other.attachedRigidbody.isKinematic = true;
+            if (other.TryGetComponent(out PushableObject pushable))
+            {
+                pushable.DisableTrigger();
+            }
         }
     }
 }
