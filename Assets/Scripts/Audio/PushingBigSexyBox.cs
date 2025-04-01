@@ -9,6 +9,7 @@ public class PushingBigSexyBox : MonoBehaviour
     {
         if(other.CompareTag("PuzzleBlock"))
         {
+            Debug.Log("new pushing");
             playerAudio.PlayPushingObject();
         }
     }
@@ -17,6 +18,7 @@ public class PushingBigSexyBox : MonoBehaviour
     {
         if(other.CompareTag("PuzzleBlock"))
         {
+            Debug.Log("no more pushing");
             playerAudio.StopPushingObject();
         }
     }
