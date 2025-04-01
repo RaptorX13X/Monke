@@ -15,7 +15,8 @@ public class PlayerHangingState : PlayerBaseState
     public override void Enter()
     {
         stateMachine.transform.rotation = Quaternion.LookRotation(ledgeForward, Vector3.up);
-        stateMachine.Animator.CrossFadeInFixedTime(HangingHash, CrossFadeDuration);
+        stateMachine.VisnaAnimator.CrossFadeInFixedTime(HangingHash, CrossFadeDuration);
+        stateMachine.HanumanAnimator.CrossFadeInFixedTime(HangingHash, CrossFadeDuration);
     }
 
     public override void Tick(float deltaTime)

@@ -21,7 +21,8 @@ public class PlayerJumpingState : PlayerBaseState
 
         momentum = stateMachine.CharacterController.velocity;
         momentum.y = 0f;
-        stateMachine.Animator.CrossFadeInFixedTime(JumpHash, TransitionDuration);
+        stateMachine.VisnaAnimator.CrossFadeInFixedTime(JumpHash, TransitionDuration);
+        stateMachine.HanumanAnimator.CrossFadeInFixedTime(JumpHash, TransitionDuration);
         stateMachine.PlayerAudio.PlayJump();
         stateMachine.LedgeDetector.OnLedgeDetect += HandleLedgeDetect;
     }

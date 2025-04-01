@@ -7,7 +7,8 @@ public class PlayerStateMachine : StateMachine
     [field: Header("Components")]
     [field: SerializeField] public CharacterController CharacterController { get; private set; }
     [field: SerializeField] public InputReader InputReader { get; private set; }
-    [field: SerializeField] public Animator Animator { get; private set; }
+    [field: SerializeField] public Animator VisnaAnimator { get; private set; }
+    [field: SerializeField] public Animator HanumanAnimator { get; private set; }
     [field: SerializeField] public ForceReceiver ForceReceiver { get; private set; }
     [field: SerializeField] public PlayerAudio PlayerAudio { get; private set; }
     [field: SerializeField] public LedgeDetector LedgeDetector { get; private set; }

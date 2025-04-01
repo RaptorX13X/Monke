@@ -12,7 +12,8 @@ public class PlayerFreeLookState : PlayerBaseState
     {
         stateMachine.InputReader.JumpEvent += OnJump;
         stateMachine.InputReader.HanumanEvent += OnHanuman;
-        stateMachine.Animator.CrossFadeInFixedTime(FreeLookBlendtreeHash, 0.1f);
+        stateMachine.VisnaAnimator.CrossFadeInFixedTime(FreeLookBlendtreeHash, 0.1f);
+        stateMachine.HanumanAnimator.CrossFadeInFixedTime(FreeLookBlendtreeHash, 0.1f);
         stateMachine.PlayerLeftFoot.canPlay = true;
         stateMachine.PlayerRightFoot.canPlay = true;
     }
@@ -31,10 +32,12 @@ public class PlayerFreeLookState : PlayerBaseState
         
         if (stateMachine.InputReader.MovementValue == Vector2.zero)
         {
-            stateMachine.Animator.SetFloat(FreeLookSpeedHash, 0, AnimatorDampTime, deltaTime);
+            stateMachine.VisnaAnimator.SetFloat(FreeLookSpeedHash, 0, AnimatorDampTime, deltaTime);
+            stateMachine.HanumanAnimator.SetFloat(FreeLookSpeedHash, 0, AnimatorDampTime, deltaTime);
             return;
         }
-        stateMachine.Animator.SetFloat(FreeLookSpeedHash, 1, AnimatorDampTime, deltaTime);
+        stateMachine.VisnaAnimator.SetFloat(FreeLookSpeedHash, 1, AnimatorDampTime, deltaTime);
+        stateMachine.HanumanAnimator.SetFloat(FreeLookSpeedHash, 1, AnimatorDampTime, deltaTime);
         FaceMovementDirection(movement, deltaTime);
     }
 

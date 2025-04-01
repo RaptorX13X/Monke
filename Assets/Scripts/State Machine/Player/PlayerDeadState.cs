@@ -14,7 +14,8 @@ public class PlayerDeadState : PlayerBaseState
     public override void Enter()
     {
         //stateMachine.Weapon.gameObject.SetActive(false);
-        stateMachine.Animator.CrossFadeInFixedTime(DyingHash, TransitionDuration);
+        stateMachine.VisnaAnimator.CrossFadeInFixedTime(DyingHash, TransitionDuration);
+        stateMachine.HanumanAnimator.CrossFadeInFixedTime(DyingHash, TransitionDuration);
         if (stateMachine.deathByFalling) stateMachine.PlayerAudio.PlayDeathByFalling();
         else if (!stateMachine.deathByFalling) stateMachine.PlayerAudio.PlayDeath();
     }
@@ -23,7 +24,14 @@ public class PlayerDeadState : PlayerBaseState
     {
         forceCooldown -= deltaTime;
         if (forceCooldown >= 0.1f) return;
-        if (stateMachine.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1) return;
+        if (!stateMachine.HanumanBool)
+        {
+            if (stateMachine.VisnaAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1) return;
+        }
+        else
+        {
+            if (stateMachine.HanumanAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1) return;
+        }
         stateMachine.Health.Respawn();
         stateMachine.Respawn.Respawn();
         //stateMachine.Weapon.gameObject.SetActive(true);
