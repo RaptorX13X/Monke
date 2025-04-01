@@ -1,4 +1,6 @@
 using System;
+using DG.Tweening.Core.Easing;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FirstReelPuzzle : MonoBehaviour
@@ -8,11 +10,12 @@ public class FirstReelPuzzle : MonoBehaviour
     private bool rotated2;
     private InputReader inputReader;
     private PlayerStateMachine stateMachine;
-    [SerializeField] private PuzzleAudio puzzleAudio;
+    private PlayerAudio playerAudio;
+    private bool isPlayingAudio;
 
     public bool isComplete;
 
-    public void AttachPlayer(PlayerStateMachine _stateMachine, InputReader reader, Transform attacher)
+    public void AttachPlayer(PlayerStateMachine _stateMachine, InputReader reader, Transform attacher, PlayerAudio audio)
     {
         if (stateMachine == null)
         {
@@ -20,6 +23,7 @@ public class FirstReelPuzzle : MonoBehaviour
         }
         stateMachine.attachPoint = attacher;
         inputReader = reader;
+        playerAudio = audio;
         stateMachine.AttachedBool = true;
         isAttached = true;
         stateMachine.SwitchState(new PlayerPushingState(stateMachine));
@@ -32,7 +36,7 @@ public class FirstReelPuzzle : MonoBehaviour
         isAttached = false;
         inputReader = null;
         stateMachine.attachPoint = null;
-        puzzleAudio.StopStoneWheel();
+        playerAudio.StopStoneWheel();
     }
 
     private void Update()
@@ -42,18 +46,18 @@ public class FirstReelPuzzle : MonoBehaviour
         {
             case > 0.01f:
                 transform.Rotate(0, -1, 0);
-                puzzleAudio.PlayStoneWheel();
+                PlayAudio();
                 break;
             case < -0.01f:
                 transform.Rotate(0, 1, 0);
-                puzzleAudio.PlayStoneWheel();
+                PlayAudio();
                 break;
             case 0f:
-                puzzleAudio.StopStoneWheel();
+                StopAudio();
                 break;
         }
         
-        if (Math.Abs(transform.rotation.eulerAngles.y - 90f) < 0.1f && !rotated1)
+        if (Math.Abs(transform.rotation.eulerAngles.y - 155f) < 0.1f && !rotated1)
         {
             rotated1 = true;
             DetachPlayer();
@@ -61,12 +65,26 @@ public class FirstReelPuzzle : MonoBehaviour
 
         if (rotated1)
         {
-            if (Math.Abs(transform.rotation.eulerAngles.y - 270f) < 0.1f)
+            if (Math.Abs(transform.rotation.eulerAngles.y - 55f) < 0.1f)
             {
                 rotated2 = true;
                 DetachPlayer();
                 isComplete = true;
             }
         }
+    }
+
+    private void PlayAudio()
+    {
+        if (isPlayingAudio) return;
+        playerAudio.PlayStoneWheel();
+        isPlayingAudio = true;
+    }
+
+    private void StopAudio()
+    {
+        if (!isPlayingAudio) return;
+        playerAudio.StopStoneWheel();
+        isPlayingAudio = false;
     }
 }

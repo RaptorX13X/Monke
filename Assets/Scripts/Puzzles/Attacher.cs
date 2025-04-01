@@ -5,6 +5,7 @@ public class Attacher : MonoBehaviour
     public PlayerStateMachine stateMachine;
     public InputReader inputReader;
     [SerializeField] private FirstReelPuzzle puzzle;
+    public PlayerAudio playerAudio;
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out InputReader input))
@@ -16,6 +17,11 @@ public class Attacher : MonoBehaviour
         if (other.TryGetComponent(out PlayerStateMachine _stateMachine))
         {
             stateMachine = _stateMachine;
+        }
+
+        if (other.TryGetComponent(out PlayerAudio audio))
+        {
+            playerAudio = audio;
         }
     }
     
@@ -30,11 +36,16 @@ public class Attacher : MonoBehaviour
         {
             stateMachine = null;
         }
+        
+        if (other.TryGetComponent(out PlayerAudio audio))
+        {
+            playerAudio = null;
+        }
     }
 
     private void Interact()
     {
         if (puzzle.isComplete) return;
-        puzzle.AttachPlayer(stateMachine, inputReader, transform);
+        puzzle.AttachPlayer(stateMachine, inputReader, transform, playerAudio);
     }
 }

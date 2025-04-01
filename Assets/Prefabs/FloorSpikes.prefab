@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48bd1095d5ee0494fad65245910bab2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 100
   move: {x: 0, y: -3, z: 0}
 --- !u!65 &3234845846164617383
 BoxCollider:

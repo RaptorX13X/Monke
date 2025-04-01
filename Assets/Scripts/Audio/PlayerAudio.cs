@@ -13,6 +13,7 @@ public class PlayerAudio : MonoBehaviour
     FMOD.Studio.EventInstance FallToDeathSound;
     FMOD.Studio.EventInstance PushingObjectSound;
     FMOD.Studio.EventInstance LeverSound;
+    FMOD.Studio.EventInstance StoneWheelSound;
     
 
     FMOD.Studio.EventInstance HanumanJumpSound;
@@ -30,6 +31,7 @@ public class PlayerAudio : MonoBehaviour
     [SerializeField] private EventReference fallToDeathEvent;
     [SerializeField] private EventReference pushingObjectEvent;
     [SerializeField] private EventReference leverEvent;
+    [SerializeField] private EventReference stoneWheelEvent;
 
     [SerializeField] private EventReference hanumanJumpEvent;
     [SerializeField] private EventReference hanumanDamageEvent;
@@ -279,5 +281,18 @@ public class PlayerAudio : MonoBehaviour
         CrushSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
         CrushSound.start();
         CrushSound.release();
+    }
+    
+    public void PlayStoneWheel()
+    {
+        StoneWheelSound = FMODUnity.RuntimeManager.CreateInstance(stoneWheelEvent);
+        StoneWheelSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+        StoneWheelSound.start();
+        StoneWheelSound.release();
+    }
+
+    public void StopStoneWheel()
+    {
+        StoneWheelSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }

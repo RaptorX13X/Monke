@@ -185,6 +185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a0d456f22ba77d4ab64b133c26ec526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 100
   pathPoint1: {fileID: 4846117279662079593}
   pathPoint2: {fileID: 8940550459344444955}
