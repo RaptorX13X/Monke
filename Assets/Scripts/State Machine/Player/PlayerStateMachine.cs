@@ -41,6 +41,7 @@ public class PlayerStateMachine : StateMachine
     public bool deathByFalling;
 
     public bool HanumanBool = false;
+    public bool UnlockedHanuman;
     public bool AttachedBool;
     public Transform attachPoint;
 
