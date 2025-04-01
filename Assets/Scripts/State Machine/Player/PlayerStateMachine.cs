@@ -17,7 +17,9 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public Targeter Targeter { get; private set; }
     [field: SerializeField] public TestRespawnHandler Respawn { get; private set; }
     [field: SerializeField] public PlayerFoot PlayerLeftFoot { get; private set; }
+    [field: SerializeField] public PlayerFoot HanumanLeftFoot { get; private set; }
     [field: SerializeField] public PlayerFoot PlayerRightFoot { get; private set; }
+    [field: SerializeField] public PlayerFoot HanumanRightFoot { get; private set; }
     [field: SerializeField] public GameObject PlayerObject { get; set; }
     
 
@@ -32,12 +34,8 @@ public class PlayerStateMachine : StateMachine
     [field: Header("Testing")]
     [field: SerializeField] public Transform BaseTransform { get; private set; }
     [field: SerializeField] public float RotationDamping { get; private set; }
-    [field: SerializeField] public GameObject VisnaMesh { get; private set; }
-    [field: SerializeField] public GameObject VisnaBones { get; private set; }
-    [field: SerializeField] public GameObject HanumanMesh { get; private set; }
-    [field: SerializeField] public GameObject HanumanBones { get; private set; }
-    [field: SerializeField] public GameObject TransformationHolder { get; private set; }
-    [field: SerializeField] public GameObject PlayerHolder { get; private set; }
+    [field: SerializeField] public GameObject VisnaForm { get; private set; }
+    [field: SerializeField] public GameObject HanumanForm { get; private set; }
     
     [field: SerializeField] public ParticleSystem transformParticles { get; private set; }
 

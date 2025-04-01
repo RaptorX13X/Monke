@@ -16,6 +16,8 @@ public class PlayerFreeLookState : PlayerBaseState
         stateMachine.HanumanAnimator.CrossFadeInFixedTime(FreeLookBlendtreeHash, 0.1f);
         stateMachine.PlayerLeftFoot.canPlay = true;
         stateMachine.PlayerRightFoot.canPlay = true;
+        stateMachine.HanumanLeftFoot.canPlay = true;
+        stateMachine.HanumanRightFoot.canPlay = true;
     }
 
     public override void Tick(float deltaTime)
@@ -47,6 +49,8 @@ public class PlayerFreeLookState : PlayerBaseState
         stateMachine.InputReader.HanumanEvent -= OnHanuman;
         stateMachine.PlayerLeftFoot.canPlay = false;
         stateMachine.PlayerRightFoot.canPlay = false;
+        stateMachine.HanumanLeftFoot.canPlay = false;
+        stateMachine.HanumanRightFoot.canPlay = false;
     }
     
     private Vector3 CalculateMovement()
