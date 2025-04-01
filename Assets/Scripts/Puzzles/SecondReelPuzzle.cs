@@ -1,21 +1,17 @@
-using System;
-using DG.Tweening.Core.Easing;
-using Unity.VisualScripting;
 using UnityEngine;
-
-public class FirstReelPuzzle : MonoBehaviour
+using System;
+using DG.Tweening;
+public class SecondReelPuzzle : MonoBehaviour
 {
     private bool isAttached;
-    private bool rotated1;
+    public bool rotated1;
     private bool rotated2;
     private InputReader inputReader;
     private PlayerStateMachine stateMachine;
     private PlayerAudio playerAudio;
     private bool isPlayingAudio;
-    
-    [SerializeField] private float rotation1 = 155f;
-    [SerializeField] private float rotation2 = 55f;
-
+    [SerializeField] private float rotation1;
+    [SerializeField] private float rotation2;
     public bool isComplete;
 
     public void AttachPlayer(PlayerStateMachine _stateMachine, InputReader reader, Transform attacher, PlayerAudio audio)
@@ -89,5 +85,10 @@ public class FirstReelPuzzle : MonoBehaviour
         if (!isPlayingAudio) return;
         playerAudio.StopStoneWheel();
         isPlayingAudio = false;
+    }
+
+    public void NeedHanuman()
+    {
+        transform.DOShakePosition(0.2f, 0.05f, 50, 90f, false, false);
     }
 }
