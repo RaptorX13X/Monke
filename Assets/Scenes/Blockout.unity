@@ -28003,10 +28003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51506c852bef314aa260e8de7f278b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target1: {fileID: 0}
-  target2: {fileID: 0}
-  inputReader: {fileID: 0}
-  stateMachine: {fileID: 0}
+  isComplete: 0
 --- !u!1001 &865775245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31728,6 +31725,11 @@ Transform:
   - {fileID: 1955785348}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -134.126, z: 0}
+--- !u!1 &965282915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2542094535025376225, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+  m_PrefabInstance: {fileID: 1352702689}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &968389918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44925,8 +44927,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2542094535025376225, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: emitter
+      value: 
+      objectReference: {fileID: 1352702691}
+    - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: reelPuzzle
+      value: 
+      objectReference: {fileID: 859577499}
+    - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: puzzleAudio
+      value: 
+      objectReference: {fileID: 2038767117}
     - target: {fileID: 7045026863892140539, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_LocalScale.y
       value: 10.159557
@@ -44975,16 +44989,47 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2542094535025376225, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 1352702696}
   m_SourcePrefab: {fileID: 100100000, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
 --- !u!4 &1352702690 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7045026863892140539, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
   m_PrefabInstance: {fileID: 1352702689}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1352702691 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+  m_PrefabInstance: {fileID: 1352702689}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965282915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1352702696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965282915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2deefab6f0b8d91429dd8e93e5d4aaf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reelPuzzle: {fileID: 859577499}
+  move: {x: 0, y: -10, z: 0}
+  puzzleAudio: {fileID: 2038767117}
+  emitter: {fileID: 1352702691}
 --- !u!1 &1358565140
 GameObject:
   m_ObjectHideFlags: 0

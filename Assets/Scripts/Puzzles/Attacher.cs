@@ -34,6 +34,7 @@ public class Attacher : MonoBehaviour
 
     private void Interact()
     {
+        if (puzzle.isComplete) return;
         puzzle.AttachPlayer(stateMachine, inputReader, transform);
     }
 }
