@@ -13,7 +13,6 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public PlayerAudio PlayerAudio { get; private set; }
     [field: SerializeField] public LedgeDetector LedgeDetector { get; private set; }
     [field: SerializeField] public Health Health { get; private set; }
-    //[field: SerializeField] public WeaponDamage Weapon { get; private set; }
     [field: SerializeField] public Targeter Targeter { get; private set; }
     [field: SerializeField] public TestRespawnHandler Respawn { get; private set; }
     [field: SerializeField] public PlayerFoot PlayerLeftFoot { get; private set; }
@@ -42,6 +41,8 @@ public class PlayerStateMachine : StateMachine
     public bool deathByFalling;
 
     public bool HanumanBool = false;
+    public bool AttachedBool;
+    public Transform attachPoint;
 
     public bool OutOfCombat()
     {
