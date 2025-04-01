@@ -15,6 +15,7 @@ public class MenuController : MonoBehaviour
         menuObject.SetActive(true);
         controlsObject.SetActive(false);
         Screen.SetResolution(screenWidth, screenHeight, FullScreenMode.Windowed);
+        Application.targetFrameRate = 60;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }

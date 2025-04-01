@@ -52,7 +52,7 @@ public class FirstReelPuzzle : MonoBehaviour
                 PlayAudio();
                 break;
             case < -0.01f:
-                transform.Rotate(0, 1, 0);
+                transform.Rotate(0, 1 , 0);
                 PlayAudio();
                 break;
             case 0f:
