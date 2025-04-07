@@ -218,11 +218,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1516025398
-      Data2: 1203990683
-      Data3: -19552341
-      Data4: 1145717807
-    Path: event:/puzzles/secret door open
+      Data1: 285909880
+      Data2: 1198147361
+      Data3: -437863808
+      Data4: -1445621811
+    Path: event:/puzzles/small door open
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -232,8 +232,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 200
-  OverrideMaxDistance: 200
+  OverrideMinDistance: 20
+  OverrideMaxDistance: 20
 --- !u!114 &7663721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17743,16 +17743,36 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/puzzles/small door open
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: OverrideAttenuation
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: OverrideMaxDistance
-      value: 200
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: OverrideMinDistance
-      value: 200
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 285909880
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1198147361
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: -437863808
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -1445621811
       objectReference: {fileID: 0}
     - target: {fileID: 7045026863892140539, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32014,11 +32034,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1516025398
-      Data2: 1203990683
-      Data3: -19552341
-      Data4: 1145717807
-    Path: event:/puzzles/secret door open
+      Data1: 285909880
+      Data2: 1198147361
+      Data3: -437863808
+      Data4: -1445621811
+    Path: event:/puzzles/small door open
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -32028,8 +32048,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 200
-  OverrideMaxDistance: 200
+  OverrideMinDistance: 20
+  OverrideMaxDistance: 20
 --- !u!1 &962994212
 GameObject:
   m_ObjectHideFlags: 0
@@ -39666,11 +39686,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1516025398
-      Data2: 1203990683
-      Data3: -19552341
-      Data4: 1145717807
-    Path: event:/puzzles/secret door open
+      Data1: 285909880
+      Data2: 1198147361
+      Data3: -437863808
+      Data4: -1445621811
+    Path: event:/puzzles/small door open
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -39680,8 +39700,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 2000
-  OverrideMaxDistance: 2000
+  OverrideMinDistance: 30.67
+  OverrideMaxDistance: 50
 --- !u!114 &1171311659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57398,11 +57418,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1516025398
-      Data2: 1203990683
-      Data3: -19552341
-      Data4: 1145717807
-    Path: event:/puzzles/secret door open
+      Data1: 285909880
+      Data2: 1198147361
+      Data3: -437863808
+      Data4: -1445621811
+    Path: event:/puzzles/small door open
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -57412,8 +57432,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 2000
-  OverrideMaxDistance: 2000
+  OverrideMinDistance: 20
+  OverrideMaxDistance: 20
 --- !u!114 &1650240237
 MonoBehaviour:
   m_ObjectHideFlags: 0
