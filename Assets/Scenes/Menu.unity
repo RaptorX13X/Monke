@@ -531,7 +531,7 @@ MonoBehaviour:
   gameSceneNumber: 1
   menuObject: {fileID: 685824067}
   controlsObject: {fileID: 1109793553}
-  screenWidth: 1440
+  screenWidth: 1920
   screenHeight: 1080
 --- !u!1001 &2196052153200050439
 PrefabInstance:
