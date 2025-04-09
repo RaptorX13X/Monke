@@ -6,7 +6,6 @@ public class Lever : MonoBehaviour
     public bool isSet;
     [SerializeField] private Animator animator;
     [SerializeField] private LeverPuzzle puzzle;
-    private PlayerAudio playerAudio;
     
 
     private void OnTriggerEnter(Collider other)
@@ -14,10 +13,6 @@ public class Lever : MonoBehaviour
         if (other.TryGetComponent(out InputReader input))
         {
             input.InteractEvent += Interact;
-            if (other.TryGetComponent(out PlayerAudio audio))
-            {
-                playerAudio = audio;
-            }
         }
     }
 
@@ -35,13 +30,5 @@ public class Lever : MonoBehaviour
         animator.SetTrigger("interact");
         isSet = !isSet;
         puzzle.CheckCompletion();
-       
-    }
-    public void PlayLever()
-    {
-        if (playerAudio != null)
-        {
-            playerAudio.PlayLever();
-        }
     }
 }

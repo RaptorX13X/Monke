@@ -6,7 +6,6 @@ public class LeverSpikes : MonoBehaviour
     public bool isSet;
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject spikes;
-    private PlayerAudio playerAudio;
     private bool onlyOnce;
     
 
@@ -15,10 +14,6 @@ public class LeverSpikes : MonoBehaviour
         if (other.TryGetComponent(out InputReader input))
         {
             input.InteractEvent += Interact;
-            if (other.TryGetComponent(out PlayerAudio audio))
-            {
-                playerAudio = audio;
-            }
         }
     }
 
@@ -39,11 +34,6 @@ public class LeverSpikes : MonoBehaviour
         {
             StartCoroutine(Spikes());
             onlyOnce = true;
-        }
-        
-        if (playerAudio != null)
-        {
-            playerAudio.PlayLever();
         }
     }
 
