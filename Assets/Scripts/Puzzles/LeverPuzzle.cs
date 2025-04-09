@@ -26,10 +26,11 @@ public class LeverPuzzle : MonoBehaviour
         if (dingSound && !playedOnce)
         {
             puzzleAudio.PlayPuzzleSolved();
-            emitter.Play();
+            
             playedOnce = true;
         }
         MoveDoor();
+        emitter.Play();
     }
     
     

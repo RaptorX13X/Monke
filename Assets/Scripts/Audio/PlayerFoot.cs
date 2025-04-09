@@ -10,10 +10,12 @@ public class PlayerFoot : MonoBehaviour
     {
         Debug.Log("attempting audio from stópka");
         if (!canPlay) return;
+        playerAudio.PlayFootsteps();
+
         if (other.CompareTag("gravel") || other.CompareTag("stone"))
         {
             Debug.Log("stupka dziala");
-            playerAudio.PlayFootsteps();
+            
         }
     }
 }

@@ -13,7 +13,8 @@ public class ReelDoor : MonoBehaviour
     [SerializeField] private PuzzleAudio puzzleAudio;
     [SerializeField] private StudioEventEmitter emitter;
     
-    
+
+
     private void Start()
     {
         target = transform.localPosition + move;
@@ -25,6 +26,7 @@ public class ReelDoor : MonoBehaviour
         {
             emitter.Play();
             MoveDoor();
+            puzzleAudio.PlayPuzzleSolved();
             happened = true;
         }
     }

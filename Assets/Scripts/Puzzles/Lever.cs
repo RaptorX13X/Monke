@@ -35,6 +35,10 @@ public class Lever : MonoBehaviour
         animator.SetTrigger("interact");
         isSet = !isSet;
         puzzle.CheckCompletion();
+       
+    }
+    public void PlayLever()
+    {
         if (playerAudio != null)
         {
             playerAudio.PlayLever();
