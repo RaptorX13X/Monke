@@ -337,10 +337,10 @@ MonoBehaviour:
   <HanumanRightFoot>k__BackingField: {fileID: 629225232081727378}
   <PlayerObject>k__BackingField: {fileID: 271679210315325818}
   <FreeLookMovementSpeed>k__BackingField: 6
-  <HanumanMovementSpeed>k__BackingField: 12
+  <HanumanMovementSpeed>k__BackingField: 8
   <JumpForce>k__BackingField: 3
-  <HanumanJumpForce>k__BackingField: 6
-  <ClimbOffset>k__BackingField: {x: 0, y: 1.5, z: 1.105}
+  <HanumanJumpForce>k__BackingField: 4
+  <ClimbOffset>k__BackingField: {x: 0, y: 3.9, z: 1.105}
   <BaseTransform>k__BackingField: {fileID: 5072153682559003238}
   <RotationDamping>k__BackingField: 10
   <VisnaForm>k__BackingField: {fileID: 6719205700463120721}
@@ -348,6 +348,9 @@ MonoBehaviour:
   <transformParticles>k__BackingField: {fileID: 3763213680428486649}
   deathByFalling: 0
   HanumanBool: 0
+  UnlockedHanuman: 0
+  AttachedBool: 0
+  attachPoint: {fileID: 0}
 --- !u!143 &9147552183235917680
 CharacterController:
   m_ObjectHideFlags: 0
@@ -463,6 +466,13 @@ MonoBehaviour:
       Data3: -1210001495
       Data4: 839380326
     Path: event:/puzzles/lever pull
+  stoneWheelEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   hanumanJumpEvent:
     Guid:
       Data1: 215804299
