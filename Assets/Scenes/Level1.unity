@@ -9578,7 +9578,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.010027615, y: 0.9866347, z: -0.06669813, w: 0.14833388}
-  m_LocalPosition: {x: 106.56625, y: 41.023224, z: -150.00412}
+  m_LocalPosition: {x: -16.7776, y: 11.212954, z: 73.32175}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32551,7 +32551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2503581308961057028, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3023412073059988414, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
       propertyPath: m_LocalScale.x
@@ -80843,11 +80843,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7523956
+      value: -2.7523918
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.600937
+      value: 3.6009388
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.z
@@ -80855,19 +80855,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.14836474
+      value: 0.14833388
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.01001937
+      value: 0.010027619
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.98663473
+      value: 0.9866346
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.06662944
+      value: -0.06669815
       objectReference: {fileID: 0}
     - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: stoneWheelEvent.Path
@@ -80907,15 +80907,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 109.31865
+      value: -14.0252075
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 37.422287
+      value: 7.612015
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -159.02753
+      value: 64.29834
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.w
@@ -81394,6 +81394,22 @@ PrefabInstance:
     - target: {fileID: 1022787187260047550, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135657988922000836, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
+      propertyPath: level2SceneNumber
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627702101739454812, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850928635544532868, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1759728869}
+    - target: {fileID: 4850928635544532868, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 6745335603129361693, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
       propertyPath: m_Name

@@ -11,6 +11,7 @@ public class PauseController : MonoBehaviour
     private bool canPause => !levelFinishedUI.activeInHierarchy;
     [SerializeField] private int menuSceneNumber;
     [SerializeField] private int gameSceneNumber;
+    [SerializeField] private int level2SceneNumber;
 
     private void Awake()
     {
@@ -79,5 +80,10 @@ public class PauseController : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(gameSceneNumber);
+    }
+
+    public void Level2()
+    {
+        SceneManager.LoadScene(level2SceneNumber);
     }
 }
