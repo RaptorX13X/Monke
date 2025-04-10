@@ -7,6 +7,7 @@ public class PlayerFreeLookState : PlayerBaseState
     private readonly int FreeLookSpeedHash = Animator.StringToHash("FreeLookSpeed");
     
     private const float AnimatorDampTime = 0.1f;
+
     public PlayerFreeLookState(PlayerStateMachine stateMachine) : base(stateMachine) {}
     public override void Enter()
     {
@@ -23,6 +24,13 @@ public class PlayerFreeLookState : PlayerBaseState
     public override void Tick(float deltaTime)
     {
         Vector3 movement = CalculateMovement();
+        if (stateMachine.parenter != null)
+        { 
+            if (stateMachine.parenter.TryGetComponent(out Parenter attach))
+            {
+                Move(attach.velocity, deltaTime);
+            }
+        }
         if (stateMachine.HanumanBool)
         {
             Move(movement * stateMachine.HanumanMovementSpeed, deltaTime);

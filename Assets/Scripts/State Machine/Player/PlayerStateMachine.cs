@@ -45,6 +45,8 @@ public class PlayerStateMachine : StateMachine
     public bool AttachedBool;
     public Transform attachPoint;
 
+    public Transform parenter;
+
     public bool OutOfCombat()
     {
         if (Targeter.targets.Count == 0)
