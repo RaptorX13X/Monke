@@ -45,6 +45,7 @@ public class Attacher2 : MonoBehaviour
 
     private void Interact()
     {
+        if (inputReader == null) return;
         if (puzzle.isComplete) return;
         if (puzzle.rotated1 && !stateMachine.HanumanBool)
         {

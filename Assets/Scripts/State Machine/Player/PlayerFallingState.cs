@@ -16,8 +16,8 @@ public class PlayerFallingState : PlayerBaseState
         momentum.y = 0f;
 
         stateMachine.LedgeDetector.OnLedgeDetect += HandleLedgeDetect;
-        stateMachine.VisnaAnimator.CrossFadeInFixedTime(FallHash, TransitionDuration);
-        stateMachine.HanumanAnimator.CrossFadeInFixedTime(FallHash, TransitionDuration);
+        if (!stateMachine.HanumanBool) stateMachine.VisnaAnimator.CrossFadeInFixedTime(FallHash, TransitionDuration);
+        else stateMachine.HanumanAnimator.CrossFadeInFixedTime(FallHash, TransitionDuration);
     }
 
     public override void Tick(float deltaTime)
@@ -36,8 +36,8 @@ public class PlayerFallingState : PlayerBaseState
 
     public override void Exit()
     {
-        stateMachine.VisnaAnimator.CrossFadeInFixedTime(LandHash, TransitionDuration);
-        stateMachine.HanumanAnimator.CrossFadeInFixedTime(LandHash, TransitionDuration);
+        if (!stateMachine.HanumanBool) stateMachine.VisnaAnimator.CrossFadeInFixedTime(LandHash, TransitionDuration);
+        else stateMachine.HanumanAnimator.CrossFadeInFixedTime(LandHash, TransitionDuration);
         stateMachine.PlayerAudio.PlayLanding();
         
         stateMachine.LedgeDetector.OnLedgeDetect -= HandleLedgeDetect;

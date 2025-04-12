@@ -10,8 +10,8 @@ public class PlayerPullUpState : PlayerBaseState
 
     public override void Enter()
     {
-        stateMachine.VisnaAnimator.CrossFadeInFixedTime(PullUpHash, CrossFadeDuration);
-        stateMachine.HanumanAnimator.CrossFadeInFixedTime(PullUpHash, CrossFadeDuration);
+        if (!stateMachine.HanumanBool) stateMachine.VisnaAnimator.CrossFadeInFixedTime(PullUpHash, CrossFadeDuration);
+        else stateMachine.HanumanAnimator.CrossFadeInFixedTime(PullUpHash, CrossFadeDuration);
     }
 
     public override void Tick(float deltaTime)

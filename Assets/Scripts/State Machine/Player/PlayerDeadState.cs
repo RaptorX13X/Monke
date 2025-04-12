@@ -13,9 +13,9 @@ public class PlayerDeadState : PlayerBaseState
 
     public override void Enter()
     {
-        //stateMachine.Weapon.gameObject.SetActive(false);
-        stateMachine.VisnaAnimator.CrossFadeInFixedTime(DyingHash, TransitionDuration);
-        stateMachine.HanumanAnimator.CrossFadeInFixedTime(DyingHash, TransitionDuration);
+        if (stateMachine.HanumanBool) stateMachine.HanumanAnimator.CrossFadeInFixedTime(DyingHash, TransitionDuration);
+        else stateMachine.VisnaAnimator.CrossFadeInFixedTime(DyingHash, TransitionDuration);
+        
         if (stateMachine.deathByFalling) stateMachine.PlayerAudio.PlayDeathByFalling();
         else if (!stateMachine.deathByFalling) stateMachine.PlayerAudio.PlayDeath();
     }

@@ -12,8 +12,8 @@ public class PlayerPushingState : PlayerBaseState
     public override void Enter()
     {
         stateMachine.CharacterController.enabled = false;
-        stateMachine.VisnaAnimator.CrossFadeInFixedTime(PushingHash, CrossFadeDuration);
-        stateMachine.HanumanAnimator.CrossFadeInFixedTime(PushingHash, CrossFadeDuration);
+        if (!stateMachine.HanumanBool) stateMachine.VisnaAnimator.CrossFadeInFixedTime(PushingHash, CrossFadeDuration);
+        else stateMachine.HanumanAnimator.CrossFadeInFixedTime(PushingHash, CrossFadeDuration);
     }
 
     public override void Tick(float deltaTime)
