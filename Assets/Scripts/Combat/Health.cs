@@ -9,8 +9,8 @@ public class Health : MonoBehaviour
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int healthRegen = 5;
     [SerializeField] private bool isPlayer;
-    [SerializeField] private TextMeshProUGUI healthText;
-    [SerializeField] private Image healthBar;
+    //[SerializeField] private TextMeshProUGUI healthText;
+    //[SerializeField] private Image healthBar;
     
     private int currentHealth;
     private bool isInvulnerable;
@@ -28,8 +28,8 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth;
         if (isPlayer)
         {
-            healthText.text = currentHealth.ToString();
-            healthBar.fillAmount = currentHealth * 0.01f;
+            //healthText.text = currentHealth.ToString();
+            //healthBar.fillAmount = currentHealth * 0.01f;
         }
 
         regen = regenRate;
@@ -55,16 +55,16 @@ public class Health : MonoBehaviour
         Debug.Log(currentHealth);
         if (isPlayer)
         {
-            healthText.text = currentHealth.ToString();
-            healthBar.fillAmount = currentHealth * 0.01f;
+            //healthText.text = currentHealth.ToString();
+            //healthBar.fillAmount = currentHealth * 0.01f;
         }
     }
 
     public void Respawn()
     {
         currentHealth = maxHealth;
-        healthText.text = currentHealth.ToString();
-        healthBar.fillAmount = currentHealth * 0.01f;
+        //healthText.text = currentHealth.ToString();
+        //healthBar.fillAmount = currentHealth * 0.01f;
     }
 
     private void Update()
@@ -78,8 +78,8 @@ public class Health : MonoBehaviour
                 {
                     currentHealth += healthRegen;
                     Mathf.Clamp(currentHealth, 0, maxHealth);
-                    healthText.text = currentHealth.ToString();
-                    healthBar.fillAmount = currentHealth * 0.01f;
+                    //healthText.text = currentHealth.ToString();
+                    //healthBar.fillAmount = currentHealth * 0.01f;
                     regen = regenRate;
                 }
             }
