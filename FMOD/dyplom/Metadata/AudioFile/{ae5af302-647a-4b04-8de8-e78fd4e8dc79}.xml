@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{815bcaa1-9c66-4d18-bbdb-3a2c7290f6f8}">
+	<object class="AudioFile" id="{ae5af302-647a-4b04-8de8-e78fd4e8dc79}">
 		<property name="assetPath">
-			<value>naga/naga damge-001.mp3</value>
+			<value>ui/ui_clicked-005.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>48</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.5673469387755101</value>
+			<value>0.55200000000000005</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{8df8c748-50e3-4d56-aa57-737ff52775ac}</destination>

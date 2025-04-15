@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{8913e883-7ee1-4ee7-9808-029dea2b8130}">
+	<object class="AudioFile" id="{32e579e9-7fb3-46db-bf71-1b5dcc3bac2f}">
 		<property name="assetPath">
-			<value>naga/naga attack-001.mp3</value>
+			<value>ui/ui_hovered-004.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>48</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>2.4293877551020406</value>
+			<value>0.55200000000000005</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{8df8c748-50e3-4d56-aa57-737ff52775ac}</destination>
