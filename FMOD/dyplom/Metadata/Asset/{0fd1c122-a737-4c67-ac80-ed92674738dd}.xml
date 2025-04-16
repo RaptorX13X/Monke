@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="EncodableAsset" id="{078d5e52-34b7-4a4d-a005-e72eeed1dfc2}">
+	<object class="EncodableAsset" id="{0fd1c122-a737-4c67-ac80-ed92674738dd}">
 		<property name="assetPath">
-			<value>naga/</value>
+			<value>ui/</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{8df8c748-50e3-4d56-aa57-737ff52775ac}</destination>
