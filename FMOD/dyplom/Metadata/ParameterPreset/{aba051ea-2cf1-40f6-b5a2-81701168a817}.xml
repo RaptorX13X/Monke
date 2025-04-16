@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{aba051ea-2cf1-40f6-b5a2-81701168a817}">
+		<property name="name">
+			<value>puzzle</value>
+		</property>
+		<relationship name="folder">
+			<destination>{a2b4286c-34a4-49f6-a34c-67d3c7d02ad4}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{55219c7e-f2e1-405b-83da-ea264d0137c9}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{55219c7e-f2e1-405b-83da-ea264d0137c9}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>solved</value>
+			<value>half</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

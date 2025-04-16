@@ -22,7 +22,7 @@ public class ReelDoor2 : MonoBehaviour
         {
             emitter.Play();
             MoveDoor();
-            puzzleAudio.PlayPuzzleSolved();
+            puzzleAudio.PlayMiddleOfPuzzle();
             happened = true;
         }
     }

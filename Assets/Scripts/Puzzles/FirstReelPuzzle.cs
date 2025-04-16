@@ -2,6 +2,7 @@ using System;
 using DG.Tweening.Core.Easing;
 using Unity.VisualScripting;
 using UnityEngine;
+using FMODUnity;
 
 public class FirstReelPuzzle : MonoBehaviour
 {
@@ -12,7 +13,9 @@ public class FirstReelPuzzle : MonoBehaviour
     private PlayerStateMachine stateMachine;
     private PlayerAudio playerAudio;
     private bool isPlayingAudio;
-    
+
+    [SerializeField] private StudioEventEmitter emitter;
+
     [SerializeField] private float rotation1 = 155f;
     [SerializeField] private float rotation2 = 55f;
 
@@ -64,6 +67,7 @@ public class FirstReelPuzzle : MonoBehaviour
         {
             rotated1 = true;
             DetachPlayer();
+            emitter.Play();
         }
 
         if (rotated1)
