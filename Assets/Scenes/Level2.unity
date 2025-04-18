@@ -12741,6 +12741,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.039270587
       objectReference: {fileID: 0}
+    - target: {fileID: 3090553912852404232, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: UnlockedHanuman
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3521376635081412297, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_Name
       value: PlayerRig
