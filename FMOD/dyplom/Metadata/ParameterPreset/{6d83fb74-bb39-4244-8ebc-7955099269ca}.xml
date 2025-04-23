@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{6d83fb74-bb39-4244-8ebc-7955099269ca}">
+		<property name="name">
+			<value>puzzle music</value>
+		</property>
+		<relationship name="folder">
+			<destination>{a2b4286c-34a4-49f6-a34c-67d3c7d02ad4}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{5aff8120-b0ea-4654-ae8e-097b9f87ba63}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{5aff8120-b0ea-4654-ae8e-097b9f87ba63}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>25</value>
+		</property>
+	</object>
+</objects>
