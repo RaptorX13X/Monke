@@ -280,7 +280,7 @@
 	</object>
 	<object class="NamedMarker" id="{23e2c60f-679c-4f43-81f5-d268cb86aa49}">
 		<property name="position">
-			<value>35</value>
+			<value>34</value>
 		</property>
 		<property name="name">
 			<value>Ending</value>
@@ -297,7 +297,7 @@
 			<value>10.800000000000001</value>
 		</property>
 		<property name="length">
-			<value>24.199999999999999</value>
+			<value>23.199999999999999</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{2ad9f57f-4c95-4e8a-be8e-25834a157b10}</destination>
@@ -482,7 +482,7 @@
 			<value>0</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.2547189</value>
+			<value>-1.00000048</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{dd3b47af-2a7b-4048-b880-271e88185bf0}">
