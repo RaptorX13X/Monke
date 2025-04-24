@@ -36,6 +36,9 @@
 		<relationship name="parameters">
 			<destination>{885e241d-3bb9-40d6-b32d-6ffca30d7c32}</destination>
 		</relationship>
+		<relationship name="banks">
+			<destination>{5975795d-d7c2-47a7-b5f3-d3ef74298ee9}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{0851618d-4189-4ec3-9f0e-2bbe99c25daa}">
 		<relationship name="masterBus">
@@ -167,6 +170,9 @@
 		</property>
 	</object>
 	<object class="EventMixerGroup" id="{adb433de-44a8-403a-a6d5-d5797d5b205c}">
+		<property name="volume">
+			<value>-4.5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -297,6 +303,9 @@
 		<relationship name="markerTrack">
 			<destination>{60440f1f-fb28-4221-a388-87c6f3e0773f}</destination>
 		</relationship>
+		<relationship name="triggerConditions">
+			<destination>{4cfec5e2-77b1-4987-ba02-c4abff1cae58}</destination>
+		</relationship>
 		<relationship name="transitionTimeline">
 			<destination>{bed3be7e-5158-44ac-bd57-253e1e3b222c}</destination>
 		</relationship>
@@ -410,6 +419,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{10199d3e-26dc-42d4-9af0-585cd73b1214}" />
+	<object class="ParameterCondition" id="{4cfec5e2-77b1-4987-ba02-c4abff1cae58}">
+		<property name="minimum">
+			<value>0</value>
+		</property>
+		<property name="maximum">
+			<value>1</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{5aff8120-b0ea-4654-ae8e-097b9f87ba63}</destination>
+		</relationship>
+	</object>
 	<object class="TransitionTimeline" id="{bed3be7e-5158-44ac-bd57-253e1e3b222c}">
 		<property name="length">
 			<value>2</value>
