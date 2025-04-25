@@ -40,7 +40,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21013631652401119}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 2
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -351,6 +351,7 @@ MonoBehaviour:
   UnlockedHanuman: 0
   AttachedBool: 0
   attachPoint: {fileID: 0}
+  parenter: {fileID: 0}
 --- !u!143 &9147552183235917680
 CharacterController:
   m_ObjectHideFlags: 0
@@ -539,8 +540,6 @@ MonoBehaviour:
   maxHealth: 100
   healthRegen: 5
   isPlayer: 1
-  healthText: {fileID: 0}
-  healthBar: {fileID: 0}
   canRegen: 0
   regenRate: 5
   playerAudio: {fileID: 725962259733445944}
@@ -1031,7 +1030,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802486551229411750}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 2
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0

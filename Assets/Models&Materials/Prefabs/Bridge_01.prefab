@@ -52,13 +52,29 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 93ff45620cdeac84b9518813f3953ec9, type: 2}
+    - target: {fileID: -6195767538593635260, guid: c4740e33bffc94948a8093fc0416263f, type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6059772471000878105, guid: c4740e33bffc94948a8093fc0416263f, type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -3477821731311062464, guid: c4740e33bffc94948a8093fc0416263f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d0e4ba69d319a22439ba58d46521f1d2, type: 2}
+    - target: {fileID: -1041279737980340588, guid: c4740e33bffc94948a8093fc0416263f, type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c4740e33bffc94948a8093fc0416263f, type: 3}
       propertyPath: m_Name
       value: Bridge_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835409689826365435, guid: c4740e33bffc94948a8093fc0416263f, type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
