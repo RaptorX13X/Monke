@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7d55b87bf6676ff4db737110f7611a95, type: 2}
     - target: {fileID: 4431670454091400558, guid: 6737bcb91c297384885cf4ca329d7706, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4431670454091400558, guid: 6737bcb91c297384885cf4ca329d7706, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -114,7 +114,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 648d99c50be2cd14fb703db2461717fc, type: 2}
     - target: {fileID: 5694059874591286030, guid: 6737bcb91c297384885cf4ca329d7706, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694059874591286030, guid: 6737bcb91c297384885cf4ca329d7706, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5694059874591286030, guid: 6737bcb91c297384885cf4ca329d7706, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -185,5 +189,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47f413d26d1e554490a0c746d157652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookX: 90
-  lookZ: 90

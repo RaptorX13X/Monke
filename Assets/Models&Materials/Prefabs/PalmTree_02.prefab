@@ -142,7 +142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538057606817204104, guid: f94b937206622d74c828d2c4b289c2bd, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2538057606817204104, guid: f94b937206622d74c828d2c4b289c2bd, type: 3}
       propertyPath: m_DynamicOccludee
@@ -194,7 +194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3765108852280629433, guid: f94b937206622d74c828d2c4b289c2bd, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3765108852280629433, guid: f94b937206622d74c828d2c4b289c2bd, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -297,5 +297,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47f413d26d1e554490a0c746d157652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookX: 90
-  lookZ: 90
