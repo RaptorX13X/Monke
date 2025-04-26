@@ -39679,7 +39679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSet: 0
   animator: {fileID: 1076546208}
-  spikes: {fileID: 0}
+  spikes: {fileID: 1898308853}
 --- !u!1001 &1076884034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75727,6 +75727,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8689449202193871711, guid: d58999d8f91e13b49b250588d92083ff, type: 3}
   m_PrefabInstance: {fileID: 675533090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1898308853 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 871947661871899316, guid: c316f9b231c58cd4ba1e0e92b6f04249, type: 3}
+  m_PrefabInstance: {fileID: 209284917}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1901988130
 PrefabInstance:
