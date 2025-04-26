@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 7672158325937013773}
   - component: {fileID: 1833230998227929750}
   - component: {fileID: 4199400460751096318}
+  - component: {fileID: 6182779947392584865}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -469,11 +470,11 @@ MonoBehaviour:
     Path: event:/puzzles/lever pull
   stoneWheelEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -602256
+      Data2: 1174711043
+      Data3: 365219715
+      Data4: -1806947733
+    Path: event:/puzzles/stone wheel
   hanumanJumpEvent:
     Guid:
       Data1: 215804299
@@ -571,6 +572,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAudio: {fileID: 725962259733445944}
+--- !u!114 &6182779947392584865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271679210315325818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b72792e971a6804bbea00aac675ad2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &453151418350521731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1907,7 +1920,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.59, z: 0}
-  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5072153682559003238}
@@ -2086,8 +2099,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3914528299665653806}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.010027621, y: 0.9866346, z: -0.06669815, w: 0.14833392}
-  m_LocalPosition: {x: -2.752393, y: 3.6009383, z: 9.023408}
+  m_LocalRotation: {x: 0.010036211, y: 0.98663455, z: -0.06669946, w: 0.1483333}
+  m_LocalPosition: {x: -2.75237, y: 3.6009867, z: 9.023411}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2339,24 +2352,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3914528299665653806}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbe43d662878a7c43bcd44d43c9e2094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CollideAgainst:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 257
   IgnoreTag: 
   TransparentLayers:
     serializedVersion: 2
     m_Bits: 0
-  MinimumDistanceFromTarget: 0.3
+  MinimumDistanceFromTarget: 0.01
   AvoidObstacles:
     Enabled: 1
     DistanceLimit: 0
     MinimumOcclusionTime: 0
-    CameraRadius: 0.4
+    CameraRadius: 0.75
     UseFollowTarget:
       Enabled: 0
       YOffset: 0
@@ -2378,7 +2391,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3914528299665653806}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
   m_Name: 
