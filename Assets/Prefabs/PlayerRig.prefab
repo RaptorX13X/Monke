@@ -478,6 +478,13 @@ MonoBehaviour:
       Data3: 365219715
       Data4: -1806947733
     Path: event:/puzzles/stone wheel
+  torchEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   hanumanJumpEvent:
     Guid:
       Data1: 215804299
@@ -695,7 +702,7 @@ GameObject:
   - component: {fileID: 5515614109171745513}
   - component: {fileID: 5705389253283404007}
   - component: {fileID: 3781726658937487344}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2733,7 +2740,7 @@ GameObject:
   - component: {fileID: 1142636967573216085}
   - component: {fileID: 333425732991079560}
   - component: {fileID: 5860708306347898539}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3317,7 +3324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6224601002234124583}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TORCH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3509,7 +3516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5393885005428122919}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TORCH
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,4 +1,5 @@
 using UnityEngine;
+using FMODUnity;
 
 public class Brazier : MonoBehaviour
 {
@@ -6,7 +7,9 @@ public class Brazier : MonoBehaviour
     private InputReader inputReader;
     [SerializeField] private TorchPuzzle puzzle;
     public bool burning;
-    private bool canInteract = true;
+    public bool canInteract = true;
+
+    [SerializeField] private StudioEventEmitter emitter;
         
         private void OnTriggerEnter(Collider other)
         {
@@ -43,6 +46,8 @@ public class Brazier : MonoBehaviour
                 burning = true;
                 puzzle.CheckCompletion();
                 canInteract = false;
+            emitter.Play();
+            
             }
         }
 }

@@ -4,6 +4,7 @@ public class Torch : MonoBehaviour
 {
     private PlayerStateMachine stateMachine;
     private InputReader inputReader;
+    private PlayerAudio playerAudio;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -16,6 +17,10 @@ public class Torch : MonoBehaviour
         if (other.TryGetComponent(out PlayerStateMachine _stateMachine))
         {
             stateMachine = _stateMachine;
+        }
+        if (other.TryGetComponent(out PlayerAudio _playerAudio))
+        {
+            playerAudio = _playerAudio;
         }
     }
     
@@ -30,11 +35,17 @@ public class Torch : MonoBehaviour
         {
             stateMachine = null;
         }
+        if (other.TryGetComponent(out PlayerAudio _playerAudio))
+        {
+            playerAudio = null;
+        }
     }
 
     private void Interact()
     {
+        playerAudio.PlayTorch();
         stateMachine.PickUpTorch();
         gameObject.SetActive(false);
+        
     }
 }

@@ -14,7 +14,8 @@ public class PlayerAudio : MonoBehaviour
     FMOD.Studio.EventInstance PushingObjectSound;
     FMOD.Studio.EventInstance LeverSound;
     FMOD.Studio.EventInstance StoneWheelSound;
-    
+    FMOD.Studio.EventInstance TorchSound;
+
 
     FMOD.Studio.EventInstance HanumanJumpSound;
     FMOD.Studio.EventInstance HanumanDamageSound;
@@ -32,6 +33,7 @@ public class PlayerAudio : MonoBehaviour
     [SerializeField] private EventReference pushingObjectEvent;
     [SerializeField] private EventReference leverEvent;
     [SerializeField] private EventReference stoneWheelEvent;
+    [SerializeField] private EventReference torchEvent;
 
     [SerializeField] private EventReference hanumanJumpEvent;
     [SerializeField] private EventReference hanumanDamageEvent;
@@ -294,5 +296,18 @@ public class PlayerAudio : MonoBehaviour
     public void StopStoneWheel()
     {
         StoneWheelSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
+    public void PlayTorch()
+    {
+        TorchSound = FMODUnity.RuntimeManager.CreateInstance(torchEvent);
+        TorchSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+        TorchSound.start();
+        TorchSound.release();
+    }
+
+    public void StopTorch()
+    {
+        TorchSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }

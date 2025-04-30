@@ -129,5 +129,6 @@ public class PlayerStateMachine : StateMachine
     public void LoseTorch()
     {
         hasTorch = false;
+        PlayerAudio.StopTorch();
     }
 }

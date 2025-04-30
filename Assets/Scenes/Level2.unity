@@ -4024,6 +4024,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleSlidingDoor (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -8536,6 +8544,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleSlidingDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -11603,6 +11619,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2591710887291407798, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: EventPlayTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3450827429076301591, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.742191
@@ -11647,6 +11667,14 @@ PrefabInstance:
       propertyPath: puzzle
       value: 
       objectReference: {fileID: 533021482}
+    - target: {fileID: 4626981148534329343, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: burning
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4626981148534329343, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: emitter
+      value: 
+      objectReference: {fileID: 331926420}
     - target: {fileID: 7515926915907502837, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_Name
       value: Brazier (1)
@@ -11665,6 +11693,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58659614312c22c448e7270d18f514af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &331926420 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2591710887291407798, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+  m_PrefabInstance: {fileID: 331926418}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &332734996
@@ -11948,6 +11987,26 @@ PrefabInstance:
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.06669815
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: torchEvent.Path
+      value: event:/puzzles/torch
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: torchEvent.Guid.Data1
+      value: -1053482250
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: torchEvent.Guid.Data2
+      value: 1235608909
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: torchEvent.Guid.Data3
+      value: 159867048
+      objectReference: {fileID: 0}
+    - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: torchEvent.Guid.Data4
+      value: -1517435182
       objectReference: {fileID: 0}
     - target: {fileID: 3090553912852404232, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: UnlockedHanuman
@@ -27465,6 +27524,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleSlidingDoor (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -29561,6 +29628,14 @@ PrefabInstance:
     - target: {fileID: 2542094535025376225, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_Name
       value: PuzzleSlidingDoor (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_Enabled
@@ -35992,6 +36067,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleSlidingDoor (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -41135,6 +41218,14 @@ PrefabInstance:
     - target: {fileID: 2542094535025376225, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_Name
       value: PuzzleSlidingDoor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_Enabled
@@ -54706,6 +54797,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2591710887291407798, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: EventPlayTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3450827429076301591, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.742191
@@ -54750,6 +54845,14 @@ PrefabInstance:
       propertyPath: puzzle
       value: 
       objectReference: {fileID: 533021482}
+    - target: {fileID: 4626981148534329343, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: burning
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4626981148534329343, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: emitter
+      value: 
+      objectReference: {fileID: 1547220163}
     - target: {fileID: 7515926915907502837, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_Name
       value: Brazier (2)
@@ -54768,6 +54871,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58659614312c22c448e7270d18f514af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1547220163 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2591710887291407798, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+  m_PrefabInstance: {fileID: 1547220161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1550027008
@@ -58399,6 +58513,14 @@ PrefabInstance:
     - target: {fileID: 2542094535025376225, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_Name
       value: PuzzleSlidingDoor (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_Enabled
@@ -62375,6 +62497,14 @@ PrefabInstance:
     - target: {fileID: 2542094535025376225, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_Name
       value: PuzzleSlidingDoor (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: plate
@@ -72630,6 +72760,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleSlidingDoor (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -76358,6 +76496,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleSlidingDoor (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -76744,6 +76890,14 @@ PrefabInstance:
       propertyPath: puzzle
       value: 
       objectReference: {fileID: 533021482}
+    - target: {fileID: 4626981148534329343, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: emitter
+      value: 
+      objectReference: {fileID: 6517050603516732659}
+    - target: {fileID: 4626981148534329343, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: canInteract
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7515926915907502837, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_Name
       value: Brazier
@@ -76762,6 +76916,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58659614312c22c448e7270d18f514af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6517050603516732659 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2591710887291407798, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+  m_PrefabInstance: {fileID: 6517050603516732652}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &7913962182141845434
