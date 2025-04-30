@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b87304f156131d40a6e3e804d1780ce, type: 3}
+  m_Name: 2Dialogue 5
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - character:
+      name: Hanuman
+      icon: {fileID: 0}
+    line: Wait, I recognize this statue... It's of... Me...
+    hasChoices: 0
+    choice1: 
+    choice2: 
+    soundToPlay: {fileID: 0}
+    dialoguetoStartOn1: {fileID: 0}
+    dialoguetoStartOn2: {fileID: 0}
+  - character:
+      name: Hanuman
+      icon: {fileID: 0}
+    line: It represents my Panchamukhi faces, each facing a different direction and
+      bestowing different blessings upon its followers.
+    hasChoices: 0
+    choice1: 
+    choice2: 
+    soundToPlay: {fileID: 0}
+    dialoguetoStartOn1: {fileID: 0}
+    dialoguetoStartOn2: {fileID: 0}
+  - character:
+      name: Hanuman
+      icon: {fileID: 0}
+    line: But, my main face should be facing east...
+    hasChoices: 0
+    choice1: 
+    choice2: 
+    soundToPlay: {fileID: 0}
+    dialoguetoStartOn1: {fileID: 0}
+    dialoguetoStartOn2: {fileID: 0}
+  isComplete: 0
