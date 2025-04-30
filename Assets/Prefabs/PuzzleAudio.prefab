@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2863275518015596630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5934839722046967786}
+  - component: {fileID: 3723209987103622970}
+  m_Layer: 0
+  m_Name: PuzzleAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5934839722046967786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2863275518015596630}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 80.47778, y: 3.9561687, z: -111.52875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3723209987103622970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2863275518015596630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f1b932b63883724eb3c04c96de7df79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secretDoorOpenEvent:
+    Guid:
+      Data1: -1516025398
+      Data2: 1203990683
+      Data3: -19552341
+      Data4: 1145717807
+    Path: event:/puzzles/secret door open
+  stoneWheelEvent:
+    Guid:
+      Data1: -602256
+      Data2: 1174711043
+      Data3: 365219715
+      Data4: -1806947733
+    Path: event:/puzzles/stone wheel
+  puzzleSolvedEvent:
+    Guid:
+      Data1: 484284879
+      Data2: 1074705844
+      Data3: 2114634910
+      Data4: 1759395377
+    Path: event:/puzzles/puzzle solved
+  middleOfPuzzleSolvedEvent:
+    Guid:
+      Data1: -1667264364
+      Data2: 1330316887
+      Data3: -417978949
+      Data4: -1071760886
+    Path: event:/puzzles/middle of puzzle
