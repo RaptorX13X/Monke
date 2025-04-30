@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b87304f156131d40a6e3e804d1780ce, type: 3}
+  m_Name: Dialogue9
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - character:
+      name: Visna
+      icon: {fileID: 0}
+    line: What is this thing?... *touches the gada*
+    hasChoices: 0
+    choice1: 
+    choice2: 
+    soundToPlay: {fileID: 0}
+    dialoguetoStartOn1: {fileID: 0}
+    dialoguetoStartOn2: {fileID: 0}
+  - character:
+      name: Hanuman
+      icon: {fileID: 0}
+    line: I am Hanuman, the god of wisdom and strenght, the biggest warrior among
+      gods.
+    hasChoices: 0
+    choice1: 
+    choice2: 
+    soundToPlay: {fileID: 0}
+    dialoguetoStartOn1: {fileID: 0}
+    dialoguetoStartOn2: {fileID: 0}
+  - character:
+      name: Hanuman
+      icon: {fileID: 0}
+    line: You, my child, have freed me from the chains keeping me inside my own weapon.
+    hasChoices: 0
+    choice1: 
+    choice2: 
+    soundToPlay: {fileID: 0}
+    dialoguetoStartOn1: {fileID: 0}
+    dialoguetoStartOn2: {fileID: 0}
+  - character:
+      name: Visna
+      icon: {fileID: 0}
+    line: I don't know what to say my lord, I'm really honored. Mighty Hanuman, can
+      you help me find a way out of here?
+    hasChoices: 0
+    choice1: 
+    choice2: 
+    soundToPlay: {fileID: 0}
+    dialoguetoStartOn1: {fileID: 0}
+    dialoguetoStartOn2: {fileID: 0}
+  - character:
+      name: Hanuman
+      icon: {fileID: 0}
+    line: Don't worry my child, you helped me, so now I shall help you.
+    hasChoices: 0
+    choice1: 
+    choice2: 
+    soundToPlay: {fileID: 0}
+    dialoguetoStartOn1: {fileID: 0}
+    dialoguetoStartOn2: {fileID: 0}
+  isComplete: 0
