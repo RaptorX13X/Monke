@@ -6494,6 +6494,8 @@ GameObject:
   - component: {fileID: 164055881}
   - component: {fileID: 164055880}
   - component: {fileID: 164055879}
+  - component: {fileID: 164055883}
+  - component: {fileID: 164055884}
   m_Layer: 0
   m_Name: Cube (107)
   m_TagString: Untagged
@@ -6583,13 +6585,63 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164055878}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000014603138}
-  m_LocalPosition: {x: -114.95, y: 20.47, z: -95.91}
+  m_LocalRotation: {x: -0.0017453891, y: 0.9999985, z: -0, w: 0}
+  m_LocalPosition: {x: -119.66, y: 20.45, z: -95.91}
   m_LocalScale: {x: 4.8502088, y: 0.36810836, z: 15.625004}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: -0.2}
+--- !u!114 &164055883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164055878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4201ebdfbd7b56745ba5f8d709d89810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levers:
+  - {fileID: 595493916}
+  move: {x: 5, y: 0, z: 0}
+  puzzleAudio: {fileID: 1687601483}
+  emitter: {fileID: 164055884}
+  dingSound: 0
+  doorDuration: 5
+--- !u!114 &164055884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164055878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 285909880
+      Data2: 1198147361
+      Data3: -437863808
+      Data4: -1445621811
+    Path: event:/puzzles/small door open
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 20
+  OverrideMaxDistance: 20
 --- !u!1 &166289615
 GameObject:
   m_ObjectHideFlags: 0
@@ -20193,6 +20245,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lever
       objectReference: {fileID: 0}
+    - target: {fileID: 2698470687376150363, guid: 876b4279c54c5ef4c89039be36973ed5, type: 3}
+      propertyPath: puzzle
+      value: 
+      objectReference: {fileID: 164055883}
     - target: {fileID: 4806511896402460939, guid: 876b4279c54c5ef4c89039be36973ed5, type: 3}
       propertyPath: m_Name
       value: Lever_01 (1)
@@ -20242,6 +20298,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 876b4279c54c5ef4c89039be36973ed5, type: 3}
+--- !u!114 &595493916 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2698470687376150363, guid: 876b4279c54c5ef4c89039be36973ed5, type: 3}
+  m_PrefabInstance: {fileID: 595493915}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ed5bdb88f98354fbab88f199e92e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &596854402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49124,6 +49191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzlePressurePlate
       objectReference: {fileID: 0}
+    - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1699799751}
     - target: {fileID: 5425696795634817659, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: m_LocalPosition.x
       value: -106.29
@@ -49169,6 +49240,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+--- !u!114 &1407078970 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+  m_PrefabInstance: {fileID: 1407078969}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509bc67ca087ed84c91f51fe5d5a5ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1409652586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59668,6 +59750,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71086414a0611e9449306370acfda382, type: 3}
+--- !u!65 &1699799751 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3112186932185454510, guid: 71086414a0611e9449306370acfda382, type: 3}
+  m_PrefabInstance: {fileID: 1699799750}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1701472267
 GameObject:
   m_ObjectHideFlags: 0
@@ -62317,9 +62404,21 @@ PrefabInstance:
       value: PuzzleSlidingDoor (3)
       objectReference: {fileID: 0}
     - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: plate
+      value: 
+      objectReference: {fileID: 1407078970}
+    - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: emitter
+      value: 
+      objectReference: {fileID: 1791123443}
+    - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: puzzleAudio
+      value: 
+      objectReference: {fileID: 1687601483}
     - target: {fileID: 7045026863892140539, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_LocalScale.y
       value: 7.4604125
@@ -62369,6 +62468,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+--- !u!114 &1791123443 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+  m_PrefabInstance: {fileID: 1791123442}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1792466288
 GameObject:
   m_ObjectHideFlags: 0
