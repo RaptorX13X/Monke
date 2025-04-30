@@ -27,10 +27,10 @@ public class TorchPuzzle : MonoBehaviour
         if (dingSound && !playedOnce)
         {
             puzzleAudio.PlayPuzzleSolved();
-            player.LoseTorch();
             playedOnce = true;
         }
         MoveDoor();
+        player.LoseTorch();
         emitter.Play();
     }
     
