@@ -7,11 +7,14 @@ public class PuzzleAudio : MonoBehaviour
     FMOD.Studio.EventInstance StoneWheelSound;
     FMOD.Studio.EventInstance PuzzleSolvedSound;
     FMOD.Studio.EventInstance MiddlePuzzleSound;
+    FMOD.Studio.EventInstance BladeSound;
 
     [SerializeField] private EventReference secretDoorOpenEvent;
     [SerializeField] private EventReference stoneWheelEvent;
     [SerializeField] private EventReference puzzleSolvedEvent;
     [SerializeField] private EventReference middleOfPuzzleSolvedEvent;
+    [SerializeField] private EventReference bladeEvent;
+
 
     public void PlaySecretDoorOpen()
     {
@@ -50,4 +53,12 @@ public class PuzzleAudio : MonoBehaviour
         MiddlePuzzleSound.start();
         MiddlePuzzleSound.release();
     }
+
+    //public void PlayBlade()
+    //{
+    //    BladeSound = FMODUnity.RuntimeManager.CreateInstance(bladeEvent);
+    //    BladeSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+    //    BladeSound.start();
+    //    BladeSound.release();
+    //}
 }

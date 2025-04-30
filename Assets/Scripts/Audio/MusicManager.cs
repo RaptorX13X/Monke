@@ -19,10 +19,7 @@ public class MusicManager : MonoBehaviour
     public void ChangeMusic(EventInstance eventInstance, EventReference eventRefernce)
     {
 
-        if(eventI.isValid())
-        {
-            StopMusic();
-        }
+        
         eventI = eventInstance;
         eventR = eventRefernce;
 
