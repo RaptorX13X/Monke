@@ -47,6 +47,10 @@ public class PlayerStateMachine : StateMachine
 
     public Transform parenter;
 
+    public bool hasTorch;
+    public GameObject visnaTorch;
+    public GameObject hanumanTorch;
+
     public bool OutOfCombat()
     {
         if (Targeter.targets.Count == 0)
@@ -64,7 +68,6 @@ public class PlayerStateMachine : StateMachine
         MainCameraTransform = Camera.main.transform;
         SwitchState(new PlayerFreeLookState(this));
     }
-
     private void FixedUpdate() // zmienic na event callniety raz jak sie jest out of combat?
     {
         if (OutOfCombat())
@@ -79,6 +82,20 @@ public class PlayerStateMachine : StateMachine
         else
         {
             Health.canRegen = false;
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (!HanumanBool && hasTorch)
+        {
+            hanumanTorch.SetActive(false);
+            visnaTorch.SetActive(true);
+        }
+        else if (HanumanBool && hasTorch)
+        {
+            visnaTorch.SetActive(false);
+            hanumanTorch.SetActive(true);
         }
     }
 
@@ -102,5 +119,15 @@ public class PlayerStateMachine : StateMachine
     private void HandleDie()
     {
         SwitchState(new PlayerDeadState(this));
+    }
+
+    public void PickUpTorch()
+    {
+        hasTorch = true;
+    }
+
+    public void LoseTorch()
+    {
+        hasTorch = false;
     }
 }
