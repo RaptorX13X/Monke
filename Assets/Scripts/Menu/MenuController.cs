@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     [SerializeField] private int gameSceneNumber;
+    [SerializeField] private int gameSceneNumber2;
     [SerializeField] private GameObject menuObject;
     [SerializeField] private GameObject controlsObject;
     [SerializeField] private int screenWidth = 640;
@@ -23,6 +24,10 @@ public class MenuController : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadSceneAsync(gameSceneNumber);
+    }
+    public void StartGame2()
+    {
+        SceneManager.LoadSceneAsync(gameSceneNumber2);
     }
 
     public void ControlsButton()

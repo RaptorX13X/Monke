@@ -8,6 +8,7 @@ public class Brazier : MonoBehaviour
     [SerializeField] private TorchPuzzle puzzle;
     public bool burning;
     public bool canInteract = true;
+    [SerializeField] private GameObject fakeFire;
 
     [SerializeField] private StudioEventEmitter emitter;
         
@@ -47,7 +48,7 @@ public class Brazier : MonoBehaviour
                 puzzle.CheckCompletion();
                 canInteract = false;
             emitter.Play();
-            
+            fakeFire.SetActive(true);
             }
         }
 }

@@ -895,7 +895,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6822448410010472324, guid: 4302fe8b2ffeca24980ad710da28d47e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1786372331}
   m_SourcePrefab: {fileID: 100100000, guid: 4302fe8b2ffeca24980ad710da28d47e, type: 3}
 --- !u!4 &15976119 stripped
 Transform:
@@ -4855,6 +4858,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2591710887291407798, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: EventPlayTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3450827429076301591, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -202.18542
@@ -5387,7 +5394,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2698470687376150363, guid: 876b4279c54c5ef4c89039be36973ed5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -5419,7 +5427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSet: 0
   animator: {fileID: 123599183}
-  spikes: {fileID: 166289615}
+  spikes: {fileID: 1786372328}
 --- !u!1 &125301033
 GameObject:
   m_ObjectHideFlags: 0
@@ -7187,6 +7195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brazier (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8109225259580106484, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8932,7 +8944,7 @@ MonoBehaviour:
   puzzleAudio: {fileID: 1687601483}
   emitter: {fileID: 215701934}
   dingSound: 0
-  doorDuration: 20
+  doorDuration: 10
 --- !u!1001 &224170494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12263,7 +12275,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7523928
+      value: -2.7523918
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12271,23 +12283,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.023407
+      value: 9.023411
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.14833395
+      value: 0.148382
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.01002762
+      value: 0.010034024
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9866346
+      value: 0.98662597
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.06669815
+      value: -0.066718526
       objectReference: {fileID: 0}
     - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: torchEvent.Path
@@ -12319,15 +12331,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.821504
+      value: -6.4662075
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.05
+      value: 4.68
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -120.90298
+      value: 35.4404
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15621,7 +15633,7 @@ MonoBehaviour:
   puzzleAudio: {fileID: 1687601483}
   emitter: {fileID: 423537587}
   dingSound: 1
-  doorDuration: 20
+  doorDuration: 10
   player: {fileID: 339144192}
 --- !u!114 &423537587
 MonoBehaviour:
@@ -18450,7 +18462,7 @@ MonoBehaviour:
   puzzleAudio: {fileID: 1687601483}
   emitter: {fileID: 533021476}
   dingSound: 1
-  doorDuration: 20
+  doorDuration: 10
   player: {fileID: 339144192}
 --- !u!1 &533203387
 GameObject:
@@ -19416,7 +19428,7 @@ MonoBehaviour:
   puzzleAudio: {fileID: 1687601483}
   emitter: {fileID: 560999375}
   dingSound: 0
-  doorDuration: 20
+  doorDuration: 10
 --- !u!114 &560999375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27588,8 +27600,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: OverrideMinDistance
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: plate
@@ -29705,9 +29721,9 @@ MonoBehaviour:
   move: {x: 0, y: -10, z: 0}
   puzzleAudio: {fileID: 1687601483}
   emitter: {fileID: 864775237}
-  dingSound: 0
-  doorDuration: 20
-  player: {fileID: 0}
+  dingSound: 1
+  doorDuration: 10
+  player: {fileID: 339144192}
 --- !u!1 &866237519
 GameObject:
   m_ObjectHideFlags: 0
@@ -32238,6 +32254,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2591710887291407798, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: EventPlayTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3450827429076301591, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -227.73
@@ -32895,6 +32915,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2591710887291407798, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: EventPlayTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3450827429076301591, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -119.44
@@ -34530,6 +34554,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2591710887291407798, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: EventPlayTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3450827429076301591, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -80.28
@@ -36253,8 +36281,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: OverrideMinDistance
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_Enabled
@@ -36354,7 +36386,7 @@ MonoBehaviour:
   puzzleAudio: {fileID: 1687601483}
   emitter: {fileID: 1050708283}
   dingSound: 0
-  doorDuration: 20
+  doorDuration: 10
 --- !u!1 &1051533120
 GameObject:
   m_ObjectHideFlags: 0
@@ -38503,6 +38535,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brazier (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8109225259580106484, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39589,7 +39625,7 @@ Transform:
   m_GameObject: {fileID: 1142056184}
   serializedVersion: 2
   m_LocalRotation: {x: 0.010027623, y: 0.9866346, z: -0.06669815, w: 0.14833395}
-  m_LocalPosition: {x: -14.573896, y: 10.650939, z: -111.87957}
+  m_LocalPosition: {x: -7.331285, y: 7.409143, z: 38.328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40178,7 +40214,7 @@ MonoBehaviour:
   puzzleAudio: {fileID: 1687601483}
   emitter: {fileID: 1158053239}
   dingSound: 0
-  doorDuration: 20
+  doorDuration: 10
 --- !u!114 &1158053239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51760,6 +51796,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2591710887291407798, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: EventPlayTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3450827429076301591, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -91.04
@@ -56517,6 +56557,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2627702101739454812, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6745335603129361693, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
       propertyPath: m_Name
       value: UI
@@ -56524,6 +56568,10 @@ PrefabInstance:
     - target: {fileID: 6745335603129361693, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276457173923179128, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -61812,6 +61860,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2591710887291407798, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: EventPlayTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3450827429076301591, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -184.5194
@@ -62617,6 +62669,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1368140148}
   m_LocalEulerAnglesHint: {x: 0, y: -135, z: 0}
+--- !u!1 &1786372328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6822448410010472324, guid: 4302fe8b2ffeca24980ad710da28d47e, type: 3}
+  m_PrefabInstance: {fileID: 15976118}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1786372331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786372328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48bd1095d5ee0494fad65245910bab2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
+  move: {x: 0, y: 0, z: 0}
 --- !u!1 &1789419209
 GameObject:
   m_ObjectHideFlags: 0
@@ -65632,8 +65703,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 50
-  OverrideMaxDistance: 50
+  OverrideMinDistance: 100
+  OverrideMaxDistance: 100
 --- !u!114 &1853625516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65654,7 +65725,7 @@ MonoBehaviour:
   puzzleAudio: {fileID: 1687601483}
   emitter: {fileID: 1853625515}
   dingSound: 1
-  doorDuration: 20
+  doorDuration: 10
 --- !u!1 &1856116339
 GameObject:
   m_ObjectHideFlags: 0
@@ -76769,8 +76840,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540083102763428278, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: OverrideMinDistance
-      value: 20
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+      propertyPath: move.y
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 7019309333976270202, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
       propertyPath: m_Enabled
@@ -76866,11 +76945,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levers:
   - {fileID: 1607116735}
-  move: {x: 0, y: -10, z: 0}
+  move: {x: 0, y: -40, z: 0}
   puzzleAudio: {fileID: 1687601483}
   emitter: {fileID: 2141156954}
-  dingSound: 1
-  doorDuration: 20
+  dingSound: 0
+  doorDuration: 10
 --- !u!1 &2144725492
 GameObject:
   m_ObjectHideFlags: 0
@@ -77207,6 +77286,10 @@ PrefabInstance:
     - target: {fileID: 7515926915907502837, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_Name
       value: Brazier
+      objectReference: {fileID: 0}
+    - target: {fileID: 8109225259580106484, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

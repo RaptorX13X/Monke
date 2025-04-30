@@ -41,6 +41,6 @@ public class LeverSpikes : MonoBehaviour
     {
         spikes.transform.Translate(new Vector3(0, -5, 0), Space.Self);
         yield return new WaitForSeconds(3f);
-        Destroy(spikes);
+        spikes.SetActive(false);
     }
 }

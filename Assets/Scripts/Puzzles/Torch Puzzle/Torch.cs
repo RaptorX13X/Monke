@@ -45,7 +45,10 @@ public class Torch : MonoBehaviour
     {
         playerAudio.PlayTorch();
         stateMachine.PickUpTorch();
+        inputReader.InteractEvent -= Interact;
+        inputReader = null;
+        stateMachine = null;
+        playerAudio = null;
         gameObject.SetActive(false);
-        
     }
 }

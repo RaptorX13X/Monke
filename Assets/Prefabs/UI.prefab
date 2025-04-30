@@ -221,6 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1022787187260047550}
   - component: {fileID: 2135657988922000836}
+  - component: {fileID: 4304554143597758311}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -265,6 +266,25 @@ MonoBehaviour:
   menuSceneNumber: 0
   gameSceneNumber: 1
   level2SceneNumber: 2
+--- !u!114 &4304554143597758311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6745335603129361693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422018004ea18c14ca3a8c56225d2640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UiEvent:
+    Guid:
+      Data1: 419144483
+      Data2: 1299159339
+      Data3: -1567874143
+      Data4: -232878442
+    Path: event:/UI clicks
 --- !u!1 &7585982431383097745
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +406,7 @@ MonoBehaviour:
   isDialogueActive: 0
   typingSpeed: 0.08
   currentDialogue: {fileID: 0}
-  timeBetweenLines: 1
+  timeBetweenLines: 3
 --- !u!1001 &1980698232069393898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -502,13 +522,172 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5406356891847091682, guid: bb6f952081b2a9b498b099d523cbbbc0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3057031229409245623}
+    - targetCorrespondingSourceObject: {fileID: 6274619410546983781, guid: bb6f952081b2a9b498b099d523cbbbc0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6095615716745317938}
+    - targetCorrespondingSourceObject: {fileID: 7613119110596077458, guid: bb6f952081b2a9b498b099d523cbbbc0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1229805305434597595}
   m_SourcePrefab: {fileID: 100100000, guid: bb6f952081b2a9b498b099d523cbbbc0, type: 3}
 --- !u!1 &2627702101739454812 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4542904625107815606, guid: bb6f952081b2a9b498b099d523cbbbc0, type: 3}
   m_PrefabInstance: {fileID: 1980698232069393898}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5507681962184216207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6274619410546983781, guid: bb6f952081b2a9b498b099d523cbbbc0, type: 3}
+  m_PrefabInstance: {fileID: 1980698232069393898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6095615716745317938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507681962184216207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4304554143597758311}
+          m_TargetAssemblyTypeName: UiAudio, Assembly-CSharp
+          m_MethodName: PlayUiSound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: clicked
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4304554143597758311}
+          m_TargetAssemblyTypeName: UiAudio, Assembly-CSharp
+          m_MethodName: PlayUiSound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: hovered
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!1 &5799482377000085512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5406356891847091682, guid: bb6f952081b2a9b498b099d523cbbbc0, type: 3}
+  m_PrefabInstance: {fileID: 1980698232069393898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3057031229409245623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799482377000085512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4304554143597758311}
+          m_TargetAssemblyTypeName: UiAudio, Assembly-CSharp
+          m_MethodName: PlayUiSound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: clicked
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4304554143597758311}
+          m_TargetAssemblyTypeName: UiAudio, Assembly-CSharp
+          m_MethodName: PlayUiSound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: hovered
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!1 &8276457173923179128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7613119110596077458, guid: bb6f952081b2a9b498b099d523cbbbc0, type: 3}
+  m_PrefabInstance: {fileID: 1980698232069393898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1229805305434597595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8276457173923179128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4304554143597758311}
+          m_TargetAssemblyTypeName: UiAudio, Assembly-CSharp
+          m_MethodName: PlayUiSound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: clicked
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4304554143597758311}
+          m_TargetAssemblyTypeName: UiAudio, Assembly-CSharp
+          m_MethodName: PlayUiSound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: hovered
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!224 &9192737581244954093 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7273296440510691335, guid: bb6f952081b2a9b498b099d523cbbbc0, type: 3}
@@ -860,10 +1039,66 @@ PrefabInstance:
     - {fileID: 4911638435480968733, guid: 96cfd39aa514cfc469cb83db146ecdbd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5406356891847091682, guid: 96cfd39aa514cfc469cb83db146ecdbd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7247734474204039017}
+    - targetCorrespondingSourceObject: {fileID: 6274619410546983781, guid: 96cfd39aa514cfc469cb83db146ecdbd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5462660673420128725}
     - targetCorrespondingSourceObject: {fileID: 4766914278812307229, guid: 96cfd39aa514cfc469cb83db146ecdbd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8868589762492222623}
   m_SourcePrefab: {fileID: 100100000, guid: 96cfd39aa514cfc469cb83db146ecdbd, type: 3}
+--- !u!1 &180697663673148536 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6274619410546983781, guid: 96cfd39aa514cfc469cb83db146ecdbd, type: 3}
+  m_PrefabInstance: {fileID: 6166020034269783837}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5462660673420128725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180697663673148536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4304554143597758311}
+          m_TargetAssemblyTypeName: UiAudio, Assembly-CSharp
+          m_MethodName: PlayUiSound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: clicked
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4304554143597758311}
+          m_TargetAssemblyTypeName: UiAudio, Assembly-CSharp
+          m_MethodName: PlayUiSound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: hovered
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1708379156482353152 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4766914278812307229, guid: 96cfd39aa514cfc469cb83db146ecdbd, type: 3}
@@ -899,6 +1134,56 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &2203709922507506431 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5406356891847091682, guid: 96cfd39aa514cfc469cb83db146ecdbd, type: 3}
+  m_PrefabInstance: {fileID: 6166020034269783837}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7247734474204039017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2203709922507506431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4304554143597758311}
+          m_TargetAssemblyTypeName: UiAudio, Assembly-CSharp
+          m_MethodName: PlayUiSound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: clicked
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4304554143597758311}
+          m_TargetAssemblyTypeName: UiAudio, Assembly-CSharp
+          m_MethodName: PlayUiSound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: hovered
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!224 &3566263898381688602 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7273296440510691335, guid: 96cfd39aa514cfc469cb83db146ecdbd, type: 3}

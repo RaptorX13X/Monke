@@ -24,14 +24,14 @@ public class TorchPuzzle : MonoBehaviour
         {
             if (!brazier.burning) return;
         } 
+        MoveDoor();
+        player.LoseTorch();
+        emitter.Play();
         if (dingSound && !playedOnce)
         {
             puzzleAudio.PlayPuzzleSolved();
             playedOnce = true;
         }
-        MoveDoor();
-        player.LoseTorch();
-        emitter.Play();
     }
     
     

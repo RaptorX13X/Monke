@@ -97,6 +97,11 @@ public class PlayerStateMachine : StateMachine
             visnaTorch.SetActive(false);
             hanumanTorch.SetActive(true);
         }
+        else if (!hasTorch)
+        {
+            visnaTorch.SetActive(false);
+            hanumanTorch.SetActive(false);
+        }
     }
 
     private void OnEnable()
