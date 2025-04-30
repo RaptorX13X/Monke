@@ -37,6 +37,7 @@ public class Brazier : MonoBehaviour
 
         private void Interact()
         {
+            if (!stateMachine.hasTorch) return;
             if (canInteract)
             {
                 burning = true;
