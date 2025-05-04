@@ -21,6 +21,7 @@ public class FirstReelPuzzle : MonoBehaviour
 
     public bool isComplete;
 
+    
     public void AttachPlayer(PlayerStateMachine _stateMachine, InputReader reader, Transform attacher, PlayerAudio audio)
     {
         if (stateMachine == null)

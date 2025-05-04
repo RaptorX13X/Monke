@@ -51,6 +51,8 @@ public class PlayerStateMachine : StateMachine
     public GameObject visnaTorch;
     public GameObject hanumanTorch;
 
+    [SerializeField] private GameObject gada;
+
     public bool OutOfCombat()
     {
         if (Targeter.targets.Count == 0)
@@ -101,6 +103,11 @@ public class PlayerStateMachine : StateMachine
         {
             visnaTorch.SetActive(false);
             hanumanTorch.SetActive(false);
+        }
+
+        if (UnlockedHanuman)
+        {
+            gada.SetActive(true);
         }
     }
 

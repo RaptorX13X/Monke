@@ -13,6 +13,10 @@ public class SecondReelPuzzle : MonoBehaviour
     [SerializeField] private float rotation1;
     [SerializeField] private float rotation2;
     public bool isComplete;
+    
+    public DialogueSO dialogue;
+    public DialogueSO dialogue2;
+    private bool playedOnce = false;
 
     public void AttachPlayer(PlayerStateMachine _stateMachine, InputReader reader, Transform attacher, PlayerAudio audio)
     {
@@ -60,6 +64,7 @@ public class SecondReelPuzzle : MonoBehaviour
         {
             rotated1 = true;
             DetachPlayer();
+            TriggerDialogue();
         }
 
         if (rotated1)
@@ -90,5 +95,16 @@ public class SecondReelPuzzle : MonoBehaviour
     public void NeedHanuman()
     {
         transform.DOShakePosition(0.2f, 0.05f, 50, 90f, false, false);
+        if (stateMachine.UnlockedHanuman && !playedOnce)
+        {
+            TriggerDialogue();
+            playedOnce = true;
+        }
+    }
+    
+    public void TriggerDialogue()
+    {
+        DialogueManager.Instance.StartDialogue(dialogue);
+        Destroy(this);
     }
 }
