@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: What a beatuful day for exploration!
+    line: What a beatiful day for exploration!
     hasChoices: 0
     choice1: 
     choice2: 
