@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: We got to get up there.
+    line: We need to get up there.
     hasChoices: 0
     choice1: 
     choice2: 

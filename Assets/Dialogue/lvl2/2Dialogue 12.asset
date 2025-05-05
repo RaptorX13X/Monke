@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b87304f156131d40a6e3e804d1780ce, type: 3}
-  m_Name: 2Dialogue 4
+  m_Name: 2Dialogue 12
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: Visna
+      name: Hanuman
       icon: {fileID: 0}
-    line: It seems we need to pick which way to go.
+    line: Three levers, just like the three levels of this building...
     hasChoices: 0
     choice1: 
     choice2: 
