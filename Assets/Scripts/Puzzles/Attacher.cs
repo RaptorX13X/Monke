@@ -46,6 +46,11 @@ public class Attacher : MonoBehaviour
     private void Interact()
     {
         if (puzzle.isComplete) return;
+        if (puzzle.isAttached)
+        {
+            puzzle.DetachPlayer();
+            return;
+        }
         puzzle.AttachPlayer(stateMachine, inputReader, transform, playerAudio);
     }
 }

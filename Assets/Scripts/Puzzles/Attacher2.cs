@@ -47,6 +47,11 @@ public class Attacher2 : MonoBehaviour
     {
         if (inputReader == null) return;
         if (puzzle.isComplete) return;
+        if (puzzle.isAttached)
+        {
+            puzzle.DetachPlayer();
+            return;
+        }
         if (puzzle.rotated1 && !stateMachine.HanumanBool)
         {
             puzzle.NeedHanuman();

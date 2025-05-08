@@ -6,7 +6,7 @@ using FMODUnity;
 
 public class FirstReelPuzzle : MonoBehaviour
 {
-    private bool isAttached;
+    public bool isAttached;
     private bool rotated1;
     private bool rotated2;
     private InputReader inputReader;

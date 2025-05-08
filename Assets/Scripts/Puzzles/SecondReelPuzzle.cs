@@ -3,7 +3,7 @@ using System;
 using DG.Tweening;
 public class SecondReelPuzzle : MonoBehaviour
 {
-    private bool isAttached;
+    public bool isAttached;
     public bool rotated1;
     private bool rotated2;
     private InputReader inputReader;
