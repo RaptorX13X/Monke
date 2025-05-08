@@ -49,6 +49,12 @@ public class PlayerFreeLookState : PlayerBaseState
         if (!stateMachine.HanumanBool) stateMachine.VisnaAnimator.SetFloat(FreeLookSpeedHash, 1, AnimatorDampTime, deltaTime);
         else stateMachine.HanumanAnimator.SetFloat(FreeLookSpeedHash, 1, AnimatorDampTime, deltaTime);
         FaceMovementDirection(movement, deltaTime);
+        
+        // if (stateMachine.CharacterController.velocity.y <= -5f)
+        // {
+        //     stateMachine.SwitchState(new PlayerFallingState(stateMachine));
+        //     return;
+        // }
     }
 
     public override void Exit()
