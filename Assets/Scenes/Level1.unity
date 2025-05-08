@@ -250,6 +250,11 @@ MonoBehaviour:
   move: {x: 0, y: -10, z: 0}
   puzzleAudio: {fileID: 2038767117}
   emitter: {fileID: 7663720}
+--- !u!4 &7663722 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3023412073059988414, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
+  m_PrefabInstance: {fileID: 7663718}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9492796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3255,9 +3260,17 @@ PrefabInstance:
       value: PuzzlePressurePlate
       objectReference: {fileID: 0}
     - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 1171311660}
+    - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 851105594}
+    - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: playerMove.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5425696795634817659, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: m_LocalPosition.x
       value: 143.3
@@ -10952,8 +10965,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.014337766, y: 0.98244536, z: -0.16534065, w: 0.085194245}
-  m_LocalPosition: {x: 69.43463, y: 46.457973, z: -92.19231}
+  m_LocalRotation: {x: 0.014344479, y: 0.9824424, z: -0.1653362, w: 0.08523617}
+  m_LocalPosition: {x: -3.6480966, y: 7.1631207, z: -61.836014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21402,10 +21415,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzlePressurePlate
       objectReference: {fileID: 0}
+    - target: {fileID: 747832117648134893, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 1965907121}
     - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 2130960025}
+    - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: playerMove.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: objectToDisable
       value: 
@@ -44269,6 +44294,11 @@ MonoBehaviour:
   move: {x: 0, y: -15, z: 0}
   puzzleAudio: {fileID: 2038767117}
   emitter: {fileID: 1171311658}
+--- !u!4 &1171311660 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3023412073059988414, guid: 39e128913d5d46e42b741407bf92af79, type: 3}
+  m_PrefabInstance: {fileID: 1171311656}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1174526336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8689449202193871711, guid: d58999d8f91e13b49b250588d92083ff, type: 3}
@@ -45322,6 +45352,9 @@ MonoBehaviour:
   isSet: 0
   isSpecial: 0
   theSpecialOne: {fileID: 0}
+  playerOn: 0
+  door: {fileID: 0}
+  playerMove: {x: 0, y: 0, z: 0}
 --- !u!114 &1206239714 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
@@ -75422,9 +75455,17 @@ PrefabInstance:
       value: PuzzlePressurePlate (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 7663722}
+    - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1321262387}
+    - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: playerMove.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5425696795634817659, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: m_LocalPosition.x
       value: 102.09897
@@ -76538,6 +76579,9 @@ MonoBehaviour:
   isSet: 0
   isSpecial: 0
   theSpecialOne: {fileID: 0}
+  playerOn: 0
+  door: {fileID: 0}
+  playerMove: {x: 0, y: 0, z: 0}
 --- !u!114 &1875729535 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
@@ -89813,7 +89857,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6273575
+      value: -1.6273599
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.y
@@ -89825,11 +89869,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.08523608
+      value: 0.08523616
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.01434447
+      value: 0.014344488
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.y
@@ -89837,7 +89881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.16533627
+      value: -0.16533631
       objectReference: {fileID: 0}
     - target: {fileID: 1467855116582742774, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: OrbitStyle
@@ -89885,15 +89929,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 71.06199
+      value: -2.0207367
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 41.184853
+      value: 1.89
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -101.50028
+      value: -71.14399
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.w

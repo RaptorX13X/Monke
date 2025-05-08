@@ -32,6 +32,5 @@ public class PuzzleResult : MonoBehaviour
     {
         transform.DOShakePosition(1f, 0.05f, 50, 90f, false, false);
         transform.DOLocalMove(target, 5).SetDelay(1).SetLoops(0);
-
     }
 }
