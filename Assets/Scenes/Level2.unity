@@ -6227,9 +6227,17 @@ PrefabInstance:
       value: PuzzlePressurePlate (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 784760631}
+    - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1465381711}
+    - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: playerMove.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5425696795634817659, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: m_LocalPosition.x
       value: -132.80476
@@ -28335,6 +28343,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &784760631 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7045026863892140539, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+  m_PrefabInstance: {fileID: 784760629}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &798964435
 GameObject:
   m_ObjectHideFlags: 0
@@ -50456,9 +50469,17 @@ PrefabInstance:
       value: PuzzlePressurePlate
       objectReference: {fileID: 0}
     - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 1791123444}
+    - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1699799751}
+    - target: {fileID: 4591336802956976547, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
+      propertyPath: playerMove.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5425696795634817659, guid: ae192fefa946faa46a320b2a8b9fd460, type: 3}
       propertyPath: m_LocalPosition.x
       value: -106.29
@@ -64613,6 +64634,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1791123444 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7045026863892140539, guid: 8afcfe6b7923493409b25c37d135d94c, type: 3}
+  m_PrefabInstance: {fileID: 1791123442}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1792466288
 GameObject:
   m_ObjectHideFlags: 0

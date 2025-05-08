@@ -8,6 +8,9 @@ public class PressurePlateCheat : MonoBehaviour
     public bool isSet = false;
     [SerializeField] private bool isSpecial;
     [SerializeField] private PressurePlateCheat theSpecialOne;
+    public bool playerOn;
+    [SerializeField] private Transform door;
+    [SerializeField] private Vector3 playerMove;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -24,5 +27,36 @@ public class PressurePlateCheat : MonoBehaviour
                 pushable.DisableTrigger();
             }
         }
+        else if (other.CompareTag("Player"))
+        {
+            ShakeDoor();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            StopShake();
+        }
+    }
+    
+    private void ShakeDoor()
+    {
+        door.DOLocalMove(door.localPosition - playerMove, 1).SetDelay(0).SetLoops(0).OnComplete(StartShake);
+    }
+    
+    private void StartShake()
+    {
+        door.DOShakePosition(1f, 0.2f, 50, 90f, false, true, ShakeRandomnessMode.Harmonic).SetLoops(-1);
+    }
+    private void StopShake()
+    {
+        door.DOLocalMove(door.localPosition + playerMove, 1).SetDelay(0).SetLoops(0).OnComplete(StopAnim);
+    }
+    
+    private void StopAnim()
+    {
+        door.DOPause();
     }
 }
