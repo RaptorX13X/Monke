@@ -45,6 +45,15 @@ public class SecondReelPuzzle : MonoBehaviour
     private void Update()
     {
         if (!isAttached) return;
+        if (isComplete)
+        {
+            if (stateMachine.AttachedBool)
+            {
+                DetachPlayer();
+            }
+        
+            return;
+        }
         switch (inputReader.MovementValue.y)
         {
             case > 0.01f:
@@ -59,6 +68,8 @@ public class SecondReelPuzzle : MonoBehaviour
                 StopAudio();
                 break;
         }
+        
+        
         
         if (Math.Abs(transform.rotation.eulerAngles.y - rotation1) < 0.1f && !rotated1)
         {

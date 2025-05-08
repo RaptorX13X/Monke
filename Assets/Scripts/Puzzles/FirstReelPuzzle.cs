@@ -18,7 +18,7 @@ public class FirstReelPuzzle : MonoBehaviour
 
     [SerializeField] private float rotation1 = 155f;
     [SerializeField] private float rotation2 = 55f;
-
+    [SerializeField] private ReelDoor door;
     public bool isComplete;
 
     
@@ -49,6 +49,16 @@ public class FirstReelPuzzle : MonoBehaviour
     private void Update()
     {
         if (!isAttached) return;
+        
+        if (isComplete)
+        {
+            if (stateMachine.AttachedBool)
+            {
+                DetachPlayer();
+            }
+
+            return;
+        }
         switch (inputReader.MovementValue.y)
         {
             case > 0.01f:
