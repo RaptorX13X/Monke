@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
 
     //public Image characterIcon;
     public TextMeshProUGUI dialogueArea;
+    public TextMeshProUGUI characterNameArea;
     public Image background;
 
     private Queue<DialogueLine> lines;
@@ -78,6 +79,7 @@ public class DialogueManager : MonoBehaviour
         currentLine = lines.Dequeue();
 
         //characterIcon.sprite = currentLine.character.icon;
+        characterNameArea.text = currentLine.character.name;
 
         dialogueArea.gameObject.SetActive(true);
         StopAllCoroutines();
