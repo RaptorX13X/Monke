@@ -131,6 +131,5 @@ public class SecondReelPuzzle : MonoBehaviour
     public void TriggerDialogue()
     {
         DialogueManager.Instance.StartDialogue(dialogue);
-        Destroy(this);
     }
 }

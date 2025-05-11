@@ -18,7 +18,7 @@ public class LeverPuzzle : MonoBehaviour
     [SerializeField] private BoxCollider colliderToReplaceWith;
     [SerializeField] private MeshCollider colliderToReplace;
     public DialogueSO dialogue;
-    
+    [SerializeField] private bool shouldPlayDialogue;
     
     private void Start()
     {
@@ -38,7 +38,7 @@ public class LeverPuzzle : MonoBehaviour
             playedOnce = true;
         }
         MoveDoor();
-        TriggerDialogue();
+        if (shouldPlayDialogue) TriggerDialogue();
         emitter.Play();
     }
     

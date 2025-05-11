@@ -18,7 +18,7 @@ public class ReelDoor2 : MonoBehaviour
 
     private void Update()
     {
-        if  (reelPuzzle.rotated1 && !happened && reelPuzzle != null)
+        if  (reelPuzzle.requireHanuman && !happened && reelPuzzle != null)
         {
             emitter.Play();
             MoveDoor();
