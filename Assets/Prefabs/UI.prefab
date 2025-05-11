@@ -175,7 +175,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 55.072876, y: 82.47489, z: 43.7771, w: 35.243134}
+  m_margin: {x: 55.072876, y: 56.666183, z: 43.7771, w: 35.243134}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -542,7 +542,7 @@ MonoBehaviour:
   characterNameArea: {fileID: 3458724234081259007}
   background: {fileID: 4137239146295679424}
   isDialogueActive: 0
-  typingSpeed: 0.12
+  typingSpeed: 0.5
   currentDialogue: {fileID: 0}
   timeBetweenLines: 3
 --- !u!1001 &1980698232069393898
@@ -557,6 +557,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2135657988922000836}
+    - target: {fileID: 1293770370830825461, guid: bb6f952081b2a9b498b099d523cbbbc0, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
     - target: {fileID: 1937645629446562153, guid: bb6f952081b2a9b498b099d523cbbbc0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -931,6 +935,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7463403487925894838, guid: df8701e605ad55345a437b0766eb0108, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 7463403487925894838, guid: df8701e605ad55345a437b0766eb0108, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -982,6 +994,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2135657988922000836}
+    - target: {fileID: 1293770370830825461, guid: 96cfd39aa514cfc469cb83db146ecdbd, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
     - target: {fileID: 1937645629446562153, guid: 96cfd39aa514cfc469cb83db146ecdbd, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
       value: 1

@@ -11,6 +11,11 @@ public class PressurePlateCheat : MonoBehaviour
     public bool playerOn;
     [SerializeField] private Transform door;
     [SerializeField] private Vector3 playerMove;
+    private Vector3 originalPos;
+    private void Start()
+    {
+        originalPos = transform.localPosition;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -52,7 +57,7 @@ public class PressurePlateCheat : MonoBehaviour
     }
     private void StopShake()
     {
-        door.DOLocalMove(door.localPosition + playerMove, 1).SetDelay(0).SetLoops(0).OnComplete(StopAnim);
+        door.DOLocalMove(originalPos, 1).SetDelay(0).SetLoops(0).OnComplete(StopAnim);
     }
     
     private void StopAnim()

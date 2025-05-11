@@ -1193,6 +1193,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4129625273340254763, guid: 81c66762ba697ae49bb8112a53d55d0b, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
     - target: {fileID: 6648546342919259611, guid: 81c66762ba697ae49bb8112a53d55d0b, type: 3}
       propertyPath: m_Name
       value: Controls
