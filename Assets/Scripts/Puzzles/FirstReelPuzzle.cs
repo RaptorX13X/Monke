@@ -78,7 +78,7 @@ public class FirstReelPuzzle : MonoBehaviour
                 break;
         }
         
-        if (Math.Abs(transform.rotation.eulerAngles.y - rotation1) < 2f && !moving)
+        if (Math.Abs(transform.rotation.eulerAngles.y - rotation1) < 3f && !moving && !rotated1)
         {
             rotated1 = true;
             DetachPlayer();
@@ -90,7 +90,7 @@ public class FirstReelPuzzle : MonoBehaviour
             isComplete = true;
             
         }
-        else if (Math.Abs(transform.rotation.eulerAngles.y - rotation2) < 2f && !moving)
+        else if (Math.Abs(transform.rotation.eulerAngles.y - rotation2) < 3f && !moving && !rotated2)
         {
             rotated2 = true;
             DetachPlayer();

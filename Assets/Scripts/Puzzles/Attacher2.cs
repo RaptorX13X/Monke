@@ -52,7 +52,7 @@ public class Attacher2 : MonoBehaviour
             puzzle.DetachPlayer();
             return;
         }
-        if (puzzle.rotated1 && !stateMachine.HanumanBool)
+        if (puzzle.requireHanuman && !stateMachine.HanumanBool)
         {
             puzzle.NeedHanuman();
             return;

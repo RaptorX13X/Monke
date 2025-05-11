@@ -13,6 +13,8 @@ public class SecondReelPuzzle : MonoBehaviour
     [SerializeField] private float rotation1;
     [SerializeField] private float rotation2;
     public bool isComplete;
+    private bool moving;
+    public bool requireHanuman;
     
     public DialogueSO dialogue;
     public DialogueSO dialogue2;
@@ -59,34 +61,47 @@ public class SecondReelPuzzle : MonoBehaviour
             case > 0.01f:
                 transform.Rotate(0, -1, 0);
                 PlayAudio();
+                moving = true;
                 break;
             case < -0.01f:
                 transform.Rotate(0, 1, 0);
                 PlayAudio();
+                moving = true;
                 break;
             case 0f:
                 StopAudio();
+                moving = false;
                 break;
         }
         
         
         
-        if (Math.Abs(transform.rotation.eulerAngles.y - rotation1) < 0.1f && !rotated1)
+        if (Math.Abs(transform.rotation.eulerAngles.y - rotation1) < 3f && !moving)
         {
             rotated1 = true;
             DetachPlayer();
-            TriggerDialogue();
-        }
-
-        if (rotated1)
-        {
-            if (Math.Abs(transform.rotation.eulerAngles.y - rotation2) < 0.1f)
+            if (!rotated2)
             {
-                rotated2 = true;
-                DetachPlayer();
-                isComplete = true;
+                requireHanuman = true;
+                TriggerDialogue();
+                return;
             }
+            isComplete = true;
         }
+        
+        else if (Math.Abs(transform.rotation.eulerAngles.y - rotation2) < 3f && !moving)
+        {
+            rotated2 = true;
+            DetachPlayer();
+            if (!rotated1)
+            {
+                requireHanuman = true;
+                TriggerDialogue();
+                return;
+            }
+            isComplete = true;
+        }
+        
     }
 
     private void PlayAudio()
