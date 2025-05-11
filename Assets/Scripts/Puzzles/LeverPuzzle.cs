@@ -11,6 +11,9 @@ public class LeverPuzzle : MonoBehaviour
     [SerializeField] private bool dingSound;
     [SerializeField] private float doorDuration = 20f;
     private bool playedOnce;
+    [SerializeField] private bool replaceCollider;
+    [SerializeField] private BoxCollider colliderToReplaceWith;
+    [SerializeField] private MeshCollider colliderToReplace;
     
     private void Start()
     {
@@ -38,7 +41,16 @@ public class LeverPuzzle : MonoBehaviour
     {
         
         transform.DOShakePosition(1f, 0.05f, 50, 90f, false, false);
-        transform.DOLocalMove(target, doorDuration).SetDelay(1).SetLoops(0);
+        transform.DOLocalMove(target, doorDuration).SetDelay(1).SetLoops(0).OnComplete(ReplaceCollider);
 
+    }
+
+    private void ReplaceCollider()
+    {
+        if (replaceCollider)
+        {
+            colliderToReplace.enabled = false;
+            colliderToReplaceWith.enabled = true;
+        }
     }
 }

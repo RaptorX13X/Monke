@@ -6745,6 +6745,7 @@ GameObject:
   - component: {fileID: 204812240}
   - component: {fileID: 204812239}
   - component: {fileID: 204812241}
+  - component: {fileID: 204812242}
   m_Layer: 8
   m_Name: Box050 (1)
   m_TagString: stone
@@ -6892,6 +6893,9 @@ MonoBehaviour:
   emitter: {fileID: 204812239}
   dingSound: 0
   doorDuration: 10
+  replaceCollider: 1
+  colliderToReplaceWith: {fileID: 204812242}
+  colliderToReplace: {fileID: 204812236}
 --- !u!54 &204812241
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6919,6 +6923,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &204812242
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204812234}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 27.602987, y: 56.158524, z: 1.17153}
+  m_Center: {x: 0, y: -0.97923106, z: 0.58576703}
 --- !u!1001 &205129932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31564,9 +31589,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51506c852bef314aa260e8de7f278b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAttached: 0
   emitter: {fileID: 859577503}
   rotation1: 155
   rotation2: 55
+  door: {fileID: 0}
   isComplete: 0
 --- !u!64 &859577502
 MeshCollider:
@@ -35915,6 +35942,9 @@ MonoBehaviour:
   emitter: {fileID: 961744507}
   dingSound: 1
   doorDuration: 20
+  replaceCollider: 0
+  colliderToReplaceWith: {fileID: 0}
+  colliderToReplace: {fileID: 0}
 --- !u!114 &961744507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47702,6 +47732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800e5608a0d4d2548a6bbab39359a51d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAttached: 0
   rotated1: 0
   rotation1: 300
   rotation2: 240
@@ -64094,6 +64125,9 @@ MonoBehaviour:
   emitter: {fileID: 1650240236}
   dingSound: 0
   doorDuration: 20
+  replaceCollider: 0
+  colliderToReplaceWith: {fileID: 0}
+  colliderToReplace: {fileID: 0}
 --- !u!4 &1650712923 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8689449202193871711, guid: d58999d8f91e13b49b250588d92083ff, type: 3}
