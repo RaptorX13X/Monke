@@ -104,5 +104,6 @@ public class DialogueManager : MonoBehaviour
         isDialogueActive = false;
         dialogueArea.text = "";
         background.gameObject.SetActive(false);
+        characterNameArea.text = "";
     }
 }

@@ -539,7 +539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueArea: {fileID: 1620492025964224368}
-  characterNameArea: {fileID: 0}
+  characterNameArea: {fileID: 3458724234081259007}
   background: {fileID: 4137239146295679424}
   isDialogueActive: 0
   typingSpeed: 0.08
