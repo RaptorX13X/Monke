@@ -6745,6 +6745,7 @@ GameObject:
   - component: {fileID: 204812240}
   - component: {fileID: 204812239}
   - component: {fileID: 204812241}
+  - component: {fileID: 204812242}
   m_Layer: 8
   m_Name: Box050 (1)
   m_TagString: stone
@@ -6892,6 +6893,13 @@ MonoBehaviour:
   emitter: {fileID: 204812239}
   dingSound: 0
   doorDuration: 10
+  replaceCollider: 1
+  removeDialogue: 0
+  triggerDialogue: 0
+  dialogueToRemove: {fileID: 0}
+  colliderToReplaceWith: {fileID: 204812242}
+  colliderToReplace: {fileID: 204812236}
+  dialogue: {fileID: 0}
 --- !u!54 &204812241
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6919,6 +6927,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &204812242
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204812234}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 27.602987, y: 56.158524, z: 1.17153}
+  m_Center: {x: 0, y: -0.97923106, z: 0.58576703}
 --- !u!1001 &205129932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10965,8 +10994,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.014344479, y: 0.9824424, z: -0.1653362, w: 0.08523617}
-  m_LocalPosition: {x: -3.6480966, y: 7.1631207, z: -61.836014}
+  m_LocalRotation: {x: 0.014344487, y: 0.9824423, z: -0.16533639, w: 0.08523612}
+  m_LocalPosition: {x: 112.91913, y: 39.645123, z: -134.7084}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31564,9 +31593,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51506c852bef314aa260e8de7f278b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAttached: 0
   emitter: {fileID: 859577503}
   rotation1: 155
   rotation2: 55
+  door: {fileID: 1352702696}
   isComplete: 0
 --- !u!64 &859577502
 MeshCollider:
@@ -35915,6 +35946,13 @@ MonoBehaviour:
   emitter: {fileID: 961744507}
   dingSound: 1
   doorDuration: 20
+  replaceCollider: 0
+  removeDialogue: 0
+  triggerDialogue: 0
+  dialogueToRemove: {fileID: 0}
+  colliderToReplaceWith: {fileID: 0}
+  colliderToReplace: {fileID: 0}
+  dialogue: {fileID: 0}
 --- !u!114 &961744507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47630,7 +47668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b12175174cdbbd4397e239b644eecb4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.5
+      value: 0.7660445
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b12175174cdbbd4397e239b644eecb4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -47638,11 +47676,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b12175174cdbbd4397e239b644eecb4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.8660254
+      value: 0.6427876
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b12175174cdbbd4397e239b644eecb4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b12175174cdbbd4397e239b644eecb4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -47650,7 +47688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b12175174cdbbd4397e239b644eecb4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 240
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b12175174cdbbd4397e239b644eecb4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -47702,10 +47740,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800e5608a0d4d2548a6bbab39359a51d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAttached: 0
   rotated1: 0
   rotation1: 300
   rotation2: 240
   isComplete: 0
+  requireHanuman: 0
   dialogue: {fileID: 11400000, guid: 901372e55527394479a63998579b02de, type: 2}
   dialogue2: {fileID: 11400000, guid: 2c060a0fb2a4b0d4a8ddcfdb321ede8a, type: 2}
 --- !u!64 &1276631118
@@ -64094,6 +64134,13 @@ MonoBehaviour:
   emitter: {fileID: 1650240236}
   dingSound: 0
   doorDuration: 20
+  replaceCollider: 0
+  removeDialogue: 0
+  triggerDialogue: 0
+  dialogueToRemove: {fileID: 0}
+  colliderToReplaceWith: {fileID: 0}
+  colliderToReplace: {fileID: 0}
+  dialogue: {fileID: 0}
 --- !u!4 &1650712923 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8689449202193871711, guid: d58999d8f91e13b49b250588d92083ff, type: 3}
@@ -89857,7 +89904,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6273599
+      value: -1.6273575
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.y
@@ -89865,15 +89912,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.307976
+      value: 9.307968
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.08523616
+      value: 0.0852361
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.014344488
+      value: 0.01434448
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.y
@@ -89929,15 +89976,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0207367
+      value: 114.546486
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.89
+      value: 34.372
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -71.14399
+      value: -144.01637
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.w

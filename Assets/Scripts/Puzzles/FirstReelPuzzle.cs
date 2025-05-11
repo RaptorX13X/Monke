@@ -20,6 +20,7 @@ public class FirstReelPuzzle : MonoBehaviour
     [SerializeField] private float rotation2 = 55f;
     [SerializeField] private ReelDoor door;
     public bool isComplete;
+    private bool moving;
 
     
     public void AttachPlayer(PlayerStateMachine _stateMachine, InputReader reader, Transform attacher, PlayerAudio audio)
@@ -41,7 +42,7 @@ public class FirstReelPuzzle : MonoBehaviour
         stateMachine.AttachedBool = false;
         stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
         isAttached = false;
-        inputReader = null;
+        //inputReader = null;
         stateMachine.attachPoint = null;
         playerAudio.StopStoneWheel();
     }
@@ -64,31 +65,42 @@ public class FirstReelPuzzle : MonoBehaviour
             case > 0.01f:
                 transform.Rotate(0, -1, 0);
                 PlayAudio();
+                moving = true;
                 break;
             case < -0.01f:
                 transform.Rotate(0, 1 , 0);
                 PlayAudio();
+                moving = true;
                 break;
             case 0f:
                 StopAudio();
+                moving = false;
                 break;
         }
         
-        if (Math.Abs(transform.rotation.eulerAngles.y - rotation1) < 0.1f && !rotated1)
+        if (Math.Abs(transform.rotation.eulerAngles.y - rotation1) < 3f && !moving && !rotated1)
         {
             rotated1 = true;
             DetachPlayer();
-            emitter.Play();
-        }
-
-        if (rotated1)
-        {
-            if (Math.Abs(transform.rotation.eulerAngles.y - rotation2) < 0.1f)
+            if (!rotated2)
             {
-                rotated2 = true;
-                DetachPlayer();
-                isComplete = true;
+                emitter.Play();
+                return;
             }
+            isComplete = true;
+            
+        }
+        else if (Math.Abs(transform.rotation.eulerAngles.y - rotation2) < 3f && !moving && !rotated2)
+        {
+            rotated2 = true;
+            DetachPlayer();
+            if (!rotated1)
+            {
+                emitter.Play();
+                return;
+            }
+
+            isComplete = true;
         }
     }
 

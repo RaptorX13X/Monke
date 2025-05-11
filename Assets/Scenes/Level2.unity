@@ -6989,6 +6989,7 @@ GameObject:
   - component: {fileID: 164055879}
   - component: {fileID: 164055883}
   - component: {fileID: 164055884}
+  - component: {fileID: 164055885}
   m_Layer: 0
   m_Name: Cube (107)
   m_TagString: Untagged
@@ -7013,9 +7014,9 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 6.8, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &164055880
 MeshRenderer:
@@ -7104,6 +7105,13 @@ MonoBehaviour:
   emitter: {fileID: 164055884}
   dingSound: 0
   doorDuration: 5
+  replaceCollider: 1
+  removeDialogue: 0
+  triggerDialogue: 0
+  dialogueToRemove: {fileID: 0}
+  colliderToReplaceWith: {fileID: 164055879}
+  colliderToReplace: {fileID: 164055885}
+  dialogue: {fileID: 0}
 --- !u!114 &164055884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7135,6 +7143,28 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 20
   OverrideMaxDistance: 20
+--- !u!64 &164055885
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164055878}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &166289615
 GameObject:
   m_ObjectHideFlags: 0
@@ -9227,6 +9257,13 @@ MonoBehaviour:
   emitter: {fileID: 215701934}
   dingSound: 0
   doorDuration: 10
+  replaceCollider: 0
+  removeDialogue: 0
+  triggerDialogue: 0
+  dialogueToRemove: {fileID: 0}
+  colliderToReplaceWith: {fileID: 0}
+  colliderToReplace: {fileID: 0}
+  dialogue: {fileID: 0}
 --- !u!1001 &224170494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19918,6 +19955,13 @@ MonoBehaviour:
   emitter: {fileID: 560999375}
   dingSound: 0
   doorDuration: 10
+  replaceCollider: 0
+  removeDialogue: 1
+  triggerDialogue: 0
+  dialogueToRemove: {fileID: 971067828}
+  colliderToReplaceWith: {fileID: 0}
+  colliderToReplace: {fileID: 0}
+  dialogue: {fileID: 0}
 --- !u!114 &560999375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34576,6 +34620,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ffead6bcff53c4f9ed454ad3a745cb, type: 3}
+--- !u!1 &971067828 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4819956305167514550, guid: a0ffead6bcff53c4f9ed454ad3a745cb, type: 3}
+  m_PrefabInstance: {fileID: 971067827}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &979770950
 GameObject:
   m_ObjectHideFlags: 0
@@ -37557,6 +37606,13 @@ MonoBehaviour:
   emitter: {fileID: 1050708283}
   dingSound: 0
   doorDuration: 10
+  replaceCollider: 0
+  removeDialogue: 0
+  triggerDialogue: 0
+  dialogueToRemove: {fileID: 0}
+  colliderToReplaceWith: {fileID: 0}
+  colliderToReplace: {fileID: 0}
+  dialogue: {fileID: 0}
 --- !u!1 &1051533120
 GameObject:
   m_ObjectHideFlags: 0
@@ -41385,6 +41441,13 @@ MonoBehaviour:
   emitter: {fileID: 1158053239}
   dingSound: 0
   doorDuration: 10
+  replaceCollider: 0
+  removeDialogue: 0
+  triggerDialogue: 0
+  dialogueToRemove: {fileID: 0}
+  colliderToReplaceWith: {fileID: 0}
+  colliderToReplace: {fileID: 0}
+  dialogue: {fileID: 0}
 --- !u!114 &1158053239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67766,6 +67829,13 @@ MonoBehaviour:
   emitter: {fileID: 1853625515}
   dingSound: 1
   doorDuration: 10
+  replaceCollider: 0
+  removeDialogue: 0
+  triggerDialogue: 0
+  dialogueToRemove: {fileID: 0}
+  colliderToReplaceWith: {fileID: 0}
+  colliderToReplace: {fileID: 0}
+  dialogue: {fileID: 11400000, guid: 819387e3498990a43898151717bdc371, type: 2}
 --- !u!1 &1856116339
 GameObject:
   m_ObjectHideFlags: 0
@@ -78912,6 +78982,13 @@ MonoBehaviour:
   emitter: {fileID: 2141156954}
   dingSound: 0
   doorDuration: 10
+  replaceCollider: 0
+  removeDialogue: 0
+  triggerDialogue: 0
+  dialogueToRemove: {fileID: 0}
+  colliderToReplaceWith: {fileID: 0}
+  colliderToReplace: {fileID: 0}
+  dialogue: {fileID: 0}
 --- !u!1 &2144725492
 GameObject:
   m_ObjectHideFlags: 0
