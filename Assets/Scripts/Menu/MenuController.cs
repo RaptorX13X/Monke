@@ -8,13 +8,15 @@ public class MenuController : MonoBehaviour
     [SerializeField] private int gameSceneNumber2;
     [SerializeField] private GameObject menuObject;
     [SerializeField] private GameObject controlsObject;
-    [SerializeField] private int screenWidth = 640;
-    [SerializeField] private int screenHeight = 480;
+    [SerializeField] private GameObject settingsObject;
+    [SerializeField] private int screenWidth = 1920;
+    [SerializeField] private int screenHeight = 1080;
 
     private void Awake()
     {
         menuObject.SetActive(true);
         controlsObject.SetActive(false);
+        settingsObject.SetActive(false);
         Screen.SetResolution(screenWidth, screenHeight, FullScreenMode.ExclusiveFullScreen);
         Application.targetFrameRate = 60;
         Cursor.lockState = CursorLockMode.Confined;
@@ -33,12 +35,21 @@ public class MenuController : MonoBehaviour
     public void ControlsButton()
     {
         menuObject.SetActive(false);
+        settingsObject.SetActive(false);
         controlsObject.SetActive(true);
     }
 
     public void BackToMenuButton()
     {
         menuObject.SetActive(true);
+        settingsObject.SetActive(false);
+        controlsObject.SetActive(false);
+    }
+
+    public void SettingsButton()
+    {
+        menuObject.SetActive(false);
+        settingsObject.SetActive(true);
         controlsObject.SetActive(false);
     }
 
