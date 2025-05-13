@@ -14,7 +14,7 @@ public class PressurePlateCheat : MonoBehaviour
     private Vector3 originalPos;
     private void Start()
     {
-        originalPos = transform.localPosition;
+        originalPos = door.localPosition;
     }
 
     private void OnTriggerEnter(Collider other)
