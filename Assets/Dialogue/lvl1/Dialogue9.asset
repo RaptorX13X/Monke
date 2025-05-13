@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: What is this thing?... *touches the gada*
+    line: What is this thing?... <i>touches the gada</i>
     hasChoices: 0
     choice1: 
     choice2: 

@@ -93,6 +93,11 @@ public class DialogueManager : MonoBehaviour
         dialogueArea.text = "";
         foreach (char letter in dialogueLine.line.ToCharArray())
         {
+            if (letter.ToString() == "<" || letter.ToString() == "/" ||letter.ToString() == "i" ||letter.ToString() == ">" || letter.ToString() == "b")
+            {
+                dialogueArea.text += letter;
+                continue;
+            }
             dialogueArea.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
