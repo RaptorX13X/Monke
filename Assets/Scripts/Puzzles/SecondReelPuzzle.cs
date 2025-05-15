@@ -41,7 +41,7 @@ public class SecondReelPuzzle : MonoBehaviour
         isAttached = false;
         inputReader = null;
         stateMachine.attachPoint = null;
-        playerAudio.StopStoneWheel();
+        //playerAudio.StopStoneWheel();
     }
 
     private void Update()

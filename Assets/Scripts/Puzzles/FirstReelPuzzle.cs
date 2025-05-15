@@ -44,22 +44,22 @@ public class FirstReelPuzzle : MonoBehaviour
         isAttached = false;
         //inputReader = null;
         stateMachine.attachPoint = null;
-        playerAudio.StopStoneWheel();
+        //playerAudio.StopStoneWheel();
     }
 
     private void Update()
     {
         if (!isAttached) return;
-        
         if (isComplete)
         {
             if (stateMachine.AttachedBool)
             {
                 DetachPlayer();
             }
-
+        
             return;
         }
+        
         switch (inputReader.MovementValue.y)
         {
             case > 0.01f:
