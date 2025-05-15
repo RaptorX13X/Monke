@@ -21,7 +21,7 @@ MonoBehaviour:
     choice1: 
     choice2: 
     soundToPlay: {fileID: 0}
-    dialoguetoStartOn1: {fileID: 11400000, guid: bb65a056ec046e94698823b07bb565c7, type: 2}
+    dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
   - character:
       name: Visna
@@ -31,6 +31,6 @@ MonoBehaviour:
     choice1: 
     choice2: 
     soundToPlay: {fileID: 0}
-    dialoguetoStartOn1: {fileID: 11400000, guid: bb65a056ec046e94698823b07bb565c7, type: 2}
+    dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
   isComplete: 1
