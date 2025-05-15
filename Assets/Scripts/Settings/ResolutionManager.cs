@@ -99,6 +99,7 @@ public class ResolutionManager : MonoBehaviour
     public void ToggleFullscreen()
     {
         Screen.fullScreen = !Screen.fullScreen;
+        isFullscreen = !isFullscreen;
     }
     
     private void UpdateToggle()
