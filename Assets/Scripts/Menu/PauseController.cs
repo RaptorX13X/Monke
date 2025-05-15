@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +6,8 @@ public class PauseController : MonoBehaviour
     [SerializeField] private GameObject inGameUI;
     [SerializeField] private GameObject pauseUI;
     [SerializeField] private GameObject levelFinishedUI;
+    [SerializeField] private GameObject optionsUI;
+
     private bool paused;
     private bool canPause => !levelFinishedUI.activeInHierarchy;
     [SerializeField] private int menuSceneNumber;
@@ -46,20 +47,24 @@ public class PauseController : MonoBehaviour
         {
             if (!paused)
             {
+                MusicManager.instance.PauseMusic();
                 //input.EnablingPlayer();
                 Time.timeScale = 0f;
                 inGameUI.SetActive(false);
                 pauseUI.SetActive(true);
+                optionsUI.SetActive(false);
                 paused = true;
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
             }
             else
             {
+                MusicManager.instance.UnpausedMusic();
                 //input.EnablingPlayer();
                 Time.timeScale = 1f;
                 inGameUI.SetActive(true);
                 pauseUI.SetActive(false);
+                optionsUI.SetActive(false);
                 paused = false;
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
@@ -74,16 +79,34 @@ public class PauseController : MonoBehaviour
 
     public void MainMenu()
     {
+        MusicManager.instance.StopMusic();
         SceneManager.LoadSceneAsync(menuSceneNumber);
+
     }
 
     public void Restart()
     {
+        MusicManager.instance.StopMusic();
         SceneManager.LoadScene(gameSceneNumber);
     }
 
     public void Level2()
     {
+        MusicManager.instance.StopMusic();
         SceneManager.LoadScene(level2SceneNumber);
+    }
+
+    public void Settings()
+    {
+        inGameUI.SetActive(false);
+        pauseUI.SetActive(false);
+        optionsUI.SetActive(true);
+    }
+
+    public void ReturnButton()
+    {
+        inGameUI.SetActive(false);
+        pauseUI.SetActive(true);
+        optionsUI.SetActive(false);
     }
 }
