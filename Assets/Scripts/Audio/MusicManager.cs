@@ -33,4 +33,14 @@ public class MusicManager : MonoBehaviour
         eventI.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         eventI.release();
     }
+
+    public void PauseMusic()
+    {
+        eventI.setPaused(true);
+    }
+
+    public void UnpausedMusic()
+    {
+        eventI.setPaused(false);
+    }
 }

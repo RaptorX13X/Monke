@@ -5,6 +5,7 @@ public class AudioSettings : MonoBehaviour
 {
     FMOD.Studio.VCA SfxVCA;
     FMOD.Studio.VCA MusicVCA;
+    [SerializeField] float decibelLimit;
 
     private float DecibelToLinear(float dB) 
     {
@@ -23,12 +24,29 @@ public class AudioSettings : MonoBehaviour
 
     public void SFX(float dB)
     {
-        SfxVCA.setVolume(DecibelToLinear(dB));
+        if (dB > decibelLimit)
+        {
+            SfxVCA.setVolume(DecibelToLinear(dB));
+        }
+        else
+        {
+            SfxVCA.setVolume(DecibelToLinear(-100));
+        }
+
     }
 
     public void Music(float dB)
     {
-        MusicVCA.setVolume(DecibelToLinear(dB));
+
+        if (dB > decibelLimit)
+        {
+            MusicVCA.setVolume(DecibelToLinear(dB));
+        }
+        else
+        {
+            MusicVCA.setVolume(DecibelToLinear(-100));
+        }
+       
     }
     
 }

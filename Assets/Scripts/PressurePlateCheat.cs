@@ -34,6 +34,7 @@ public class PressurePlateCheat : MonoBehaviour
         }
         else if (other.CompareTag("Player"))
         {
+            if (isSet) return;
             ShakeDoor();
         }
     }
@@ -42,6 +43,7 @@ public class PressurePlateCheat : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            if (isSet) return;
             StopShake();
         }
     }
