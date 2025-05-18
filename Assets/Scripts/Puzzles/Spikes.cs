@@ -7,6 +7,7 @@ public class Spikes : MonoBehaviour
 {
     [SerializeField] private int damage = 100;
     [SerializeField] private Vector3 move;
+    [SerializeField] private bool routine;
     private Vector3 target;
     private Vector3 origin;
 
@@ -18,7 +19,7 @@ public class Spikes : MonoBehaviour
     {
         target = transform.localPosition + move;
         origin = transform.localPosition;
-
+        if (!routine) return;
         StartCoroutine(Routine());
     }
     private void OnTriggerEnter(Collider other)
