@@ -9,7 +9,11 @@ public class Spikes : MonoBehaviour
     [SerializeField] private Vector3 move;
     private Vector3 target;
     private Vector3 origin;
-    
+
+    public Action  hide;
+    public Action  rise;
+
+
     private void Start()
     {
         target = transform.localPosition + move;
@@ -30,10 +34,14 @@ public class Spikes : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(3f);
+            hide.Invoke();
             transform.DOLocalMove(target, 3).SetDelay(3).SetLoops(0);
+            
             yield return new WaitForSeconds(3f);
+            rise.Invoke();
             transform.DOLocalMove(origin, 3).SetDelay(3).SetLoops(0);
-            yield return new WaitForSeconds(3f);
+            
+           // yield return new WaitForSeconds(3f);
         }
     }
 }
