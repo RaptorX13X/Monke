@@ -93913,10 +93913,6 @@ PrefabInstance:
       propertyPath: optionsUI
       value: 
       objectReference: {fileID: 2059422094}
-    - target: {fileID: 2252728262886154863, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
-      propertyPath: typingSpeed
-      value: 0.06
-      objectReference: {fileID: 0}
     - target: {fileID: 2303630060482653273, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
       propertyPath: decibelLimit
       value: -30
