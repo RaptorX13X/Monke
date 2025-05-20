@@ -25,4 +25,6 @@ public class SeeSaw : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
     }
+
+
 }

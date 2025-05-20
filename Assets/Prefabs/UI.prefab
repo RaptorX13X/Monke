@@ -400,6 +400,7 @@ MonoBehaviour:
   inGameUI: {fileID: 2367521972119451442}
   pauseUI: {fileID: 7681374198099372971}
   levelFinishedUI: {fileID: 2627702101739454812}
+  optionsUI: {fileID: 0}
   menuSceneNumber: 0
   gameSceneNumber: 1
   level2SceneNumber: 2
@@ -543,7 +544,7 @@ MonoBehaviour:
   characterNameArea: {fileID: 3458724234081259007}
   background: {fileID: 4137239146295679424}
   isDialogueActive: 0
-  typingSpeed: 0.5
+  typingSpeed: 0.06
   currentDialogue: {fileID: 0}
   timeBetweenLines: 3
 --- !u!1001 &1980698232069393898

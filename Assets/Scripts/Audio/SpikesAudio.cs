@@ -8,6 +8,8 @@ public class SpikesAudio : MonoBehaviour
     [SerializeField] private StudioEventEmitter EmitterRise;
     [SerializeField] private StudioEventEmitter EmitterHide;
 
+    public bool muted;
+
 
     private void Start()
     {
