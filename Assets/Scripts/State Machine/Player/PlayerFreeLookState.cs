@@ -4,7 +4,9 @@ using UnityEngine;
 public class PlayerFreeLookState : PlayerBaseState
 {
     private readonly int FreeLookBlendtreeHash = Animator.StringToHash("FreeLookBlendTree");
+    private readonly int TorchBlendtreeHash = Animator.StringToHash("TorchBlendTree");
     private readonly int FreeLookSpeedHash = Animator.StringToHash("FreeLookSpeed");
+    private readonly int TorchSpeedHash = Animator.StringToHash("TorchSpeed");
     
     private const float AnimatorDampTime = 0.1f;
 
@@ -13,8 +15,16 @@ public class PlayerFreeLookState : PlayerBaseState
     {
         stateMachine.InputReader.JumpEvent += OnJump;
         stateMachine.InputReader.HanumanEvent += OnHanuman;
-        if (!stateMachine.HanumanBool) stateMachine.VisnaAnimator.CrossFadeInFixedTime(FreeLookBlendtreeHash, 0.1f);
-        else stateMachine.HanumanAnimator.CrossFadeInFixedTime(FreeLookBlendtreeHash, 0.1f);
+        if (!stateMachine.hasTorch)
+        {
+            if (!stateMachine.HanumanBool) stateMachine.VisnaAnimator.CrossFadeInFixedTime(FreeLookBlendtreeHash, 0.1f);
+            else stateMachine.HanumanAnimator.CrossFadeInFixedTime(FreeLookBlendtreeHash, 0.1f);
+        }
+        else
+        {
+            if (!stateMachine.HanumanBool) stateMachine.VisnaAnimator.CrossFadeInFixedTime(TorchBlendtreeHash, 0.1f);
+            else stateMachine.HanumanAnimator.CrossFadeInFixedTime(TorchBlendtreeHash, 0.1f);
+        }
         stateMachine.PlayerLeftFoot.canPlay = true;
         stateMachine.PlayerRightFoot.canPlay = true;
         stateMachine.HanumanLeftFoot.canPlay = true;
@@ -42,14 +52,30 @@ public class PlayerFreeLookState : PlayerBaseState
         
         if (stateMachine.InputReader.MovementValue == Vector2.zero)
         {
-            if (!stateMachine.HanumanBool) stateMachine.VisnaAnimator.SetFloat(FreeLookSpeedHash, 0, AnimatorDampTime, deltaTime);
-            else stateMachine.HanumanAnimator.SetFloat(FreeLookSpeedHash, 0, AnimatorDampTime, deltaTime);
+            if (!stateMachine.HanumanBool)
+            {
+                stateMachine.VisnaAnimator.SetFloat(FreeLookSpeedHash, 0, AnimatorDampTime, deltaTime);
+                stateMachine.VisnaAnimator.SetFloat(TorchSpeedHash, 0, AnimatorDampTime, deltaTime);
+            }
+            else
+            {
+                stateMachine.HanumanAnimator.SetFloat(FreeLookSpeedHash, 0, AnimatorDampTime, deltaTime);
+                stateMachine.HanumanAnimator.SetFloat(TorchSpeedHash, 0, AnimatorDampTime, deltaTime);
+            }
             return;
         }
-        if (!stateMachine.HanumanBool) stateMachine.VisnaAnimator.SetFloat(FreeLookSpeedHash, 1, AnimatorDampTime, deltaTime);
-        else stateMachine.HanumanAnimator.SetFloat(FreeLookSpeedHash, 1, AnimatorDampTime, deltaTime);
+
+        if (!stateMachine.HanumanBool)
+        {
+            stateMachine.VisnaAnimator.SetFloat(FreeLookSpeedHash, 1, AnimatorDampTime, deltaTime);
+            stateMachine.VisnaAnimator.SetFloat(TorchSpeedHash, 1, AnimatorDampTime, deltaTime);
+        }
+        else
+        {
+            stateMachine.HanumanAnimator.SetFloat(FreeLookSpeedHash, 1, AnimatorDampTime, deltaTime);
+            stateMachine.HanumanAnimator.SetFloat(TorchSpeedHash, 1, AnimatorDampTime, deltaTime);
+        }
         FaceMovementDirection(movement, deltaTime);
-        
         if (stateMachine.CharacterController.velocity.y <= -5f)
         {
             stateMachine.SwitchState(new PlayerFallingState(stateMachine));

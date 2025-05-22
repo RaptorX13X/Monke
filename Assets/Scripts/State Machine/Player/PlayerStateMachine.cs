@@ -136,11 +136,13 @@ public class PlayerStateMachine : StateMachine
     public void PickUpTorch()
     {
         hasTorch = true;
+        SwitchState(new PlayerFreeLookState(this));
     }
 
     public void LoseTorch()
     {
         hasTorch = false;
         PlayerAudio.StopTorch();
+        SwitchState(new PlayerFreeLookState(this));
     }
 }
