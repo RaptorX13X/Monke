@@ -20,7 +20,7 @@ public class Spikes : MonoBehaviour
         target = transform.localPosition + move;
         origin = transform.localPosition;
         if (!routine) return;
-        StartCoroutine(Routine());
+        //StartCoroutine(Routine());
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -30,19 +30,19 @@ public class Spikes : MonoBehaviour
         }
     }
 
-    private IEnumerator Routine()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(3f);
-            hide.Invoke();
-            transform.DOLocalMove(target, 3).SetDelay(3).SetLoops(0);
+    //private IEnumerator Routine()
+    //{
+    //    while (true)
+    //    {
+    //        yield return new WaitForSeconds(3f);
+    //        hide.Invoke();
+    //        transform.DOLocalMove(target, 3).SetDelay(3).SetLoops(0);
             
-            yield return new WaitForSeconds(3f);
-            rise.Invoke();
-            transform.DOLocalMove(origin, 3).SetDelay(3).SetLoops(0);
+    //        yield return new WaitForSeconds(3f);
+    //        rise.Invoke();
+    //        transform.DOLocalMove(origin, 3).SetDelay(3).SetLoops(0);
             
-           // yield return new WaitForSeconds(3f);
-        }
-    }
+    //       // yield return new WaitForSeconds(3f);
+    //    }
+    //}
 }

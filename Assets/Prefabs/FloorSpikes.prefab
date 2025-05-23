@@ -2187,6 +2187,7 @@ GameObject:
   - component: {fileID: 2733805987606180952}
   - component: {fileID: 8729969014959962079}
   - component: {fileID: 8285633054272993710}
+  - component: {fileID: 2240236088928843148}
   m_Layer: 0
   m_Name: FloorSpikes
   m_TagString: Untagged
@@ -2276,6 +2277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 100
   move: {x: 0, y: -3, z: 0}
+  routine: 0
 --- !u!65 &8285633054272993710
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2297,6 +2299,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 16.104, y: 36.79537, z: 4.000001}
   m_Center: {x: -7.052, y: -17.446627, z: 2.0000005}
+--- !u!95 &2240236088928843148
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5511120208119872344}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 02005ae43a2ce554cae672831d8ad9ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5872726262342531460
 GameObject:
   m_ObjectHideFlags: 0
