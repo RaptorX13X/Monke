@@ -117,7 +117,17 @@
 			<destination>{b403920a-5f54-404e-960e-d04d0e01fd10}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{145e03c4-5199-4413-9558-453181808a8d}" />
+	<object class="MixerBusPanner" id="{145e03c4-5199-4413-9558-453181808a8d}">
+		<property name="surroundPanDirection">
+			<value>11.3099327</value>
+		</property>
+		<property name="surroundPanExtent">
+			<value>168.68602</value>
+		</property>
+		<property name="disabledSpeakers">
+			<value>48</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{6c66a3f1-8a21-42d0-85ee-ba14efb56e3b}" />
 	<object class="MixerBusEffectChain" id="{a97d0399-bbf9-4712-885a-baeb874a4e5d}">
 		<relationship name="effects">
@@ -131,6 +141,16 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{724f64a1-3ff8-4509-864b-7cc25603c691}" />
-	<object class="SpatialiserEffect" id="{b403920a-5f54-404e-960e-d04d0e01fd10}" />
+	<object class="SpatialiserEffect" id="{b403920a-5f54-404e-960e-d04d0e01fd10}">
+		<property name="minimumDistance">
+			<value>3.20000005</value>
+		</property>
+		<property name="maximumDistance">
+			<value>70</value>
+		</property>
+		<property name="overrideRange">
+			<value>true</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{224ed22d-dbc5-4b6f-8e76-7a6959ffc7a1}" />
 </objects>
