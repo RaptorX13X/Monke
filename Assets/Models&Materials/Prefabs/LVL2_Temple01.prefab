@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 90940c28ba4ecb449a2fc07680583f1d, type: 2}
+    - target: {fileID: -8762265505669158681, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8762265505669158681, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
+      propertyPath: m_TagString
+      value: stone
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 70.6
@@ -56,6 +64,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8007887913652829478, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8007887913652829478, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
+      propertyPath: m_TagString
+      value: stone
+      objectReference: {fileID: 0}
     - target: {fileID: -7844269056197582312, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -64,6 +80,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 90940c28ba4ecb449a2fc07680583f1d, type: 2}
+    - target: {fileID: -7199186707532838672, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -7199186707532838672, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
+      propertyPath: m_TagString
+      value: stone
+      objectReference: {fileID: 0}
     - target: {fileID: -7090172708948836902, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -192,6 +216,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 34e2ccaa568ff4d4db0bacafaab434b6, type: 2}
+    - target: {fileID: -620197162853362017, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -620197162853362017, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
+      propertyPath: m_TagString
+      value: stone
+      objectReference: {fileID: 0}
     - target: {fileID: -468258005924968644, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -232,6 +264,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 90940c28ba4ecb449a2fc07680583f1d, type: 2}
+    - target: {fileID: 3705777827859194390, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705777827859194390, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
+      propertyPath: m_TagString
+      value: stone
+      objectReference: {fileID: 0}
     - target: {fileID: 3770962362908778836, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -300,6 +340,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 90940c28ba4ecb449a2fc07680583f1d, type: 2}
+    - target: {fileID: 6038766492670993576, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6038766492670993576, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
+      propertyPath: m_TagString
+      value: stone
+      objectReference: {fileID: 0}
     - target: {fileID: 6538392758038070146, guid: 066d45c9c181ba445864dac7ae15a5cd, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.037
