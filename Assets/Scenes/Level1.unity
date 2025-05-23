@@ -19302,72 +19302,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &502048125
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 502048128}
-  - component: {fileID: 502048127}
-  - component: {fileID: 502048126}
-  m_Layer: 0
-  m_Name: StopMusicTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &502048126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502048125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168a0e5696d79f241a9d7c178f595ed4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &502048127
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502048125}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.71243, y: 12.25839, z: 11.245186}
-  m_Center: {x: -1.3562179, y: 4.3979383, z: -1.9604635}
---- !u!4 &502048128
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502048125}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.00829018, y: 0, z: 0, w: 0.99996567}
-  m_LocalPosition: {x: 121.32, y: 21.25, z: -36.63}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0.95, y: 0, z: 0}
 --- !u!1001 &502927686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92521,6 +92455,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7885667478877579677, guid: f40bbc8351138f049ba9ba8f233f3f32, type: 3}
   m_PrefabInstance: {fileID: 3291915135584679102}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3355819444670804412
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5037137952129262870, guid: dc4606750cd56b6459c4b7c328ef0c1a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 121.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5037137952129262870, guid: dc4606750cd56b6459c4b7c328ef0c1a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 21.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5037137952129262870, guid: dc4606750cd56b6459c4b7c328ef0c1a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 5037137952129262870, guid: dc4606750cd56b6459c4b7c328ef0c1a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99996567
+      objectReference: {fileID: 0}
+    - target: {fileID: 5037137952129262870, guid: dc4606750cd56b6459c4b7c328ef0c1a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00829018
+      objectReference: {fileID: 0}
+    - target: {fileID: 5037137952129262870, guid: dc4606750cd56b6459c4b7c328ef0c1a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5037137952129262870, guid: dc4606750cd56b6459c4b7c328ef0c1a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5037137952129262870, guid: dc4606750cd56b6459c4b7c328ef0c1a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 5037137952129262870, guid: dc4606750cd56b6459c4b7c328ef0c1a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5037137952129262870, guid: dc4606750cd56b6459c4b7c328ef0c1a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500356201927766823, guid: dc4606750cd56b6459c4b7c328ef0c1a, type: 3}
+      propertyPath: m_Name
+      value: StopMusicTrigger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dc4606750cd56b6459c4b7c328ef0c1a, type: 3}
 --- !u!1001 &4622965391616172610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93947,7 +93938,7 @@ SceneRoots:
   - {fileID: 523499458}
   - {fileID: 1803999046}
   - {fileID: 1048612540}
-  - {fileID: 502048128}
+  - {fileID: 3355819444670804412}
   - {fileID: 1096148341}
   - {fileID: 1399357000}
   - {fileID: 932336597}
