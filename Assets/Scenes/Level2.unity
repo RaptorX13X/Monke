@@ -3133,7 +3133,7 @@ MonoBehaviour:
   Preload: 0
   NonRigidbodyVelocity: 0
   Params: []
-  OverrideAttenuation: 0
+  OverrideAttenuation: 1
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
 --- !u!1001 &78771444
@@ -10456,84 +10456,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &285489696
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 285489699}
-  - component: {fileID: 285489698}
-  - component: {fileID: 285489697}
-  m_Layer: 0
-  m_Name: JungleAmbientManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &285489697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 285489696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -195480809
-      Data2: 1317958853
-      Data3: -1572048238
-      Data4: -1327657109
-    Path: event:/ambience/jungle ambient 3D
-  Event: 
-  EventPlayTrigger: 1
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 10
-  OverrideMaxDistance: 10
---- !u!114 &285489698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 285489696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54773166edb62eb48b2f20dad82baf10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Path: {fileID: 730621460}
-  Player: {fileID: 633833700}
---- !u!4 &285489699
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 285489696}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -96.86481, y: 39.957504, z: -52.07353}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &286918475
 GameObject:
   m_ObjectHideFlags: 0
@@ -11794,31 +11716,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.13886213
+      value: 0.13885498
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2692356
+      value: 3.2692337
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.666748
+      value: -9.666749
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9987945
+      value: 0.9987895
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.048692588
+      value: 0.048794437
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0062083323
+      value: -0.006209947
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00030266464
+      value: 0.00030337807
       objectReference: {fileID: 0}
     - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: torchEvent.Path
@@ -11850,15 +11772,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.449
+      value: -91.48826
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.691
+      value: 27.181
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 36.975777
+      value: 12.148109
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17268,7 +17190,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 532560522}
-  - component: {fileID: 532560521}
   - component: {fileID: 532560520}
   m_Layer: 0
   m_Name: BladeZoneManager4
@@ -17308,20 +17229,6 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 10
   OverrideMaxDistance: 10
---- !u!114 &532560521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532560519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54773166edb62eb48b2f20dad82baf10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Path: {fileID: 1268631347}
-  Player: {fileID: 633833700}
 --- !u!4 &532560522
 Transform:
   m_ObjectHideFlags: 0
@@ -18695,6 +18602,69 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00c4db2ec522b1f48b601be675dc7407, type: 3}
+--- !u!1 &573666390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 573666392}
+  - component: {fileID: 573666391}
+  m_Layer: 0
+  m_Name: JungleAmbientManager (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &573666391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573666390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -195480809
+      Data2: 1317958853
+      Data3: -1572048238
+      Data4: -1327657109
+    Path: event:/ambience/jungle ambient 3D
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 10
+  OverrideMaxDistance: 20
+--- !u!4 &573666392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573666390}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.06594948, y: -0.4742656, z: 0.045635678, w: 0.87672126}
+  m_LocalPosition: {x: -91.26, y: 28.68, z: -52.09}
+  m_LocalScale: {x: 0.74491, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &573788633
 GameObject:
   m_ObjectHideFlags: 0
@@ -19282,7 +19252,7 @@ PrefabInstance:
     - target: {fileID: 785160167236235764, guid: a4c306d3b52e53a4b9d2ed6d62d61fdb, type: 3}
       propertyPath: BladeEmitter
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 74112108}
     - target: {fileID: 2643695947394400324, guid: a4c306d3b52e53a4b9d2ed6d62d61fdb, type: 3}
       propertyPath: m_Name
       value: SeeSaw (1)
@@ -24097,69 +24067,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &730621459
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 730621461}
-  - component: {fileID: 730621460}
-  m_Layer: 0
-  m_Name: JungleAmbientZone
-  m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &730621460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730621459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d37e5385efd7064cb1d54c94960acae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Resolution: 20
-  m_Appearance:
-    pathColor: {r: 0, g: 1, b: 0, a: 1}
-    inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    width: 0.2
-  m_Looped: 1
-  m_Waypoints:
-  - position: {x: 0, y: 0, z: -5}
-    tangent: {x: 1, y: 0, z: 0}
-    roll: 0
-  - position: {x: -0.0000003268985, y: 0, z: 12.199921}
-    tangent: {x: 1, y: 0, z: 0}
-    roll: 0
-  - position: {x: -17.752998, y: 0, z: 12.199921}
-    tangent: {x: 1.4566832, y: 0, z: -0.000009536743}
-    roll: 0
-  - position: {x: -16.29631, y: 0, z: -7.509925}
-    tangent: {x: 1.4566832, y: 0, z: -0.000009536743}
-    roll: 0
---- !u!4 &730621461
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730621459}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7403983, z: -0, w: 0.6721684}
-  m_LocalPosition: {x: -92.73, y: 42.88, z: -59.24}
-  m_LocalScale: {x: 0.82199, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 95.531, z: 0}
 --- !u!1 &733686007
 GameObject:
   m_ObjectHideFlags: 0
@@ -27335,7 +27242,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 816354696}
-  - component: {fileID: 816354695}
   - component: {fileID: 816354694}
   m_Layer: 0
   m_Name: BladeZoneManager2
@@ -27375,20 +27281,6 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 10
   OverrideMaxDistance: 10
---- !u!114 &816354695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816354693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54773166edb62eb48b2f20dad82baf10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Path: {fileID: 1278453806}
-  Player: {fileID: 633833700}
 --- !u!4 &816354696
 Transform:
   m_ObjectHideFlags: 0
@@ -27398,7 +27290,7 @@ Transform:
   m_GameObject: {fileID: 816354693}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -89.83651, y: 16.94, z: -80.02}
+  m_LocalPosition: {x: -89.83651, y: 22.62, z: -80.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29573,7 +29465,7 @@ PrefabInstance:
     - target: {fileID: 785160167236235764, guid: a4c306d3b52e53a4b9d2ed6d62d61fdb, type: 3}
       propertyPath: BladeEmitter
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1499407621}
     - target: {fileID: 2643695947394400324, guid: a4c306d3b52e53a4b9d2ed6d62d61fdb, type: 3}
       propertyPath: m_Name
       value: SeeSaw (2)
@@ -35309,7 +35201,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1058807248}
-  - component: {fileID: 1058807247}
   - component: {fileID: 1058807246}
   m_Layer: 0
   m_Name: JungleAmbientManager (1)
@@ -35348,21 +35239,7 @@ MonoBehaviour:
   Params: []
   OverrideAttenuation: 1
   OverrideMinDistance: 10
-  OverrideMaxDistance: 10
---- !u!114 &1058807247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058807245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54773166edb62eb48b2f20dad82baf10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Path: {fileID: 1188950434}
-  Player: {fileID: 633833700}
+  OverrideMaxDistance: 20
 --- !u!4 &1058807248
 Transform:
   m_ObjectHideFlags: 0
@@ -35372,8 +35249,8 @@ Transform:
   m_GameObject: {fileID: 1058807245}
   serializedVersion: 2
   m_LocalRotation: {x: 0.06594948, y: -0.4742656, z: 0.045635678, w: 0.87672126}
-  m_LocalPosition: {x: -89.1, y: 27.1, z: -26.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -90.84, y: 26.08, z: -15.82}
+  m_LocalScale: {x: 0.74491, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -38043,8 +37920,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142056184}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.048692588, y: -0.0062083295, z: 0.00030266453, w: 0.9987945}
-  m_LocalPosition: {x: -6.354867, y: 10.607073, z: 30.907547}
+  m_LocalRotation: {x: 0.04879444, y: -0.0062099467, z: 0.00030337815, w: 0.9987895}
+  m_LocalPosition: {x: -91.41987, y: 29.895138, z: 8.151}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39829,69 +39706,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb08e05c7ec11b940b4c4fcc18e44cb3, type: 3}
---- !u!1 &1188950433
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1188950435}
-  - component: {fileID: 1188950434}
-  m_Layer: 0
-  m_Name: JungleAmbientZone (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1188950434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188950433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d37e5385efd7064cb1d54c94960acae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Resolution: 20
-  m_Appearance:
-    pathColor: {r: 0, g: 1, b: 0, a: 1}
-    inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    width: 0.2
-  m_Looped: 1
-  m_Waypoints:
-  - position: {x: 0, y: 0, z: -5}
-    tangent: {x: 1, y: 0, z: 0}
-    roll: 0
-  - position: {x: 45.5953, y: 0, z: -4.999996}
-    tangent: {x: 1, y: 0, z: 0}
-    roll: 0
-  - position: {x: 46.5953, y: 0, z: 20.989616}
-    tangent: {x: 1, y: 0, z: 0}
-    roll: 0
-  - position: {x: -0.20980072, y: 0, z: 20.989616}
-    tangent: {x: 1, y: 0, z: 0}
-    roll: 0
---- !u!4 &1188950435
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188950433}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -106.78, y: 48.49, z: -20.75}
-  m_LocalScale: {x: 0.6242938, y: 1, z: 0.51450634}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1190149945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40951,7 +40765,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1216172068}
-  - component: {fileID: 1216172067}
   - component: {fileID: 1216172066}
   m_Layer: 0
   m_Name: BladeZoneManager3
@@ -40991,20 +40804,6 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 10
   OverrideMaxDistance: 10
---- !u!114 &1216172067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216172065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54773166edb62eb48b2f20dad82baf10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Path: {fileID: 1298999919}
-  Player: {fileID: 633833700}
 --- !u!4 &1216172068
 Transform:
   m_ObjectHideFlags: 0
@@ -41014,7 +40813,7 @@ Transform:
   m_GameObject: {fileID: 1216172065}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -90.08, y: 21.07, z: 34.3}
+  m_LocalPosition: {x: -90.08, y: 30.43, z: 34.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42246,69 +42045,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265716278}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1268631346
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1268631348}
-  - component: {fileID: 1268631347}
-  m_Layer: 0
-  m_Name: BladeZone4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1268631347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1268631346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d37e5385efd7064cb1d54c94960acae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Resolution: 20
-  m_Appearance:
-    pathColor: {r: 0, g: 1, b: 0, a: 1}
-    inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    width: 0.2
-  m_Looped: 1
-  m_Waypoints:
-  - position: {x: 0, y: 0, z: -5}
-    tangent: {x: 1, y: 0, z: 0}
-    roll: 0
-  - position: {x: 0, y: 0, z: 5}
-    tangent: {x: 1, y: 0, z: 0}
-    roll: 0
-  - position: {x: -41.722427, y: 0, z: 5}
-    tangent: {x: 1.0897522, y: 0, z: 0}
-    roll: 0
-  - position: {x: -40.632675, y: 0, z: -4.497364}
-    tangent: {x: 1.0897522, y: 0, z: -0.009925842}
-    roll: 0
---- !u!4 &1268631348
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1268631346}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -162.555, y: 42.55, z: 67.480415}
-  m_LocalScale: {x: 0.83969, y: 1, z: 0.85957}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1268735998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6122600816519223991, guid: dca95e46639408a4b8cbff0738feab1e, type: 3}
@@ -42638,72 +42374,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 269.999, z: 0}
---- !u!1 &1278453803
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1278453805}
-  - component: {fileID: 1278453806}
-  m_Layer: 0
-  m_Name: BladeZone2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1278453805
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278453803}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.11055838, y: -0.70326257, z: 0.13859451, w: -0.6884694}
-  m_LocalPosition: {x: -90.46, y: 17.78, z: -89.7}
-  m_LocalScale: {x: 0.7292, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -182.448, y: 630.78, z: -200.283}
---- !u!114 &1278453806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278453803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d37e5385efd7064cb1d54c94960acae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Resolution: 20
-  m_Appearance:
-    pathColor: {r: 0, g: 1, b: 0, a: 1}
-    inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    width: 0.2
-  m_Looped: 1
-  m_Waypoints:
-  - position: {x: 0, y: 0, z: -5}
-    tangent: {x: 1, y: 0, z: 0}
-    roll: 0
-  - position: {x: 0, y: 0, z: 0}
-    tangent: {x: -0.09950373, y: -0.000000014901161, z: 0.99503744}
-    roll: 0
-  - position: {x: 0, y: 0, z: 5}
-    tangent: {x: 1, y: 0, z: 0}
-    roll: 0
-  - position: {x: -21.734055, y: -4.313566, z: 4.9566045}
-    tangent: {x: 0.732007, y: -0.0000009536743, z: 0.0000009536743}
-    roll: 0
-  - position: {x: -21.00205, y: -4.31357, z: -7.1427813}
-    tangent: {x: 0.732007, y: -0.0000009536743, z: 0.0000009536743}
-    roll: 0
 --- !u!1 &1278581474
 GameObject:
   m_ObjectHideFlags: 0
@@ -43608,69 +43278,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b09a2e44560972a488008db1d9067489, type: 3}
---- !u!1 &1298999918
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1298999920}
-  - component: {fileID: 1298999919}
-  m_Layer: 0
-  m_Name: BladeZone3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1298999919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1298999918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d37e5385efd7064cb1d54c94960acae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Resolution: 20
-  m_Appearance:
-    pathColor: {r: 0, g: 1, b: 0, a: 1}
-    inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    width: 0.2
-  m_Looped: 1
-  m_Waypoints:
-  - position: {x: 0, y: 0, z: -5}
-    tangent: {x: 1, y: 0, z: 0}
-    roll: 0
-  - position: {x: 0, y: 0, z: 5}
-    tangent: {x: 1, y: 0, z: 0}
-    roll: 0
-  - position: {x: -36.60493, y: 0, z: 5.000008}
-    tangent: {x: 1, y: 0, z: 0}
-    roll: 0
-  - position: {x: -35.60493, y: 0, z: -12.085084}
-    tangent: {x: 1, y: 0, z: 0}
-    roll: 0
---- !u!4 &1298999920
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1298999918}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.74828047, z: -0, w: 0.6633826}
-  m_LocalPosition: {x: -92.28, y: 26.851255, z: 16.19}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 96.883, z: 0}
 --- !u!1 &1299409408
 GameObject:
   m_ObjectHideFlags: 0
@@ -73484,6 +73091,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 40.51
       objectReference: {fileID: 0}
+    - target: {fileID: 7466262382041294711, guid: a4c306d3b52e53a4b9d2ed6d62d61fdb, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8186575174857374306, guid: a4c306d3b52e53a4b9d2ed6d62d61fdb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5347611
@@ -74929,19 +74540,14 @@ SceneRoots:
   - {fileID: 832430315}
   - {fileID: 635044701}
   - {fileID: 9024909}
-  - {fileID: 1188950435}
   - {fileID: 1058807248}
+  - {fileID: 573666392}
   - {fileID: 934093579}
   - {fileID: 775480418261104760}
   - {fileID: 752481881}
   - {fileID: 1097372190}
-  - {fileID: 1278453805}
   - {fileID: 816354696}
-  - {fileID: 730621461}
-  - {fileID: 285489699}
-  - {fileID: 1298999920}
   - {fileID: 1216172068}
-  - {fileID: 1268631348}
   - {fileID: 532560522}
   - {fileID: 1785432413}
   - {fileID: 454242005}
