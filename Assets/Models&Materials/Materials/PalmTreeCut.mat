@@ -36,6 +36,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaToMask: 1
     - _BlendModePreserveSpecular: 1
     - _Cull: 2
     - _DstBlend: 0
