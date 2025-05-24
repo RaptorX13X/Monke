@@ -78,6 +78,7 @@ public class SecondReelPuzzle : MonoBehaviour
         
         if (Math.Abs(transform.rotation.eulerAngles.y - rotation1) < 3f && !moving)
         {
+            if (rotated1) return;
             rotated1 = true;
             DetachPlayer();
             if (!rotated2)
@@ -91,6 +92,7 @@ public class SecondReelPuzzle : MonoBehaviour
         
         else if (Math.Abs(transform.rotation.eulerAngles.y - rotation2) < 3f && !moving)
         {
+            if (rotated2) return;
             rotated2 = true;
             DetachPlayer();
             if (!rotated1)
