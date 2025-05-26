@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: A fire? I think we need to find a way up there to light up those torches.
+    line: A torch? I think we need to find a way up there to light up those braziers.
     hasChoices: 0
     choice1: 
     choice2: 
