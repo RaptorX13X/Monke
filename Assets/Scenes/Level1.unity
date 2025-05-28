@@ -26001,6 +26001,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 983dfe11deec45a4e9ca4103325452ac, type: 3}
+--- !u!95 &711066867 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7267886359261481857, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
+  m_PrefabInstance: {fileID: 8280963805365266543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &711620454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84767,11 +84772,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &2059422094 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4181955753980253930, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
-  m_PrefabInstance: {fileID: 8280963805365266543}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2062598146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93431,9 +93431,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1759728869}
     - target: {fileID: 2135657988922000836, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
-      propertyPath: optionsUI
+      propertyPath: animator
       value: 
-      objectReference: {fileID: 2059422094}
+      objectReference: {fileID: 711066867}
     - target: {fileID: 2213111704620345064, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
       propertyPath: m_Delegates.Array.data[0].eventID
       value: 4
@@ -93457,10 +93457,6 @@ PrefabInstance:
     - target: {fileID: 2213111704620345064, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: hovered
-      objectReference: {fileID: 0}
-    - target: {fileID: 2303630060482653273, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
-      propertyPath: decibelLimit
-      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 2627702101739454812, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
       propertyPath: m_IsActive
@@ -93686,6 +93682,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RestartTxt
       objectReference: {fileID: 0}
+    - target: {fileID: 7230750641646048749, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7307327997971845773, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
       propertyPath: m_Delegates.Array.data[0].eventID
       value: 4
@@ -93713,10 +93713,6 @@ PrefabInstance:
     - target: {fileID: 7681374198099372971, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7825544854505321361, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 660
       objectReference: {fileID: 0}
     - target: {fileID: 8276457173923179128, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
       propertyPath: m_Name

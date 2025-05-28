@@ -62429,6 +62429,10 @@ PrefabInstance:
       value: Settings
       objectReference: {fileID: 0}
     - target: {fileID: 2135657988922000836, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1606815720}
+    - target: {fileID: 2135657988922000836, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
       propertyPath: optionsUI
       value: 
       objectReference: {fileID: 1606815717}
@@ -62592,6 +62596,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7230750641646048749, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7307327997971845773, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
       propertyPath: m_Delegates.Array.data[0].eventID
       value: 4
@@ -62693,6 +62701,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 422018004ea18c14ca3a8c56225d2640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1606815720 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7267886359261481857, guid: 2a8c7d28028f3f745946b1f6b1b1bf25, type: 3}
+  m_PrefabInstance: {fileID: 1606815716}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1607116734
 PrefabInstance:
   m_ObjectHideFlags: 0

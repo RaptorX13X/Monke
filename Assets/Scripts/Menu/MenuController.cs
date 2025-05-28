@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,8 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject settingsObject;
     [SerializeField] private int screenWidth = 1920;
     [SerializeField] private int screenHeight = 1080;
+
+    [SerializeField] private Animator animator;
 
     private void Awake()
     {
@@ -25,11 +28,14 @@ public class MenuController : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadSceneAsync(gameSceneNumber);
+        animator.SetTrigger("FadeOut");
+        StartCoroutine(StartGameFade());
     }
-    public void StartGame2()
+
+    private IEnumerator StartGameFade()
     {
-        SceneManager.LoadSceneAsync(gameSceneNumber2);
+        yield return new WaitForSeconds(1.1f);
+        SceneManager.LoadSceneAsync(gameSceneNumber);
     }
 
     public void ControlsButton()
@@ -57,6 +63,4 @@ public class MenuController : MonoBehaviour
     {
         Application.Quit();
     }
-    
-    
 }

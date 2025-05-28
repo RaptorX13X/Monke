@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PauseController : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class PauseController : MonoBehaviour
     [SerializeField] private int menuSceneNumber;
     [SerializeField] private int gameSceneNumber;
     [SerializeField] private int level2SceneNumber;
+    
+    
+    [SerializeField] private Animator animator;
 
     private void Awake()
     {
@@ -21,6 +25,7 @@ public class PauseController : MonoBehaviour
         inGameUI.SetActive(true);
         pauseUI.SetActive(false);
         levelFinishedUI.SetActive(false);
+        animator.gameObject.SetActive(true);
     }
 
     private void Update()
@@ -79,9 +84,16 @@ public class PauseController : MonoBehaviour
 
     public void MainMenu()
     {
+        animator.SetTrigger("FadeOut");
+        StartCoroutine(StartGameFade());
+    }
+    
+    private IEnumerator StartGameFade()
+    {
+        Time.timeScale = 1f;
+        yield return new WaitForSeconds(1.1f);
         MusicManager.instance.StopMusic();
         SceneManager.LoadSceneAsync(menuSceneNumber);
-
     }
 
     public void Restart()
@@ -92,6 +104,14 @@ public class PauseController : MonoBehaviour
 
     public void Level2()
     {
+        animator.SetTrigger("FadeOut");
+        StartCoroutine(StartGameFade2());
+    }
+    
+    private IEnumerator StartGameFade2()
+    {
+        Time.timeScale = 1f;
+        yield return new WaitForSeconds(1.1f);
         MusicManager.instance.StopMusic();
         SceneManager.LoadScene(level2SceneNumber);
     }
