@@ -56,6 +56,11 @@ public class ResolutionManager : MonoBehaviour
                 resHeight = 1440;
                 resolutionText.text = resWidth + " x " + resHeight;
                 break;
+            case 5: 
+                resWidth = 3440;
+                resHeight = 1440;
+                resolutionText.text = resWidth + " x " + resHeight;
+                break;
         }
     }
 
@@ -67,14 +72,14 @@ public class ResolutionManager : MonoBehaviour
         }
         else
         {
-            resNumber = 4;
+            resNumber = 5;
         }
         ChangeDisplayText();
     }
 
     public void ToggleRight()
     {
-        if (resNumber < 4)
+        if (resNumber < 5)
         {
             resNumber += 1;
         }
