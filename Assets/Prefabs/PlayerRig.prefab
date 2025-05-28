@@ -2113,8 +2113,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3914528299665653806}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.04878234, y: -0.006207924, z: 0.00030320394, w: 0.9987901}
-  m_LocalPosition: {x: 0.13885498, y: 3.2692337, z: -9.666748}
+  m_LocalRotation: {x: 0.000303421, y: 0.9987898, z: -0.048788235, w: 0.006211616}
+  m_LocalPosition: {x: -0.10195572, y: 3.2692337, z: 9.699836}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2908,8 +2908,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.35
-  m_Height: 0.35
+  m_Radius: 0.4
+  m_Height: 0.4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0.1}
 --- !u!1 &5504577949608823160
@@ -3510,8 +3510,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.35
-  m_Height: 0.35
+  m_Radius: 0.4
+  m_Height: 0.4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0.1}
 --- !u!1 &6833507794271093149
@@ -3921,8 +3921,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.35
-  m_Height: 0.35
+  m_Radius: 0.45
+  m_Height: 0.45
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0.1}
 --- !u!1 &7719701063536064485
@@ -4213,8 +4213,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.35
-  m_Height: 0.35
+  m_Radius: 0.45
+  m_Height: 0.45
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0.1}
 --- !u!1 &9066880705450667558

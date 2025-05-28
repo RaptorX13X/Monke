@@ -6833,7 +6833,7 @@ MonoBehaviour:
   puzzleAudio: {fileID: 1687601483}
   emitter: {fileID: 164055884}
   dingSound: 0
-  doorDuration: 5
+  doorDuration: 6
   replaceCollider: 1
   removeDialogue: 0
   triggerDialogue: 0
@@ -6857,11 +6857,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 285909880
-      Data2: 1198147361
-      Data3: -437863808
-      Data4: -1445621811
-    Path: event:/puzzles/small door open
+      Data1: -152559947
+      Data2: 1236069542
+      Data3: 578927515
+      Data4: 968302568
+    Path: event:/puzzles/moving floor
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -6871,8 +6871,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 20
-  OverrideMaxDistance: 20
+  OverrideMinDistance: 10
+  OverrideMaxDistance: 10
 --- !u!64 &164055885
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13102,31 +13102,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.10195572
+      value: 0.13885498
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.269236
+      value: 3.2692337
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.699836
+      value: -9.666756
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.006211617
+      value: 0.99879014
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00030342105
+      value: 0.048782326
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9987898
+      value: -0.0062079215
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.048788242
+      value: 0.00030320373
       objectReference: {fileID: 0}
     - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: torchEvent.Path
@@ -13158,31 +13158,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -119
+      value: -82.67964
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28
+      value: 42.017
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -91
+      value: -108.16356
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.0000029653306
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13190,7 +13190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7109068186969124594, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -42765,7 +42765,7 @@ Transform:
   m_GameObject: {fileID: 1142056184}
   serializedVersion: 2
   m_LocalRotation: {x: 0.048788235, y: -0.0062086545, z: 0.00030327632, w: 0.9987898}
-  m_LocalPosition: {x: -118.91663, y: 31.123259, z: -99.20814}
+  m_LocalPosition: {x: -82.54079, y: 45.286232, z: -117.830315}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49289,6 +49289,38 @@ MonoBehaviour:
   isSet: 0
   canInteract: 1
   targetRotation: {x: 0, y: 0, z: 0}
+  puzzleEmitter: {fileID: 1317261316}
+--- !u!114 &1317261316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317261312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1670844784
+      Data2: 1270735773
+      Data3: 151646650
+      Data4: 1686682575
+    Path: event:/puzzles/hanuman puzzle
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 5
+  OverrideMaxDistance: 5
 --- !u!1001 &1323339223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83078,6 +83110,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4113616926003993118, guid: d13d0205fcf3ec441a0ec4c981b8c9c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1317261314}
+    - targetCorrespondingSourceObject: {fileID: 4113616926003993118, guid: d13d0205fcf3ec441a0ec4c981b8c9c8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1317261316}
     - targetCorrespondingSourceObject: {fileID: 1390224697591933673, guid: d13d0205fcf3ec441a0ec4c981b8c9c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1706039737}
