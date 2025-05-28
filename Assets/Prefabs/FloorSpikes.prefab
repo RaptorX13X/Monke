@@ -311,7 +311,6 @@ Transform:
   m_Children:
   - {fileID: 3451727164074437056}
   - {fileID: 5242176485332964173}
-  - {fileID: 756937905693130968}
   - {fileID: 2535700110849039600}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -472,7 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71123dc4ff88254d82355b345306907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spikesAudio: {fileID: 1230017645027941059}
+  spikesAudio: {fileID: 7885468083523210237}
 --- !u!65 &2974173466277188997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2188,6 +2187,9 @@ GameObject:
   - component: {fileID: 8729969014959962079}
   - component: {fileID: 8285633054272993710}
   - component: {fileID: 2240236088928843148}
+  - component: {fileID: 7885468083523210237}
+  - component: {fileID: 2461230223428373083}
+  - component: {fileID: 4334564532858145819}
   m_Layer: 0
   m_Name: FloorSpikes
   m_TagString: Untagged
@@ -2321,6 +2323,84 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7885468083523210237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5511120208119872344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93fd69cb1180a6c40be404e7dbc6041a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikes: {fileID: 8729969014959962079}
+  EmitterRise: {fileID: 4334564532858145819}
+  EmitterHide: {fileID: 2461230223428373083}
+  muted: 0
+--- !u!114 &2461230223428373083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5511120208119872344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 504964628
+      Data2: 1073855839
+      Data3: -614587971
+      Data4: 156865823
+    Path: event:/puzzles/spikes hide
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 10
+  OverrideMaxDistance: 10
+--- !u!114 &4334564532858145819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5511120208119872344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -51006959
+      Data2: 1315863595
+      Data3: 1746823062
+      Data4: 704643512
+    Path: event:/puzzles/spikes rise
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 10
+  OverrideMaxDistance: 10
 --- !u!1 &5872726262342531460
 GameObject:
   m_ObjectHideFlags: 0
@@ -3644,118 +3724,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.5}
   m_Size: {x: 1, y: 1, z: 1}
   m_FadeFactor: 1
---- !u!1 &9009952205165894567
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 756937905693130968}
-  - component: {fileID: 6779332556980219491}
-  - component: {fileID: 2794463832604771966}
-  - component: {fileID: 1230017645027941059}
-  m_Layer: 0
-  m_Name: AudioSpikes
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &756937905693130968
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9009952205165894567}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.91, y: 2.99, z: 7.82}
-  m_LocalScale: {x: 0.99999976, y: 1, z: 0.99999976}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 224174589899355978}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6779332556980219491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9009952205165894567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -51006959
-      Data2: 1315863595
-      Data3: 1746823062
-      Data4: 704643512
-    Path: event:/puzzles/spikes rise
-  Event: 
-  EventPlayTrigger: 0
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 20
-  OverrideMaxDistance: 20
---- !u!114 &2794463832604771966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9009952205165894567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 504964628
-      Data2: 1073855839
-      Data3: -614587971
-      Data4: 156865823
-    Path: event:/puzzles/spikes hide
-  Event: 
-  EventPlayTrigger: 0
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 20
-  OverrideMaxDistance: 20
---- !u!114 &1230017645027941059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9009952205165894567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93fd69cb1180a6c40be404e7dbc6041a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spikes: {fileID: 8729969014959962079}
-  EmitterRise: {fileID: 6779332556980219491}
-  EmitterHide: {fileID: 2794463832604771966}
-  muted: 0
 --- !u!1 &9038858054285569771
 GameObject:
   m_ObjectHideFlags: 0

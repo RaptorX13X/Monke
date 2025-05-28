@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEditor;
 using UnityEngine;
 using DG.Tweening;
+using FMODUnity;
 
 public class HeadPuzzle : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class HeadPuzzle : MonoBehaviour
     private InputReader reader;
     private Vector3 rotation = new Vector3(0, 90, 0);
     public Vector3 targetRotation;
+    [SerializeField] private StudioEventEmitter puzzleEmitter;
 
     private void Update()
     {
@@ -39,6 +41,7 @@ public class HeadPuzzle : MonoBehaviour
     {
         if (!canInteract) return;
         if (isSet) return;
+        puzzleEmitter.Play();
         StartCoroutine(Rotation());
     }
 
