@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{1c3c5a95-8fef-418c-b5b4-7d92262ef374}">
+		<property name="assetPath">
+			<value>puzzles/moving floor.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.552</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8df8c748-50e3-4d56-aa57-737ff52775ac}</destination>
+		</relationship>
+	</object>
+</objects>
