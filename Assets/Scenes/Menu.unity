@@ -755,6 +755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelChange
       objectReference: {fileID: 0}
+    - target: {fileID: 4778217937063868028, guid: 24934bdc42d739f4d814ec25e11cb1f1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -911,7 +915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2210065437582372705, guid: f1b211b27dd96714f90481ffbef33573, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4772032021966588177, guid: f1b211b27dd96714f90481ffbef33573, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1076,11 +1080,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e90c15efe6e59bb42bab638fbef83bd2, type: 3}
     - target: {fileID: 1806626248752985336, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1806626248752985336, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2087035424844016702, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_Pivot.x
@@ -1168,15 +1172,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2676100249980006980, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4767644743735627071, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4767644743735627071, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4968343262303816358, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_Sprite
@@ -1196,19 +1200,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5511807117138932415, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5511807117138932415, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5511807117138932415, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5511807117138932415, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 6037362896192700468, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1228,19 +1232,19 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9fcb3454b1f3c1499ee5ea124104a42, type: 3}
     - target: {fileID: 6505851197622166893, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6505851197622166893, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6505851197622166893, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6505851197622166893, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 6540260705080854274, guid: d9a9d0b73b6e19c49826e1fce946106c, type: 3}
       propertyPath: m_MinValue
