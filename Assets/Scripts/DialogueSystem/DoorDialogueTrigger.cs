@@ -8,6 +8,7 @@ public class DoorDialogueTrigger : MonoBehaviour
     public Vector3 move;
     private Vector3 target;
     [SerializeField] private StudioEventEmitter emitter;
+    [SerializeField] private bool shouldntTrigger;
     
     private void Start()
     {
@@ -29,7 +30,13 @@ public class DoorDialogueTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             MoveDoor();
+            if (shouldntTrigger)
+            {
+                Destroy(this);
+                return;
+            }
             TriggerDialogue();
+            Destroy(this);
         }
     }
     

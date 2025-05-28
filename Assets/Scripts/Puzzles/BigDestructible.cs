@@ -7,6 +7,7 @@ public class BigDestructible : MonoBehaviour
     [SerializeField] private MeshRenderer renderer;
     private PlayerAudio playerAudio;
     private PlayerStateMachine stateMachine;
+    [SerializeField] private ParticleSystem particles;
     
 
     private void OnTriggerEnter(Collider other)
@@ -39,6 +40,7 @@ public class BigDestructible : MonoBehaviour
         //animator.SetTrigger("interact");
         collider.enabled = false;
         renderer.enabled = false;
+        particles.Play();
         if (playerAudio != null)
         {
             playerAudio.PlaySmashBigBoy();

@@ -14,9 +14,12 @@ public class ResolutionManager : MonoBehaviour
     public Toggle fullscreenToggle;
 
     private bool isFullscreen;
+    private Vector2 currentResolution;
 
     private void Awake()
     {
+        resWidth = Screen.currentResolution.width;
+        resHeight = Screen.currentResolution.height;
         resNumber = 3;
         resolutionText.text = resWidth + " x " + resHeight;
         isFullscreen = Screen.fullScreen;
