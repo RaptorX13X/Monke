@@ -2361,7 +2361,7 @@ MonoBehaviour:
     Path: event:/puzzles/spikes hide
   Event: 
   EventPlayTrigger: 0
-  EventStopTrigger: 0
+  EventStopTrigger: 12
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -2392,7 +2392,7 @@ MonoBehaviour:
     Path: event:/puzzles/spikes rise
   Event: 
   EventPlayTrigger: 0
-  EventStopTrigger: 0
+  EventStopTrigger: 12
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0

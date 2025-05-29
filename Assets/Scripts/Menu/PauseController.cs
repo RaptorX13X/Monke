@@ -93,7 +93,7 @@ public class PauseController : MonoBehaviour
     {
         Time.timeScale = 1f;
         yield return new WaitForSeconds(1.1f);
-        SceneManager.LoadSceneAsync(menuSceneNumber);
+        SceneManager.LoadScene(menuSceneNumber);
     }
 
     public void Restart()

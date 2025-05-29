@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plate: {fileID: 0}
+  happened: 0
   move: {x: 0, y: -10, z: 0}
   puzzleAudio: {fileID: 0}
   emitter: {fileID: 0}
@@ -148,7 +149,7 @@ MonoBehaviour:
     Path: event:/puzzles/secret door open
   Event: 
   EventPlayTrigger: 0
-  EventStopTrigger: 0
+  EventStopTrigger: 12
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0

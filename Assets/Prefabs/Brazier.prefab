@@ -220,6 +220,7 @@ MonoBehaviour:
   canInteract: 1
   fakeFire: {fileID: 5217755587892919458}
   emitter: {fileID: 0}
+  hint: {fileID: 0}
 --- !u!65 &2203997767956255382
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -263,7 +264,7 @@ MonoBehaviour:
     Path: event:/puzzles/fire
   Event: 
   EventPlayTrigger: 1
-  EventStopTrigger: 0
+  EventStopTrigger: 12
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
