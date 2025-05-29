@@ -59,7 +59,7 @@ Material:
     - _RippleDensity: 5
     - _RippleSlimness: 10
     - _Ripple_Speed: 1
-    - _TextureScale: 15
+    - _TextureScale: 22.5
     - _TextureSpeed: 0.05
     - _WaterDepth: 10
     - _WaveNoise: 1
