@@ -5,6 +5,7 @@ public class HanumanUnlock : MonoBehaviour
 {
     [SerializeField] private GameObject gada;
     private PlayerStateMachine stateMachine;
+    private InputReader input;
     public DialogueSO dialogue;
     [SerializeField] private Hint hint;
     private void OnTriggerEnter(Collider other)
@@ -16,7 +17,8 @@ public class HanumanUnlock : MonoBehaviour
 
         if (other.TryGetComponent(out InputReader reader))
         {
-            reader.InteractEvent += Interact;
+            input = reader;
+            input.InteractEvent += Interact;
             hint.HintE();
         }
     }
@@ -25,7 +27,7 @@ public class HanumanUnlock : MonoBehaviour
     {
         if (other.TryGetComponent(out InputReader reader))
         {
-            reader.InteractEvent -= Interact;
+            input.InteractEvent -= Interact;
         }
     }
 
@@ -34,6 +36,7 @@ public class HanumanUnlock : MonoBehaviour
         TriggerDialogue();
         stateMachine.UnlockedHanuman = true;
         gada.SetActive(false);
+        input.InteractEvent -= Interact;
         Destroy(this);
     }
     
