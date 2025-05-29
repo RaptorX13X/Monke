@@ -8,6 +8,7 @@ public class LeverSpikes : MonoBehaviour
     [SerializeField] private GameObject spikes;
     private bool onlyOnce;
     [SerializeField] private Hint hint;
+    [SerializeField] private Vector3 translation = new Vector3(0, -5, 0);
     
 
     private void OnTriggerEnter(Collider other)
@@ -41,7 +42,7 @@ public class LeverSpikes : MonoBehaviour
 
     private IEnumerator Spikes()
     {
-        spikes.transform.Translate(new Vector3(0, -5, 0), Space.Self);
+        spikes.transform.Translate(translation, Space.Self);
         yield return new WaitForSeconds(3f);
         spikes.SetActive(false);
     }
