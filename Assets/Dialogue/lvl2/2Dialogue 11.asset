@@ -14,13 +14,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: Hanuman
+      name: Visna
       icon: {fileID: 0}
-    line: The door refuses to move, we need to find another way beyond it.
+    line: So who are those people that locked you here?
     hasChoices: 0
     choice1: 
     choice2: 
     soundToPlay: {fileID: 0}
     dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
-  isComplete: 0
+  - character:
+      name: Hanuman
+      icon: {fileID: 0}
+    line: They are not people. They are asuras who wear mortal faces.
+    hasChoices: 0
+    choice1: 
+    choice2: 
+    soundToPlay: {fileID: 0}
+    dialoguetoStartOn1: {fileID: 0}
+    dialoguetoStartOn2: {fileID: 0}
+  - character:
+      name: Hanuman
+      icon: {fileID: 0}
+    line: Kings and priests who traded devotion for power, poisoning the land from
+      within.
+    hasChoices: 0
+    choice1: 
+    choice2: 
+    soundToPlay: {fileID: 0}
+    dialoguetoStartOn1: {fileID: 0}
+    dialoguetoStartOn2: {fileID: 0}
+  - character:
+      name: Hanuman
+      icon: {fileID: 0}
+    line: They feared I would rally the righteous... So they imprisoned me deep in
+      this temple, hoping not a sould could find me.
+    hasChoices: 0
+    choice1: 
+    choice2: 
+    soundToPlay: {fileID: 0}
+    dialoguetoStartOn1: {fileID: 0}
+    dialoguetoStartOn2: {fileID: 0}
+  - character:
+      name: Visna
+      icon: {fileID: 0}
+    line: Yet one soul did.
+    hasChoices: 0
+    choice1: 
+    choice2: 
+    soundToPlay: {fileID: 0}
+    dialoguetoStartOn1: {fileID: 0}
+    dialoguetoStartOn2: {fileID: 0}
+  isComplete: 1

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: Visna
+      name: Hanuman
       icon: {fileID: 0}
     line: Two paths... Every choice here matters.
     hasChoices: 0
@@ -23,4 +23,4 @@ MonoBehaviour:
     soundToPlay: {fileID: 0}
     dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
-  isComplete: 0
+  isComplete: 1

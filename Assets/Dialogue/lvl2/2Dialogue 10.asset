@@ -47,7 +47,7 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: The same dark force that now stirs beyond these walls. They knew if I walked
+    line: The same dark force that now stirs beyond these walls knew, that if I walked
       free, their corruption would never take root.
     hasChoices: 0
     choice1: 
@@ -55,4 +55,4 @@ MonoBehaviour:
     soundToPlay: {fileID: 0}
     dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
-  isComplete: 0
+  isComplete: 1
