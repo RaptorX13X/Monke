@@ -31,9 +31,10 @@ public class PlayerDeadState : PlayerBaseState
         else
         {
             if (stateMachine.HanumanAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1) return;
+            
         }
-        stateMachine.Health.Respawn();
         stateMachine.Respawn.Respawn();
+        stateMachine.Health.Respawn();
         //stateMachine.Weapon.gameObject.SetActive(true);
         stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
     }
