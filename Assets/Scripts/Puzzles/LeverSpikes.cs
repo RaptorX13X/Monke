@@ -7,6 +7,7 @@ public class LeverSpikes : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject spikes;
     private bool onlyOnce;
+    [SerializeField] private Hint hint;
     
 
     private void OnTriggerEnter(Collider other)
@@ -14,6 +15,7 @@ public class LeverSpikes : MonoBehaviour
         if (other.TryGetComponent(out InputReader input))
         {
             input.InteractEvent += Interact;
+            hint.HintE();
         }
     }
 

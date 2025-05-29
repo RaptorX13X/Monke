@@ -6,12 +6,14 @@ public class Attacher : MonoBehaviour
     public InputReader inputReader;
     [SerializeField] private FirstReelPuzzle puzzle;
     public PlayerAudio playerAudio;
+    [SerializeField] private Hint hint;
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out InputReader input))
         {
             input.InteractEvent += Interact;
             inputReader = input;
+            hint.HintE();
         }
 
         if (other.TryGetComponent(out PlayerStateMachine _stateMachine))

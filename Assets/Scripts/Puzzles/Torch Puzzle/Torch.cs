@@ -5,6 +5,7 @@ public class Torch : MonoBehaviour
     private PlayerStateMachine stateMachine;
     private InputReader inputReader;
     private PlayerAudio playerAudio;
+    [SerializeField] private Hint hint;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -12,6 +13,7 @@ public class Torch : MonoBehaviour
         {
             input.InteractEvent += Interact;
             inputReader = input;
+            hint.HintE();
         }
 
         if (other.TryGetComponent(out PlayerStateMachine _stateMachine))

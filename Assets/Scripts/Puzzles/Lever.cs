@@ -6,6 +6,7 @@ public class Lever : MonoBehaviour
     public bool isSet;
     [SerializeField] private Animator animator;
     [SerializeField] private LeverPuzzle puzzle;
+    [SerializeField] private Hint hint;
     
 
     private void OnTriggerEnter(Collider other)
@@ -13,6 +14,7 @@ public class Lever : MonoBehaviour
         if (other.TryGetComponent(out InputReader input))
         {
             input.InteractEvent += Interact;
+            hint.HintE();
         }
     }
 

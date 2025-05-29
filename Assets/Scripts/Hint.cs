@@ -4,30 +4,49 @@ using UnityEngine;
 using DG.Tweening;
 public class Hint : MonoBehaviour
 {
-    [SerializeField] private RectTransform rect;
-    [SerializeField] private float move;
-    private float originalPosition;
-    private float goal;
+    [SerializeField] private RectTransform rectQ;
+    [SerializeField] private RectTransform rectE;
+    [SerializeField] private float moveQ;
+    [SerializeField] private float moveE;
+    private float originalPositionQ;
+    private float originalPositionE;
+    private float goalQ;
+    private float goalE;
+
+    [SerializeField] private RectTransform HiddenHint;
+    [SerializeField] private RectTransform OutHintE;
+    [SerializeField] private RectTransform OutHintQ;
     private void Start()
     {
-        originalPosition = rect.position.y;
-        goal = originalPosition - move;
+        originalPositionQ = rectQ.position.y;
+        goalQ = rectQ.position.y - (rectQ.position.y - OutHintQ.position.y);
+        originalPositionE = rectE.position.y;
+        goalE = rectE.position.y - (rectE.position.y - OutHintE.position.y);
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void HintQ()
     {
-        if (other.CompareTag("Player"))
-        {
-            StartCoroutine(Woosh());
-        }
+        StartCoroutine(WooshQ());
     }
 
-    private IEnumerator Woosh()
+    public void HintE()
     {
-        rect.DOMoveY(goal, 1f);
+        StartCoroutine(WooshE());
+    }
+
+    private IEnumerator WooshQ()
+    {
+        rectQ.DOMoveY(goalQ, 1f);
         yield return new WaitForSeconds(5f);
-        rect.DOMoveY(originalPosition, 1f);
+        rectQ.DOMoveY(originalPositionQ, 1f);
         yield return new WaitForSeconds(1f);
-        Destroy(this);
+    }
+    
+    private IEnumerator WooshE()
+    {
+        rectE.DOMoveY(goalE, 1f);
+        yield return new WaitForSeconds(5f);
+        rectE.DOMoveY(originalPositionE, 1f);
+        yield return new WaitForSeconds(1f);
     }
 }

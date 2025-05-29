@@ -15,6 +15,7 @@ public class HeadPuzzle : MonoBehaviour
     private Vector3 rotation = new Vector3(0, 90, 0);
     public Vector3 targetRotation;
     [SerializeField] private StudioEventEmitter puzzleEmitter;
+    [SerializeField] private Hint hint;
 
     private void Update()
     {
@@ -26,6 +27,7 @@ public class HeadPuzzle : MonoBehaviour
         if (other.TryGetComponent(out InputReader input))
         {
             input.InteractEvent += Interact;
+            hint.HintE();
         }
     }
 

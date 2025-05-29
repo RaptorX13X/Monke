@@ -1,5 +1,6 @@
 using UnityEngine;
 using FMODUnity;
+using UnityEngine.UIElements;
 
 public class Brazier : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Brazier : MonoBehaviour
     [SerializeField] private GameObject fakeFire;
 
     [SerializeField] private StudioEventEmitter emitter;
+    [SerializeField] private Hint hint;
         
         private void OnTriggerEnter(Collider other)
         {
@@ -18,6 +20,10 @@ public class Brazier : MonoBehaviour
             {
                 input.InteractEvent += Interact;
                 inputReader = input;
+                if (canInteract)
+                {
+                    hint.HintE();
+                }
             }
     
             if (other.TryGetComponent(out PlayerStateMachine _stateMachine))

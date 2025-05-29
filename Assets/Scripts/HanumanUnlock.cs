@@ -6,6 +6,7 @@ public class HanumanUnlock : MonoBehaviour
     [SerializeField] private GameObject gada;
     private PlayerStateMachine stateMachine;
     public DialogueSO dialogue;
+    [SerializeField] private Hint hint;
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out PlayerStateMachine machine))
@@ -16,6 +17,7 @@ public class HanumanUnlock : MonoBehaviour
         if (other.TryGetComponent(out InputReader reader))
         {
             reader.InteractEvent += Interact;
+            hint.HintE();
         }
     }
 
@@ -38,5 +40,6 @@ public class HanumanUnlock : MonoBehaviour
     public void TriggerDialogue()
     {
         DialogueManager.Instance.StartDialogue(dialogue);
+        hint.HintQ();
     }
 }
