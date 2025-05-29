@@ -18,7 +18,10 @@ public class SecondReelPuzzle : MonoBehaviour
     
     public DialogueSO dialogue;
     public DialogueSO dialogue2;
+    public DialogueSO dialogue3;
     private bool playedOnce = false;
+
+    private bool playedDialogue;
 
     public void AttachPlayer(PlayerStateMachine _stateMachine, InputReader reader, Transform attacher, PlayerAudio audio)
     {
@@ -125,13 +128,26 @@ public class SecondReelPuzzle : MonoBehaviour
         transform.DOShakePosition(0.2f, 0.05f, 50, 90f, false, false);
         if (stateMachine.UnlockedHanuman && !playedOnce)
         {
-            TriggerDialogue();
+            TriggerDialogue2();
             playedOnce = true;
+        }
+        else
+        {
+            TriggerDialogue3();
         }
     }
     
     public void TriggerDialogue()
     {
         DialogueManager.Instance.StartDialogue(dialogue);
+    }
+
+    public void TriggerDialogue2()
+    {
+        DialogueManager.Instance.StartDialogue(dialogue2);
+    }
+    public void TriggerDialogue3()
+    {
+        DialogueManager.Instance.StartDialogue(dialogue3);
     }
 }

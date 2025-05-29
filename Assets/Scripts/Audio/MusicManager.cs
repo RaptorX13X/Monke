@@ -11,8 +11,6 @@ public class MusicManager : MonoBehaviour
 
     private void Awake()
     {
-
-       
         instance = this;
     }
 

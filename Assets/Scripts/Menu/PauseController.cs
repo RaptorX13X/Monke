@@ -84,6 +84,7 @@ public class PauseController : MonoBehaviour
 
     public void MainMenu()
     {
+        MusicManager.instance.StopMusic();
         animator.SetTrigger("FadeOut");
         StartCoroutine(StartGameFade());
     }
@@ -92,7 +93,6 @@ public class PauseController : MonoBehaviour
     {
         Time.timeScale = 1f;
         yield return new WaitForSeconds(1.1f);
-        MusicManager.instance.StopMusic();
         SceneManager.LoadSceneAsync(menuSceneNumber);
     }
 
@@ -104,6 +104,7 @@ public class PauseController : MonoBehaviour
 
     public void Level2()
     {
+        MusicManager.instance.StopMusic();
         animator.SetTrigger("FadeOut");
         StartCoroutine(StartGameFade2());
     }
@@ -112,7 +113,6 @@ public class PauseController : MonoBehaviour
     {
         Time.timeScale = 1f;
         yield return new WaitForSeconds(1.1f);
-        MusicManager.instance.StopMusic();
         SceneManager.LoadScene(level2SceneNumber);
     }
 
