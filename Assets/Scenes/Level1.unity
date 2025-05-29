@@ -11051,7 +11051,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0000000036680008, y: 0.98561, z: -0.16903548, w: 0.000000021387338}
+  m_LocalRotation: {x: -0.000000008876241, y: 0.98560995, z: -0.16903555, w: -0.000000051755453}
   m_LocalPosition: {x: -16.75, y: 9.9420595, z: 90.21854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -21650,6 +21650,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4626981148534329343, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: canInteract
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5217755587892919458, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -29350,6 +29354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 822338035}
   - component: {fileID: 822338033}
+  - component: {fileID: 822338036}
   m_Layer: 0
   m_Name: JungleAmbientManager3
   m_TagString: Untagged
@@ -29369,7 +29374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
+  CollisionTag: Player
   EventReference:
     Guid:
       Data1: -1753815683
@@ -29378,7 +29383,7 @@ MonoBehaviour:
       Data4: -931744188
     Path: event:/ambience/jungle ambient 3D 2
   Event: 
-  EventPlayTrigger: 1
+  EventPlayTrigger: 3
   EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
@@ -29396,13 +29401,34 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822338032}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.060473137, y: -0.5441785, z: 0.04500893, w: 0.8355759}
-  m_LocalPosition: {x: 109.65, y: 42.63, z: -150.8}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 109.65, y: 37.74, z: -150.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &822338036
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822338032}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 40, y: 20, z: 28}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &824128980 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8689449202193871711, guid: d58999d8f91e13b49b250588d92083ff, type: 3}
@@ -38901,6 +38927,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4626981148534329343, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: canInteract
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5217755587892919458, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -44795,6 +44825,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3450827429076301591, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4626981148534329343, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: canInteract
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5217755587892919458, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
@@ -77531,6 +77565,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4626981148534329343, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: canInteract
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5217755587892919458, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -78192,6 +78230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2004734822}
   - component: {fileID: 2004734820}
+  - component: {fileID: 2004734823}
   m_Layer: 0
   m_Name: JungleAmbientManager2
   m_TagString: Untagged
@@ -78211,7 +78250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
+  CollisionTag: Player
   EventReference:
     Guid:
       Data1: -1753815683
@@ -78220,7 +78259,7 @@ MonoBehaviour:
       Data4: -931744188
     Path: event:/ambience/jungle ambient 3D 2
   Event: 
-  EventPlayTrigger: 1
+  EventPlayTrigger: 3
   EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
@@ -78245,6 +78284,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2004734823
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004734819}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 25, y: 20, z: 28}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2004813470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78611,6 +78671,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3450827429076301591, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4626981148534329343, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: canInteract
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5217755587892919458, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
@@ -83902,6 +83966,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4626981148534329343, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: canInteract
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5217755587892919458, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -84342,6 +84410,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3450827429076301591, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4626981148534329343, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
+      propertyPath: canInteract
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5217755587892919458, guid: 0097fc4bbed048244b1ccb3c38e3854f, type: 3}
@@ -87045,19 +87117,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98561
+      value: 0.98560995
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.16903546
+      value: 0.16903554
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000044391875
+      value: 0.00000005242791
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000007613357
+      value: -0.000000012797205
       objectReference: {fileID: 0}
     - target: {fileID: 725962259733445944, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: torchEvent.Path
