@@ -455,8 +455,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346094921}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0038097636, y: 0.9952893, z: -0.043911833, w: 0.08635068}
-  m_LocalPosition: {x: -1.660437, y: 4.772891, z: 9.619432}
+  m_LocalRotation: {x: 0.0487901, y: -0.0062090666, z: 0.00030330807, w: 0.9987897}
+  m_LocalPosition: {x: 0.09674302, y: 4.527468, z: -6.27774}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -565,20 +565,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.13886175
+      objectReference: {fileID: 0}
+    - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.2692356
+      objectReference: {fileID: 0}
+    - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.666749
+      objectReference: {fileID: 0}
+    - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.08635069
+      value: 0.9987897
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.003809764
+      value: 0.048790082
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9952893
+      value: -0.006209187
       objectReference: {fileID: 0}
     - target: {fileID: 689655371153723072, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.043911833
+      value: 0.00030331378
       objectReference: {fileID: 0}
     - target: {fileID: 3090553912852404232, guid: 2f00ecfbab2362f4c8bfc508fbb9ed47, type: 3}
       propertyPath: <Attacks>k__BackingField.Array.data[0].<Knockback>k__BackingField

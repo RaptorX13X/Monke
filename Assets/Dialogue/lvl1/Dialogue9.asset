@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: What is this thing?... <i>touches the gada</i>
+    line: What is this?... <i>touches the gada</i>
     hasChoices: 0
     choice1: 
     choice2: 
@@ -37,7 +37,7 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: You, my child, have freed me from the chains keeping me inside my own weapon.
+    line: You, child, have broken the spell that trapped me within my own weapon.
     hasChoices: 0
     choice1: 
     choice2: 
@@ -47,8 +47,8 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: I don't know what to say my lord, I'm really honored. Mighty Hanuman, can
-      you help me find a way out of here?
+    line: I... I'm at a loss for words. Oh mighty Hanuman, could you guide me out
+      from this place?
     hasChoices: 0
     choice1: 
     choice2: 
@@ -58,7 +58,7 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: Don't worry my child, you helped me, so now I shall help you.
+    line: Fear not. You have given me freedom, now I shall help you find yours.
     hasChoices: 0
     choice1: 
     choice2: 
