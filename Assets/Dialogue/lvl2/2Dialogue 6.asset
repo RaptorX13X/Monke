@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: Now it's right! And it opened a new way forward.
+    line: Now it's proper! Let's move forward.
     hasChoices: 0
     choice1: 
     choice2: 

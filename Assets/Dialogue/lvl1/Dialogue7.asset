@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: What's the pattern here?
+    line: Hmm, what's the right sequence... I'm sure there are clues somewhere.
     hasChoices: 0
     choice1: 
     choice2: 

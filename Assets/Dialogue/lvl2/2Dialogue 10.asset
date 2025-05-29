@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: This temple keeps getting bigger...
+    line: This temple feels like it grows larger the deeper we go...
     hasChoices: 0
     choice1: 
     choice2: 
@@ -26,7 +26,8 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: Looks like whoever built it designed it just to keep me from escaping...
+    line: A prison disguised as a sanctuary. Not a soul would suspect they could
+      find me here.
     hasChoices: 0
     choice1: 
     choice2: 
@@ -36,7 +37,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: Why did they curse and hide you in this place though, lord Hanuman?
+    line: But why go to such length to keep you sealed?
     hasChoices: 0
     choice1: 
     choice2: 
@@ -46,8 +47,8 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: Some dark forces feared my powers, knew that as long as I was free, I would
-      be able to stop them
+    line: The same dark force that now stirs beyond these walls. They knew if I walked
+      free, their corruption would never take root.
     hasChoices: 0
     choice1: 
     choice2: 

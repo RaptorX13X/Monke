@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: It seems we're getting deeper inside the temple...
+    line: This temple runs deeper than I imagined...
     hasChoices: 0
     choice1: 
     choice2: 
@@ -26,7 +26,7 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: Worry not, I know how to get us out.
+    line: Fear not young one, we shall find a way out.
     hasChoices: 0
     choice1: 
     choice2: 

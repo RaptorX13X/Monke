@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: It's locked, we need to find another way.
+    line: The door refuses to move, we need to find another way beyond it.
     hasChoices: 0
     choice1: 
     choice2: 

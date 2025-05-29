@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: Yet another secret door? For the love of Shiva...
+    line: Another door? Shiva give me patience!
     hasChoices: 0
     choice1: 
     choice2: 

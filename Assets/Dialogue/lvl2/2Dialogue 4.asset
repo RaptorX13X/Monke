@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: It seems we need to pick which way to go.
+    line: Two paths... Every choice here matters.
     hasChoices: 0
     choice1: 
     choice2: 
