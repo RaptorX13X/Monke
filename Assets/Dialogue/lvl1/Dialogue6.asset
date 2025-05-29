@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: Woah... I need to be careful here.
+    line: Those spikes tell me previous explorers were not careful.
     hasChoices: 0
     choice1: 
     choice2: 

@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: Another secret entrance?
+    line: Another door! This place is full of secrets.
     hasChoices: 0
     choice1: 
     choice2: 

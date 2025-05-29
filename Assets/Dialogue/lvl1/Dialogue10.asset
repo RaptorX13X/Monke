@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: There seems to be a dead end here. Let me use my strenght to get us through.
+    line: This obstacle cannot stop us. My strength will clear our path.
     hasChoices: 0
     choice1: 
     choice2: 

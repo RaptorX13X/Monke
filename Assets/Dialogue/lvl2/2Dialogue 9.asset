@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: Look, a new entrance unlocked! Let's go there.
+    line: Finally a new way, let us go!
     hasChoices: 0
     choice1: 
     choice2: 

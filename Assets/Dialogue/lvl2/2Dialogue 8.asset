@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: Hanuman
+      name: Visna
       icon: {fileID: 0}
-    line: We need to get up there.
+    line: If we could just get up there...
     hasChoices: 0
     choice1: 
     choice2: 

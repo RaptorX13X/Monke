@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: A secret entrance? I wonder what's inside.
+    line: A hidden passage? Well, I did come to explore.
     hasChoices: 0
     choice1: 
     choice2: 

@@ -139,7 +139,11 @@
 			<destination>{996aad9d-1c75-4d7e-b699-3208f54b2cf7}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{f7996c88-e2aa-4d60-9ea9-943d7a1ac95a}" />
+	<object class="MixerBusPanner" id="{f7996c88-e2aa-4d60-9ea9-943d7a1ac95a}">
+		<property name="surroundPanExtent">
+			<value>31.6666679</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{e625f30f-e405-4dd1-b0fa-e651e371181d}" />
 	<object class="RandomizerModulator" id="{67323a55-354d-4e16-baf5-f32e5c34b52f}">
 		<property name="nameOfPropertyBeingModulated">
@@ -156,6 +160,13 @@
 	</object>
 	<object class="MixerBusPanner" id="{da0a8f11-85fd-4ee1-9685-417cd251a9fd}" />
 	<object class="MixerBusFader" id="{d937d210-ffe2-4fdc-8d4c-aebab2641562}" />
-	<object class="SpatialiserEffect" id="{996aad9d-1c75-4d7e-b699-3208f54b2cf7}" />
+	<object class="SpatialiserEffect" id="{996aad9d-1c75-4d7e-b699-3208f54b2cf7}">
+		<property name="minimumDistance">
+			<value>5.20000029</value>
+		</property>
+		<property name="overrideRange">
+			<value>true</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{6a5922fb-1cd7-4186-876e-7318eaa14cf0}" />
 </objects>

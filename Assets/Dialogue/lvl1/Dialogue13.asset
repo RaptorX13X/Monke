@@ -10,17 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b87304f156131d40a6e3e804d1780ce, type: 3}
-  m_Name: 2Dialogue 1
+  m_Name: Dialogue13
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: It's getting more dangerous here.
+    line: Prajnaparamita, Mother of Perfect Wisdom, they say you hold the entire
+      Dharma in your hands.
     hasChoices: 0
     choice1: 
     choice2: 
     soundToPlay: {fileID: 0}
     dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
-  isComplete: 0
+  - character:
+      name: Visna
+      icon: {fileID: 0}
+    line: If only I could borrow just a fraction of your clarity to find my way.
+    hasChoices: 0
+    choice1: 
+    choice2: 
+    soundToPlay: {fileID: 0}
+    dialoguetoStartOn1: {fileID: 0}
+    dialoguetoStartOn2: {fileID: 0}
+  isComplete: 1

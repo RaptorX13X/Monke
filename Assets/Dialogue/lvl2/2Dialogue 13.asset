@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: Sounds like some new door just unlocked!
+    line: It seems another way just opened!
     hasChoices: 0
     choice1: 
     choice2: 

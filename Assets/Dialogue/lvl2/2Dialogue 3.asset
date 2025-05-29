@@ -16,7 +16,8 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: A torch? I think we need to find a way up there to light up those braziers.
+    line: Manjushri's flame of wisdom... These unlit braziers, if we ignite them,
+      perhaps the way forward will unlock.
     hasChoices: 0
     choice1: 
     choice2: 

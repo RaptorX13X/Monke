@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: I'm too weak to push it further...
+    line: By the gods, it won't even budge...
     hasChoices: 0
     choice1: 
     choice2: 
@@ -26,7 +26,7 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: Don't you worry, let me take care of this.
+    line: Then let a god's strength move what mortal hands cannot.
     hasChoices: 0
     choice1: 
     choice2: 

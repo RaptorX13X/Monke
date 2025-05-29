@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: Three levers, just like the three levels of this building...
+    line: Three levers, just as this temple climbs three stories high.
     hasChoices: 0
     choice1: 
     choice2: 

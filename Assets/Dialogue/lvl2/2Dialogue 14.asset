@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: '*placeholder dialogue about a temple*'
+    line: A Buddha statue... The Enlightened One watches over this place!
     hasChoices: 0
     choice1: 
     choice2: 
@@ -26,7 +26,7 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: '*placeholder dialogue about a temple*'
+    line: But why would he be watching over a prison of my existance?
     hasChoices: 0
     choice1: 
     choice2: 

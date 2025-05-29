@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: Hanuman
+      name: Visna
       icon: {fileID: 0}
-    line: Wait, I recognize this statue... It's of... Me...
+    line: Wait... this statue... it bears your likeness!
     hasChoices: 0
     choice1: 
     choice2: 
@@ -26,8 +26,8 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: It represents my Panchamukhi faces, each facing a different direction and
-      bestowing different blessings upon its followers.
+    line: Yes, the Panchamukhi form, five faces gazing upon the world, each granting
+      its own blessing.
     hasChoices: 0
     choice1: 
     choice2: 
@@ -37,7 +37,7 @@ MonoBehaviour:
   - character:
       name: Hanuman
       icon: {fileID: 0}
-    line: But, my main face should be facing east...
+    line: But see here? The primary visage should be facing east...
     hasChoices: 0
     choice1: 
     choice2: 

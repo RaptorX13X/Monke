@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: What? The door closed?! I need to find a way ouf of here...
+    line: What?! The door closed... There must be another way out.
     hasChoices: 0
     choice1: 
     choice2: 

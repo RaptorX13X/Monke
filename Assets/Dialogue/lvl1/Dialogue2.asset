@@ -16,11 +16,11 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: I think I gotta move that box down here.
+    line: That box... if I can just move it onto this plate.
     hasChoices: 0
     choice1: 
     choice2: 
     soundToPlay: {fileID: 0}
     dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
-  isComplete: 0
+  isComplete: 1

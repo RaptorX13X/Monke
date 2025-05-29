@@ -26,8 +26,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: Look, that's the same room we came in thorugh! Maybe we should check the
-      other direction now.
+    line: Look, this is where we chose our path! The answers must lie the other way.
     hasChoices: 0
     choice1: 
     choice2: 

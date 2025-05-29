@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: Visna
+      name: Hanuman
       icon: {fileID: 0}
-    line: It seems we need to pick which way to go.
+    line: Two paths... Every choice here matters.
     hasChoices: 0
     choice1: 
     choice2: 
     soundToPlay: {fileID: 0}
     dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
-  isComplete: 0
+  isComplete: 1

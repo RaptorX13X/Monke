@@ -16,7 +16,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: What a beatiful day for exploration!
+    line: 'Such a beautiful day for exploration! '
     hasChoices: 0
     choice1: 
     choice2: 
@@ -26,7 +26,7 @@ MonoBehaviour:
   - character:
       name: Visna
       icon: {fileID: 0}
-    line: I wonder what's that in the distance...
+    line: And what's this in the distance?
     hasChoices: 0
     choice1: 
     choice2: 
