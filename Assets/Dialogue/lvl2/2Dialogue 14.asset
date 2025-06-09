@@ -24,9 +24,9 @@ MonoBehaviour:
     dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
   - character:
-      name: Hanuman
+      name: Visna
       icon: {fileID: 0}
-    line: But why would he be watching over a prison of my existence?
+    line: But why would he be watching over your prison...
     hasChoices: 0
     choice1: 
     choice2: 
