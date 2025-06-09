@@ -8,6 +8,7 @@ public class BigDestructible : MonoBehaviour
     private PlayerAudio playerAudio;
     private PlayerStateMachine stateMachine;
     [SerializeField] private ParticleSystem particles;
+    [SerializeField] private Hint hint;
     
 
     private void OnTriggerEnter(Collider other)
@@ -23,6 +24,7 @@ public class BigDestructible : MonoBehaviour
             {
                 stateMachine = machine;
             }
+            hint.HintE();
         }
     }
 

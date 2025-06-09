@@ -86931,6 +86931,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7853686921612021781, guid: 97e4d48d739150d4bb891ae5f0c9abc4, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 224474368}
     - target: {fileID: 8858692827902135886, guid: 97e4d48d739150d4bb891ae5f0c9abc4, type: 3}
       propertyPath: m_Name
       value: BigDestructible

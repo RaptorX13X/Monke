@@ -37,7 +37,10 @@ public class Hint : MonoBehaviour
     private IEnumerator WooshQ()
     {
         rectQ.DOMoveY(goalQ, 1f);
-        yield return new WaitForSeconds(5f);
+        while (!Input.GetKeyDown(KeyCode.Q))
+        {
+            yield return null;
+        }
         rectQ.DOMoveY(originalPositionQ, 1f);
         yield return new WaitForSeconds(1f);
     }
