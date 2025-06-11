@@ -7,6 +7,7 @@ public class BoxRespawn : MonoBehaviour
     {
         if (other.TryGetComponent(out PushableObject box))
         {
+            box.DetachPlayer();
             box.Respawn();
         }
     }

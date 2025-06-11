@@ -29864,6 +29864,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2877370302822941334, guid: 71086414a0611e9449306370acfda382, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 224474368}
     - target: {fileID: 3012180043833574187, guid: 71086414a0611e9449306370acfda382, type: 3}
       propertyPath: m_LocalPosition.x
       value: 144.36703
@@ -29908,6 +29912,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzlePushableCube (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5846845607991869664, guid: 71086414a0611e9449306370acfda382, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 224474368}
+    - target: {fileID: 6209898821510602791, guid: 71086414a0611e9449306370acfda382, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 224474368}
+    - target: {fileID: 8758432036003443718, guid: 71086414a0611e9449306370acfda382, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 224474368}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -48904,6 +48920,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2877370302822941334, guid: 71086414a0611e9449306370acfda382, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 224474368}
     - target: {fileID: 3012180043833574187, guid: 71086414a0611e9449306370acfda382, type: 3}
       propertyPath: m_LocalPosition.x
       value: 74.439064
@@ -48948,6 +48968,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzlePushableCube
       objectReference: {fileID: 0}
+    - target: {fileID: 5846845607991869664, guid: 71086414a0611e9449306370acfda382, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 224474368}
+    - target: {fileID: 6209898821510602791, guid: 71086414a0611e9449306370acfda382, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 224474368}
+    - target: {fileID: 8758432036003443718, guid: 71086414a0611e9449306370acfda382, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 224474368}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -85088,6 +85120,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1781426591}
     m_Modifications:
+    - target: {fileID: 2877370302822941334, guid: 71086414a0611e9449306370acfda382, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 224474368}
     - target: {fileID: 3012180043833574187, guid: 71086414a0611e9449306370acfda382, type: 3}
       propertyPath: m_LocalPosition.x
       value: 68.54
@@ -85132,6 +85168,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzlePushableCube
       objectReference: {fileID: 0}
+    - target: {fileID: 5846845607991869664, guid: 71086414a0611e9449306370acfda382, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 224474368}
+    - target: {fileID: 6209898821510602791, guid: 71086414a0611e9449306370acfda382, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 224474368}
+    - target: {fileID: 8758432036003443718, guid: 71086414a0611e9449306370acfda382, type: 3}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 224474368}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

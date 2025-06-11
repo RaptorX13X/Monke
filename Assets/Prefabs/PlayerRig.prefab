@@ -268,8 +268,6 @@ GameObject:
   - component: {fileID: 725962259733445944}
   - component: {fileID: 7842866747011902996}
   - component: {fileID: 7672158325937013773}
-  - component: {fileID: 1833230998227929750}
-  - component: {fileID: 4199400460751096318}
   - component: {fileID: 6182779947392584865}
   m_Layer: 10
   m_Name: Player
@@ -554,34 +552,6 @@ MonoBehaviour:
   isPlayer: 1
   canRegen: 0
   regenRate: 5
-  playerAudio: {fileID: 725962259733445944}
---- !u!114 &1833230998227929750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 271679210315325818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8c1f7c4612950b4589d333556fc93f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pushPower: 4
-  stateMachine: {fileID: 3090553912852404232}
-  playerAudio: {fileID: 725962259733445944}
---- !u!114 &4199400460751096318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 271679210315325818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3da3970b69f748541af0939a503359a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   playerAudio: {fileID: 725962259733445944}
 --- !u!114 &6182779947392584865
 MonoBehaviour:
@@ -2113,8 +2083,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3914528299665653806}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.04878239, y: -0.0062082084, z: 0.00030321814, w: 0.9987901}
-  m_LocalPosition: {x: 0.13886261, y: 3.2692356, z: -9.666752}
+  m_LocalRotation: {x: -0.0003032194, y: -0.9987901, z: 0.04878225, w: -0.006208252}
+  m_LocalPosition: {x: -0.10189819, y: 3.2692356, z: 9.699837}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

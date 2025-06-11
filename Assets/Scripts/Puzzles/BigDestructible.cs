@@ -47,5 +47,6 @@ public class BigDestructible : MonoBehaviour
         {
             playerAudio.PlaySmashBigBoy();
         }
+        Destroy(this);
     }
 }
