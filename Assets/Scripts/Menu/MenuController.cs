@@ -10,6 +10,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject menuObject;
     [SerializeField] private GameObject controlsObject;
     [SerializeField] private GameObject settingsObject;
+    [SerializeField] private GameObject creditsObject;
     [SerializeField] private int screenWidth = 1920;
     [SerializeField] private int screenHeight = 1080;
 
@@ -20,6 +21,7 @@ public class MenuController : MonoBehaviour
         menuObject.SetActive(true);
         controlsObject.SetActive(false);
         settingsObject.SetActive(false);
+        creditsObject.SetActive(false);
         screenWidth = Screen.currentResolution.width;
         screenHeight = Screen.currentResolution.height;
         Screen.SetResolution(screenWidth, screenHeight, FullScreenMode.ExclusiveFullScreen);
@@ -45,6 +47,7 @@ public class MenuController : MonoBehaviour
         menuObject.SetActive(false);
         settingsObject.SetActive(false);
         controlsObject.SetActive(true);
+        creditsObject.SetActive(false);
     }
 
     public void BackToMenuButton()
@@ -52,6 +55,7 @@ public class MenuController : MonoBehaviour
         menuObject.SetActive(true);
         settingsObject.SetActive(false);
         controlsObject.SetActive(false);
+        creditsObject.SetActive(false);
     }
 
     public void SettingsButton()
@@ -59,8 +63,16 @@ public class MenuController : MonoBehaviour
         menuObject.SetActive(false);
         settingsObject.SetActive(true);
         controlsObject.SetActive(false);
+        creditsObject.SetActive(false);
     }
 
+    public void CreditsButton()
+    {
+        menuObject.SetActive(true);
+        settingsObject.SetActive(false);
+        controlsObject.SetActive(false);
+        creditsObject.SetActive(false);
+    }
     public void QuitButton()
     {
         Application.Quit();
