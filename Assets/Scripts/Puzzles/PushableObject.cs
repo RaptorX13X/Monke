@@ -9,7 +9,8 @@ public class PushableObject : MonoBehaviour
     [SerializeField] private BoxAttacher[] attachers;
     [SerializeField] private Rigidbody body;
     [SerializeField] private float speed;
-    
+    [SerializeField] private BoxCollider collider;
+
     private InputReader inputReader;
     private PlayerStateMachine stateMachine;
     private PlayerAudio playerAudio;
@@ -17,6 +18,7 @@ public class PushableObject : MonoBehaviour
     public bool isAttached;
 
     private bool moving;
+    public BoxCollider attacher;
     private void Start()
     {
         respawnPoint = transform.position;
@@ -55,16 +57,20 @@ public class PushableObject : MonoBehaviour
         stateMachine.AttachedBool = true;
         isAttached = true;
         stateMachine.SwitchState(new PlayerPushingState(stateMachine));
+        //collider.size = new Vector3(2.5f, 1f, 2.5f);
+        this.attacher.enabled = true;
     }
     
     public void DetachPlayer()
     {
+        this.attacher.enabled = false;
         stateMachine.AttachedBool = false;
         stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
         isAttached = false;
         //inputReader = null;
         stateMachine.attachPoint = null;
-        //playerAudio.StopStoneWheel();
+        StopAudio();
+        collider.size = new Vector3(1f, 1f, 1f);
     }
 
     private void Update()
@@ -84,16 +90,13 @@ public class PushableObject : MonoBehaviour
         {
             case > 0.01f:
                 transform.Rotate(0, -1, 0);
-                PlayAudio();
                 moving = true;
                 break;
             case < -0.01f:
                 transform.Rotate(0, 1 , 0);
-                PlayAudio();
                 moving = true;
                 break;
             case 0f:
-                StopAudio();
                 moving = false;
                 break;
         }
@@ -110,7 +113,7 @@ public class PushableObject : MonoBehaviour
             case < -0.01f:
                 //transform.Translate(inputReader.MovementValue * Time.deltaTime, Space.Self);
                 //body.linearVelocity = new Vector3(inputReader.MovementValue.x, body.linearVelocity.y, inputReader.MovementValue.y);
-                body.MovePosition(body.position +  stateMachine.transform.forward * Time.deltaTime * speed);
+                body.MovePosition(body.position -  stateMachine.transform.forward * Time.deltaTime * speed);
                 PlayAudio();
                 moving = true;
                 break;

@@ -7,6 +7,7 @@ public class BoxAttacher : MonoBehaviour
     [SerializeField] private PushableObject box;
     public PlayerAudio playerAudio;
     [SerializeField] private Hint hint;
+    [SerializeField] private BoxCollider collider;
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out InputReader input))
@@ -25,6 +26,8 @@ public class BoxAttacher : MonoBehaviour
         {
             playerAudio = audio;
         }
+
+        box.attacher = collider;
     }
     
     private void OnTriggerExit(Collider other)
@@ -43,6 +46,8 @@ public class BoxAttacher : MonoBehaviour
         {
             playerAudio = null;
         }
+
+        box.attacher = null;
     }
 
     private void Interact()

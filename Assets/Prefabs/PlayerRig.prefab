@@ -294,6 +294,7 @@ Transform:
   - {fileID: 9157657116890753606}
   - {fileID: 4457796089361929782}
   - {fileID: 9163971501894202507}
+  - {fileID: 6029149985085331787}
   m_Father: {fileID: 7109068186969124594}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3848167631154456629
@@ -345,6 +346,7 @@ MonoBehaviour:
   <VisnaForm>k__BackingField: {fileID: 6719205700463120721}
   <HanumanForm>k__BackingField: {fileID: 5504577949608823160}
   <transformParticles>k__BackingField: {fileID: 3763213680428486649}
+  <PushingCollision>k__BackingField: {fileID: 7363690725325528480}
   deathByFalling: 0
   HanumanBool: 0
   UnlockedHanuman: 0
@@ -3792,6 +3794,59 @@ Transform:
   - {fileID: 5386988949126701872}
   m_Father: {fileID: 4058146938960296617}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7363690725325528480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6029149985085331787}
+  - component: {fileID: 2706043067411040542}
+  m_Layer: 10
+  m_Name: PushingStateCollision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &6029149985085331787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7363690725325528480}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5072153682559003238}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2706043067411040542
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7363690725325528480}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3, y: 3, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &7476898513915208387
 GameObject:
   m_ObjectHideFlags: 0

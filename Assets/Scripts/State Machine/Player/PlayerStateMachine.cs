@@ -37,6 +37,7 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public GameObject HanumanForm { get; private set; }
     
     [field: SerializeField] public ParticleSystem transformParticles { get; private set; }
+    [field: SerializeField] public GameObject PushingCollision { get; private set; }
 
     public bool deathByFalling;
 

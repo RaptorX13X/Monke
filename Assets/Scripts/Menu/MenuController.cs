@@ -68,10 +68,10 @@ public class MenuController : MonoBehaviour
 
     public void CreditsButton()
     {
-        menuObject.SetActive(true);
+        menuObject.SetActive(false);
         settingsObject.SetActive(false);
         controlsObject.SetActive(false);
-        creditsObject.SetActive(false);
+        creditsObject.SetActive(true);
     }
     public void QuitButton()
     {
